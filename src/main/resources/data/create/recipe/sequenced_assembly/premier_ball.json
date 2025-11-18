@@ -1,0 +1,52 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create_encapsulated:poke_ball_base"
+  },
+  "results": [
+    {
+      "id": "cobblemon:premier_ball"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:poke_ball_base"
+        },
+        [
+          {
+            "item": "create_encapsulated:split_white_apricorn"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:poke_ball_base"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:poke_ball_base"
+        },
+        [
+          {
+            "tag": "c:nuggets/copper"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "cobblemon:premier_ball"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "create_encapsulated:poke_ball_base"
+  }
+}

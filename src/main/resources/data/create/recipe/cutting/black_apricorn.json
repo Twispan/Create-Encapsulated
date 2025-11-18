@@ -1,0 +1,15 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "cobblemon:black_apricorn"
+    }
+  ],
+  "processing_time": 200,
+  "results": [
+    {
+      "count": 2,
+      "id": "create_encapsulated:split_black_apricorn"
+    }
+  ]
+}
