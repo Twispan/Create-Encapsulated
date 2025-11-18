@@ -42,19 +42,19 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.WHITEPAINT)));
 
     public static final DeferredItem<Item> SPICYAPRIJUICE = ITEMS.register("spicy_aprijuice",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.SPICYAPRIJUICE)));
+            () -> new Aprijuice(new Item.Properties().stacksTo(16), "spicy"));
     public static final DeferredItem<Item> DRYAPRIJUICE = ITEMS.register("dry_aprijuice",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.DRYAPRIJUICE)));
+            () -> new Aprijuice(new Item.Properties().stacksTo(16), "dry"));
     public static final DeferredItem<Item> SOURAPRIJUICE = ITEMS.register("sour_aprijuice",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.SOURAPRIJUICE)));
+            () -> new Aprijuice(new Item.Properties().stacksTo(16), "sour"));
     public static final DeferredItem<Item> BITTERAPRIJUICE = ITEMS.register("bitter_aprijuice",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.BITTERAPRIJUICE)));
+            () -> new Aprijuice(new Item.Properties().stacksTo(16), "bitter"));
     public static final DeferredItem<Item> SWEETAPRIJUICE = ITEMS.register("sweet_aprijuice",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.SWEETAPRIJUICE)));
+            () -> new Aprijuice(new Item.Properties().stacksTo(16), "sweet"));
     public static final DeferredItem<Item> UMAMIAPRIJUICE = ITEMS.register("umami_aprijuice",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.UMAMIAPRIJUICE)));
+            () -> new Aprijuice(new Item.Properties().stacksTo(16), "umami"));
     public static final DeferredItem<Item> SALTYAPRIJUICE = ITEMS.register("salty_aprijuice",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.SALTYAPRIJUICE)));
+            () -> new Aprijuice(new Item.Properties().stacksTo(16), "salty"));
 
 
     public static void register(IEventBus eventBus) {
