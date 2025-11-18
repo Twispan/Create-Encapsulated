@@ -9,6 +9,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister
@@ -36,20 +38,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WHITEPAINT);
                     }).build());
 
-    public static final Supplier<CreativeModeTab> APRIJUICES_TAB = CREATIVE_MODE_TAB.register(
-            "aprijuices_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SPICYAPRIJUICE.get()))
-                    .title(Component.translatable("creativetab.create_encapsulated.aprijuices"))
-                    .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.SPICYAPRIJUICE);
-                        output.accept(ModItems.DRYAPRIJUICE);
-                        output.accept(ModItems.SOURAPRIJUICE);
-                        output.accept(ModItems.BITTERAPRIJUICE);
-                        output.accept(ModItems.SWEETAPRIJUICE);
-                        output.accept(ModItems.SALTYAPRIJUICE);
-                        output.accept(ModItems.UMAMIAPRIJUICE);
-                    }).build());
-
+    public static void buildContents(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.SPICYAPRIJUICE);
+            event.accept(ModItems.DRYAPRIJUICE);
+            event.accept(ModItems.SOURAPRIJUICE);
+            event.accept(ModItems.BITTERAPRIJUICE);
+            event.accept(ModItems.SWEETAPRIJUICE);
+            event.accept(ModItems.SALTYAPRIJUICE);
+            event.accept(ModItems.UMAMIAPRIJUICE);
+        }
+    }
+            
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
     }
