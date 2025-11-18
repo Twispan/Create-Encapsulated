@@ -15,70 +15,29 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 
-/**
- *
- * @author itsfirestorm
- */
 public class Aprijuice extends Item {
-    private String flavor;
+    private final String flavor;
     
     public Aprijuice (Properties props, String flavor) {
         super(props);
         this.flavor = flavor;
     }
-    
-    /**
-     *
-     * @param stack
-     * @param entity
-     * @return
-     */
+
     @Override
     public int getUseDuration(ItemStack stack, LivingEntity entity) {
         return 32;
     }
-    
-    /**
-     *
-     * @param stack
-     * @return
-     */
+
     @Override
     public UseAnim getUseAnimation(ItemStack stack) {
         return UseAnim.DRINK;
     }
-    
-    /**
-     *
-     * @param level
-     * @param player
-     * @param hand
-     * @return
-     */
+
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        if (!level.isClientSide) {
-            level.playSound(
-                null,
-                player.getZ(),
-                player.getX(),
-                player.getY(),
-                SoundEvents.GENERIC_DRINK,
-                SoundSource.PLAYERS,
-                1.0F,
-                1.0F
-            );
-        }
         return ItemUtils.startUsingInstantly(level, player, hand);
     }
-    
-    /**
-     *
-     * @param stack
-     * @param level
-     * @param entity
-     * @return
-     */
+
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
         // Apply potion effect

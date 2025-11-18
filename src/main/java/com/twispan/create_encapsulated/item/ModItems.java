@@ -27,19 +27,19 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> REDPAINT = ITEMS.register("red_paint",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.REDPAINT)));
+            () -> new Paint(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<Item> BLUEPAINT = ITEMS.register("blue_paint",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.BLUEPAINT)));
+            () -> new Paint(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<Item> YELLOWPAINT = ITEMS.register("yellow_paint",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.YELLOWPAINT)));
+            () -> new Paint(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<Item> GREENPAINT = ITEMS.register("green_paint",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.GREENPAINT)));
+            () -> new Paint(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<Item> PINKPAINT = ITEMS.register("pink_paint",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.PINKPAINT)));
+            () -> new Paint(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<Item> BLACKPAINT = ITEMS.register("black_paint",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.BLACKPAINT)));
+            () -> new Paint(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<Item> WHITEPAINT = ITEMS.register("white_paint",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.WHITEPAINT)));
+            () -> new Paint(new Item.Properties().stacksTo(16)));
 
     public static final DeferredItem<Item> SPICYAPRIJUICE = ITEMS.register("spicy_aprijuice",
             () -> new Aprijuice(new Item.Properties().stacksTo(16), "spicy"));
