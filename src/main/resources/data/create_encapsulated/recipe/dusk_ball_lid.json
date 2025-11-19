@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:split_black_apricorn"
+    }.
+    {
+      "item": "create_encapsulated:green_paint"
+    }
+  ],
+  "result": {
+    "id": "create_encapsulated:dusk_ball_lid"
+  }
+}

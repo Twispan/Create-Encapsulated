@@ -2,13 +2,13 @@
   "type": "create:cutting",
   "ingredients": [
     {
-      "item": "cobblemon:apricorn_plank"
+      "item": "cobblemon:apricorn_planks"
     }
   ],
-  "processing_time": 200,
+  "processing_time": 100,
   "results": [
     {
-      "count": 4,
+      "count": 2,
       "id": "create_encapsulated:poke_ball_base"
     }
   ]

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:split_white_apricorn"
+    },
+    {
+      "item": "create_encapsulated:red_paint"
+    },
+    {
+      "item": "create_encapsulated:black_paint"
+    },
+    {
+      "item": "minecraft:redstone_dust"
+    }
+  ],
+  "result": {
+    "id": "create_encapsulated:timer_ball_lid"
+  }
+}
