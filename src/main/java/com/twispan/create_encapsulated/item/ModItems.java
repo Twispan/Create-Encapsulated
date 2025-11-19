@@ -26,6 +26,53 @@ public class ModItems {
     public static final DeferredItem<Item> SPLITWHTAPRICORN = ITEMS.register("split_white_apricorn",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> GREATBALLLID = ITEMS.register("great_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ULTRABALLLID = ITEMS.register("ultra_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SAFARIBALLLID = ITEMS.register("safari_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> FASTBALLLID = ITEMS.register("fast_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> LEVELBALLLID = ITEMS.register("level_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> FRIENDBALLLID = ITEMS.register("friend_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> LUREBALLLID = ITEMS.register("lure_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> HEAVYBALLLID = ITEMS.register("heavy_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> LOVEBALLLID = ITEMS.register("love_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> MOONBALLLID = ITEMS.register("moon_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SPORTBALLLID = ITEMS.register("sport_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PARKBALLLID = ITEMS.register("park_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> NETBALLLID = ITEMS.register("net_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DIVEBALLLID = ITEMS.register("dive_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> NESTBALLLID = ITEMS.register("nest_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> REPEATBALLLID = ITEMS.register("repeat_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TIMERBALLLID = ITEMS.register("timer_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> LUXURYBALLLID = ITEMS.register("luxury_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DUSKBALLLID = ITEMS.register("dusk_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> HEALBALLLID = ITEMS.register("heal_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> QUICKBALLLID = ITEMS.register("quick_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DREAMBALLLID = ITEMS.register("dream_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> MASTERBALLLID = ITEMS.register("master_ball_lid",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> REDPAINT = ITEMS.register("red_paint",
             () -> new Paint(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<Item> BLUEPAINT = ITEMS.register("blue_paint",

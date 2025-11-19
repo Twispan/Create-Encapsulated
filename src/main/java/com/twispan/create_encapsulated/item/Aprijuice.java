@@ -45,7 +45,7 @@ public class Aprijuice extends Item {
             switch(flavor) {
                 case("spicy") -> entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200));
                 case("dry") -> entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 200));
-                case("sour") -> entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 200));
+                case("sour") -> entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 4));
                 case("bitter") -> entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 200));
                 case("sweet") -> entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200));
                 case("umami") -> entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200));
