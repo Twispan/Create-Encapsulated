@@ -41,13 +41,5 @@
   "item.create_encapsulated.black_paint": "Black Paint",
   "item.create_encapsulated.white_paint": "White Paint",
 
-  "item.create_encapsulated.spicy_aprijuice": "Spicy Aprijuice",
-  "item.create_encapsulated.dry_aprijuice": "Dry Aprijuice",
-  "item.create_encapsulated.sour_aprijuice": "Sour Aprijuice",
-  "item.create_encapsulated.bitter_aprijuice": "Bitter Aprijuice",
-  "item.create_encapsulated.sweet_aprijuice": "Sweet Aprijuice",
-  "item.create_encapsulated.umami_aprijuice": "Umami Aprijuice",
-  "item.create_encapsulated.salty_aprijuice": "Salty Aprijuice",
-
   "creativetab.create_encapsulated.pokeballcomponents_items": "Poké Ball Components"
 }

@@ -109,15 +109,6 @@ public class CreateEncapsulated {
             event.accept(ModItems.WHITEPAINT);
         }
 
-        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(ModItems.SPICYAPRIJUICE);
-            event.accept(ModItems.DRYAPRIJUICE);
-            event.accept(ModItems.SOURAPRIJUICE );
-            event.accept(ModItems.BITTERAPRIJUICE);
-            event.accept(ModItems.SWEETAPRIJUICE);
-            event.accept(ModItems.UMAMIAPRIJUICE);
-            event.accept(ModItems.SALTYAPRIJUICE);
-        }
     }
 
 

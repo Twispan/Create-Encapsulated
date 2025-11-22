@@ -1,11 +1,15 @@
 {
   "type": "create:mixing",
+  "heat_requirement": "heated",
   "ingredients": [
     {
       "item": "minecraft:yellow_dye"
     },
     {
       "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "create:wheat_flour"
     },
     {
       "type": "neoforge:single",
