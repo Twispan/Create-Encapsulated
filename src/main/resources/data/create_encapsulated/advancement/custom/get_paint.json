@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "create_encapsulated:red_paint"
+    },
+    "title": "Arting and Crafting",
+    "description": "Obtain any color of paint",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "create_encapsulated:custom/root",
+  "criteria": {
+    "GetItem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_encapsulated:red_paint",
+              "create_encapsulated:blue_paint",
+              "create_encapsulated:yellow_paint",
+              "create_encapsulated:green_paint",
+              "create_encapsulated:pink_paint",
+              "create_encapsulated:black_paint",
+              "create_encapsulated:white_paint"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
