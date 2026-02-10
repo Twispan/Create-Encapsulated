@@ -1,11 +1,13 @@
 package com.twispan.create_encapsulated;
 
 import com.twispan.create_encapsulated.client.ModClientSetup;
+import com.twispan.create_encapsulated.item.EmptyBottleFluidHandler;
 import com.twispan.create_encapsulated.item.ModCreativeModeTabs;
 import com.twispan.create_encapsulated.item.Paint;
 import com.twispan.create_encapsulated.item.PaintFluidHandler;
 import com.twispan.create_encapsulated.registries.ModFluids;
 import com.twispan.create_encapsulated.registries.ModItems;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLEnvironment;
@@ -134,6 +136,12 @@ public class CreateEncapsulated {
                 ModItems.PINKPAINT.get(),
                 ModItems.BLACKPAINT.get(),
                 ModItems.WHITEPAINT.get()
+        );
+
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new EmptyBottleFluidHandler(stack),
+                Items.GLASS_BOTTLE
         );
     }
 

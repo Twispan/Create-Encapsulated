@@ -58,59 +58,6 @@ public class Paint extends Item {
     }
 
     @Override
-    public @NotNull InteractionResult useOn(UseOnContext context) {
-        Level level = context.getLevel();
-        BlockPos pos = context.getClickedPos();
-        BlockState block = level.getBlockState(pos);
-        Player player = context.getPlayer();
-
-        // Check if clicking on an empty cauldron
-        if (block.is(Blocks.CAULDRON)) {
-            if (!level.isClientSide && player != null) {
-                // Fill cauldron by one stage and play bottle empty sound
-                level.setBlock(pos, Blocks.WATER_CAULDRON.defaultBlockState().setValue(LayeredCauldronBlock.LEVEL, 1), 3);
-                level.playSound(null, pos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
-                player.awardStat(Stats.ITEM_USED.get(this));
-
-                if (!player.getAbilities().instabuild) {
-                    ItemStack itemInHand = context.getItemInHand();
-                    itemInHand.shrink(1);
-
-                    // Give an empty bottle in return
-                    ItemStack bottle = new ItemStack(Items.GLASS_BOTTLE);
-                    if (!player.getInventory().add(bottle)) {
-                       player.drop(bottle, false);
-                    }
-                }
-            }
-        }
-
-        if (block.is(Blocks.WATER_CAULDRON)) {
-            int currentCauldronLevel = block.getValue(LayeredCauldronBlock.LEVEL);
-            if (currentCauldronLevel < 3) {
-                if (!level.isClientSide() && player != null) {
-                    level.setBlock(pos, Blocks.WATER_CAULDRON.defaultBlockState().setValue(LayeredCauldronBlock.LEVEL,currentCauldronLevel + 1), 3);
-                    level.playSound(null, pos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
-                    player.awardStat(Stats.ITEM_USED.get(this));
-
-                    if (!player.getAbilities().instabuild) {
-                        ItemStack itemInHand = context.getItemInHand();
-                        itemInHand.shrink(1);
-
-                        // Give an empty bottle in return
-                        ItemStack bottle = new ItemStack(Items.GLASS_BOTTLE);
-                        if (!player.getInventory().add(bottle)) {
-                            player.drop(bottle, false);
-                        }
-                    }
-                }
-            }
-        }
-
-        return InteractionResult.sidedSuccess(level.isClientSide());
-    }
-
-    @Override
     public @NotNull ItemStack finishUsingItem(@NotNull ItemStack stack, Level level, @NotNull LivingEntity entity) {
         if (!level.isClientSide) {
             entity.addEffect(new MobEffectInstance(MobEffects.POISON, 300, 1));

@@ -43,5 +43,13 @@
   "item.create_encapsulated.black_paint": "Black Paint",
   "item.create_encapsulated.white_paint": "White Paint",
 
+  "fluid_type.create_encapsulated.red_paint": "Red Paint",
+  "fluid_type.create_encapsulated.blue_paint": "Blue Paint",
+  "fluid_type.create_encapsulated.yellow_paint": "Yellow Paint",
+  "fluid_type.create_encapsulated.green_paint": "Green Paint",
+  "fluid_type.create_encapsulated.pink_paint": "Pink Paint",
+  "fluid_type.create_encapsulated.black_paint": "Black Paint",
+  "fluid_type.create_encapsulated.white_paint": "White Paint",
+
   "creativetab.create_encapsulated.pokeballcomponents_items": "Poké Ball Components"
 }
