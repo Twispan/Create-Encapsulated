@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:split_blue_apricorn"
+    },
+    {
+      "item": "create_encapsulated:white_paint"
+    },
+    {
+      "tag": "c:nuggets/zinc"
+    }
+  ],
+  "result": {
+    "id": "create_encapsulated:ancient_wing_ball_lid"
+  }
+}

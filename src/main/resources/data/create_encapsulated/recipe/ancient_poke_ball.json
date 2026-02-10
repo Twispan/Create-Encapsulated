@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:poke_ball_base"
+    },
+    {
+      "item": "cobblemon:tumblestone"
+    },
+    {
+      "tag": "c:nuggets/copper"
+    },
+    {
+      "item": "create_encapsulated:split_red_apricorn"
+    }
+  ],
+  "result": {
+    "id": "cobblemon:ancient_poke_ball"
+  }
+}

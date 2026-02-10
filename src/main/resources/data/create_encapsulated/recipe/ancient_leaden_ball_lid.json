@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:split_black_apricorn"
+    },
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "tag": "c:nuggets/zinc"
+    },
+    {
+      "item": "create_encapsulated:white_paint"
+    }
+  ],
+  "result": {
+    "id": "create_encapsulated:ancient_leaden_ball_lid"
+  }
+}

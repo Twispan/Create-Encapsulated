@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:poke_ball_base"
+    },
+    {
+      "item": "create_encapsulated:origin_alloy"
+    }
+  ],
+  "result": {
+    "id": "create_encapsulated:origin_ball_base"
+  }
+}

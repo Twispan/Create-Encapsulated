@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:poke_ball_base"
+    },
+    {
+      "item": "cobblemon:sky_tumblestone"
+    },
+    {
+      "item": "create_encapsulated:ancient_wing_ball_lid"
+    }
+  ],
+  "result": {
+    "id": "cobblemon:ancient_wing_ball"
+  }
+}

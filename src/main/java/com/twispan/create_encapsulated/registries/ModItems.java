@@ -84,6 +84,28 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> CHERISHBALLLID = ITEMS.register("cherish_ball_lid",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> FEATHERBALLLID = ITEMS.register("ancient_feather_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> WINGBALLLID = ITEMS.register("ancient_wing_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> JETBALLLID = ITEMS.register("ancient_jet_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ANCIENTHEAVYBALLLID = ITEMS.register("ancient_heavy_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> LEADENBALLLID = ITEMS.register("ancient_leaden_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> GIGATONBALLLID = ITEMS.register("ancient_gigaton_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ANCIENTGREATBALLLID = ITEMS.register("ancient_great_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ANCIENTULTRABALLLID = ITEMS.register("ancient_ultra_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ORIGINBALLLID = ITEMS.register("origin_ball_lid",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ORIGINBALLBASE = ITEMS.register("origin_ball_base",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ORIGINALLOY = ITEMS.register("origin_alloy",
+            () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> REDPAINT = ITEMS.register("red_paint",
             () -> new Paint(new Item.Properties().stacksTo(16), RED_PAINT));

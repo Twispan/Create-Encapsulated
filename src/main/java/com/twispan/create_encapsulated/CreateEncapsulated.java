@@ -108,6 +108,17 @@ public class CreateEncapsulated {
             event.accept(ModItems.MASTERBALLLID);
             event.accept(ModItems.BEASTBALLLID);
             event.accept(ModItems.CHERISHBALLLID);
+            event.accept(ModItems.FEATHERBALLLID);
+            event.accept(ModItems.WINGBALLLID);
+            event.accept(ModItems.JETBALLLID);
+            event.accept(ModItems.ANCIENTHEAVYBALLLID);
+            event.accept(ModItems.LEADENBALLLID);
+            event.accept(ModItems.GIGATONBALLLID);
+            event.accept(ModItems.ANCIENTGREATBALLLID);
+            event.accept(ModItems.ANCIENTULTRABALLLID);
+            event.accept(ModItems.ORIGINBALLLID);
+            event.accept(ModItems.ORIGINBALLBASE);
+            event.accept(ModItems.ORIGINALLOY);
             event.accept(ModItems.REDPAINT);
             event.accept(ModItems.BLUEPAINT);
             event.accept(ModItems.YELLOWPAINT);
