@@ -1,0 +1,52 @@
+{
+  "display": {
+    "icon": {
+      "id": "create_encapsulated:friend_ball_lid"
+    },
+    "title": "Put a lid on it",
+    "description": "Obtain any type of Pokéball Lid",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "create_encapsulated:custom/get_paint",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_encapsulated:great_ball_lid",
+              "create_encapsulated:ultra_ball_lid",
+              "create_encapsulated:sport_ball_lid",
+              "create_encapsulated:heavy_ball_lid",
+              "create_encapsulated:dream_ball_lid",
+              "create_encapsulated:friend_ball_lid",
+              "create_encapsulated:love_ball_lid",
+              "create_encapsulated:dusk_ball_lid",
+              "create_encapsulated:beast_ball_lid",
+              "create_encapsulated:master_ball_lid",
+              "create_encapsulated:cherish_ball_lid",
+              "create_encapsulated:moon_ball_lid",
+              "create_encapsulated:level_ball_lid",
+              "create_encapsulated:fast_ball_lid",
+              "create_encapsulated:lure_ball_lid",
+              "create_encapsulated:nest_ball_lid",
+              "create_encapsulated:net_ball_lid",
+              "create_encapsulated:safari_ball_lid",
+              "create_encapsulated:quick_ball_lid",
+              "create_encapsulated:luxury_ball_lid",
+              "create_encapsulated:timer_ball_lid",
+              "create_encapsulated:park_ball_lid",
+              "create_encapsulated:repeat_ball_lid",
+              "create_encapsulated:dive_ball_lid"
+            ]
+          }
+        ],
+        "recipe_id": ""
+      }
+    }
+  }
+}

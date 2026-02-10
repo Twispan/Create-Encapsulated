@@ -4,12 +4,12 @@
       "id": "create_encapsulated:red_paint"
     },
     "title": "Arting and Crafting",
-    "description": "Obtain any color of paint",
+    "description": "Mix any color of paint",
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "create_encapsulated:custom/root",
+  "parent": "create_encapsulated:custom/split_apricorn",
   "criteria": {
     "GetItem": {
       "trigger": "minecraft:inventory_changed",

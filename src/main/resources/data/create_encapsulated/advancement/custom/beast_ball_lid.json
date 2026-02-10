@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "id": "create_encapsulated:beast_ball_lid"
+    },
+    "title": "To go even further beyond",
+    "description": "Assemble a Beast Ball Lid",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "create_encapsulated:custom/paint_lid",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_encapsulated:beast_ball_lid"
+            ]
+          }
+        ],
+        "recipe_id": ""
+      }
+    }
+  }
+}

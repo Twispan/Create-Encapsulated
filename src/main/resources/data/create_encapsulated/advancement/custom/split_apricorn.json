@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "create_encapsulated:split_red_apricorn"
+    },
+    "title": "Let's Split!",
+    "description": "Split an Apricorn of any color in half",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "create_encapsulated:custom/root",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_encapsulated:split_red_apricorn",
+              "create_encapsulated:split_blue_apricorn",
+              "create_encapsulated:split_yellow_apricorn",
+              "create_encapsulated:split_green_apricorn",
+              "create_encapsulated:split_pink_apricorn",
+              "create_encapsulated:split_black_apricorn",
+              "create_encapsulated:split_white_apricorn"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

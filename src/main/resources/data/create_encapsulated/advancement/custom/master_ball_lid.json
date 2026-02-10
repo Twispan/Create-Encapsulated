@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "id": "create_encapsulated:master_ball_lid"
+    },
+    "title": "A lid that's ascended past a lid",
+    "description": "Assemble a Master Ball Lid",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "create_encapsulated:custom/paint_lid",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_encapsulated:master_ball_lid"
+            ]
+          }
+        ],
+        "recipe_id": ""
+      }
+    }
+  }
+}

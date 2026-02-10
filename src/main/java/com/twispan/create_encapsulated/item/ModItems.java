@@ -9,6 +9,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CreateEncapsulated.MODID);
 
+    public static final DeferredItem<Item> MODLOGO = ITEMS.register("create_encapsulated_logo",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> POKEBALLBASE = ITEMS.register("poke_ball_base",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SPLITREDAPRICORN = ITEMS.register("split_red_apricorn",
