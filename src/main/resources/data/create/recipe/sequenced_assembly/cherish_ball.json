@@ -1,11 +1,11 @@
 {
   "type": "create:sequenced_assembly",
   "ingredient": {
-    "item": "create_encapsulated:love_ball_lid"
+    "item": "create_encapsulated:cherish_ball_lid"
   },
   "results": [
     {
-      "id": "cobblemon:love_ball"
+      "id": "cobblemon:cherish_ball"
     }
   ],
   "sequence": [
@@ -13,7 +13,7 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "create_encapsulated:love_ball_lid"
+          "item": "create_encapsulated:cherish_ball_lid"
         },
         [
           {
@@ -23,7 +23,7 @@
       ],
       "results": [
         {
-          "id": "create_encapsulated:love_ball_lid"
+          "id": "create_encapsulated:cherish_ball_lid"
         }
       ]
     },
@@ -31,22 +31,22 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "create_encapsulated:love_ball_lid"
+          "item": "create_encapsulated:cherish_ball_lid"
         },
         [
           {
-            "tag": "c:nuggets/brass"
+            "item": "minecraft:netherite_scrap"
           }
         ]
       ],
       "results": [
         {
-          "id": "create_encapsulated:love_ball_lid"
+          "id": "create_encapsulated:cherish_ball_lid"
         }
       ]
     }
   ],
   "transitional_item": {
-    "id": "create_encapsulated:love_ball_lid"
+    "id": "create_encapsulated:cherish_ball_lid"
   }
 }
