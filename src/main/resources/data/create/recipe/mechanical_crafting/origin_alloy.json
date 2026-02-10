@@ -1,0 +1,71 @@
+{
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "key": {
+    "A": {
+      "item": "cobblemon:normal_gem"
+    },
+    "B": {
+      "item": "cobblemon:fighting_gem"
+    },
+    "C": {
+      "item": "cobblemon:flying_gem"
+    },
+    "D": {
+      "item": "cobblemon:poison_gem"
+    },
+    "E": {
+      "item": "cobblemon:ground_gem"
+    },
+    "F": {
+      "item": "cobblemon:rock_gem"
+    },
+    "G": {
+      "item": "cobblemon:bug_gem"
+    },
+    "H": {
+      "item": "cobblemon:ghost_gem"
+    },
+    "I": {
+      "item": "cobblemon:fire_gem"
+    },
+    "M": {
+      "item": "cobblemon:water_gem"
+    },
+    "N": {
+      "item": "cobblemon:grass_gem"
+    },
+    "O": {
+      "item": "cobblemon:electric_gem"
+    },
+    "P": {
+      "item": "cobblemon:psychic_gem"
+    },
+    "Q": {
+      "item": "cobblemon:ice_gem"
+    },
+    "R": {
+      "item": "cobblemon:dragon_gem"
+    },
+    "S": {
+      "item": "cobblemon:dark_gem"
+    },
+    "T": {
+      "item": "cobblemon:steel_gem"
+    },
+    "U": {
+      "item": "cobblemon:fairy_gem"
+    },
+    "J": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "K": {
+      "item": "cobblemon:tumblestone"
+    }
+  },
+  "pattern": [" ABC ", "DEFGH", "IJKJM", "NOPQR", " STU "],
+  "result": {
+    "count": 1,
+    "id": "create_encapsulated:origin_alloy"
+  }
+}
