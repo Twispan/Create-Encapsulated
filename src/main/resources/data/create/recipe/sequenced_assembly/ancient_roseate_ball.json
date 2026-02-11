@@ -1,0 +1,70 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create_encapsulated:split_pink_apricorn"
+  },
+  "results": [
+    {
+      "id": "cobblemon:ancient_roseate_ball"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_pink_apricorn"
+        },
+        [
+          {
+            "item": "create_encapsulated:poke_ball_base"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_pink_apricorn"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_pink_apricorn"
+        },
+        [
+          {
+            "item": "create:copper_nugget"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_pink_apricorn"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_pink_apricorn"
+        },
+        [
+          {
+            "item": "cobblemon:tumblestone"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_pink_apricorn"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "create_encapsulated:split_pink_apricorn"
+  }
+}

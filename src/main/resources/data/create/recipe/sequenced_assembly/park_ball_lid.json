@@ -5,28 +5,10 @@
   },
   "results": [
     {
-      "id": "create_encapsulated:lure_ball_lid"
+      "id": "create_encapsulated:park_ball_lid"
     }
   ],
   "sequence": [
-    {
-      "type": "create:filling",
-      "ingredients": [
-        {
-          "item": "create_encapsulated:split_green_apricorn"
-        },
-        {
-          "type": "neoforge:single",
-          "amount": 250,
-          "fluid": "create_encapsulated:blue_paint"
-        }
-      ],
-      "results": [
-        {
-          "id": "create_encapsulated:split_green_apricorn"
-        }
-      ]
-    },
     {
       "type": "create:filling",
       "ingredients": [
@@ -54,7 +36,25 @@
         {
           "type": "neoforge:single",
           "amount": 250,
-          "fluid": "create_encapsulated:yellow_paint"
+          "fluid": "create_encapsulated:red_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_green_apricorn"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_green_apricorn"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:blue_paint"
         }
       ],
       "results": [

@@ -5,21 +5,21 @@
   },
   "results": [
     {
-      "id": "create_encapsulated:lure_ball_lid"
+      "id": "cobblemon:ancient_verdant_ball"
     }
   ],
   "sequence": [
     {
-      "type": "create:filling",
+      "type": "create:deploying",
       "ingredients": [
         {
           "item": "create_encapsulated:split_green_apricorn"
         },
-        {
-          "type": "neoforge:single",
-          "amount": 250,
-          "fluid": "create_encapsulated:blue_paint"
-        }
+        [
+          {
+            "item": "create_encapsulated:poke_ball_base"
+          }
+        ]
       ],
       "results": [
         {
@@ -28,16 +28,16 @@
       ]
     },
     {
-      "type": "create:filling",
+      "type": "create:deploying",
       "ingredients": [
         {
           "item": "create_encapsulated:split_green_apricorn"
         },
-        {
-          "type": "neoforge:single",
-          "amount": 250,
-          "fluid": "create_encapsulated:green_paint"
-        }
+        [
+          {
+            "item": "create:copper_nugget"
+          }
+        ]
       ],
       "results": [
         {
@@ -46,16 +46,16 @@
       ]
     },
     {
-      "type": "create:filling",
+      "type": "create:deploying",
       "ingredients": [
         {
           "item": "create_encapsulated:split_green_apricorn"
         },
-        {
-          "type": "neoforge:single",
-          "amount": 250,
-          "fluid": "create_encapsulated:yellow_paint"
-        }
+        [
+          {
+            "item": "cobblemon:tumblestone"
+          }
+        ]
       ],
       "results": [
         {

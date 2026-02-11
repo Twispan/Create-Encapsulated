@@ -1,0 +1,34 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create_encapsulated:split_red_apricorn"
+  },
+  "results": [
+    {
+      "id": "create_encapsulated:sport_ball_lid"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_red_apricorn"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:white_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:sport_ball_lid"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "create_encapsulated:cherish_ball_lid"
+  }
+}

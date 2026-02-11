@@ -1,0 +1,70 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create_encapsulated:ancient_origin_ball_lid"
+  },
+  "results": [
+    {
+      "id": "cobblemon:ancient_origin_ball"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:ancient_origin_ball_lid"
+        },
+        [
+          {
+            "item": "create_encapsulated:ancient_origin_ball_base"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:ancient_origin_ball_lid"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:ancient_origin_ball_lid"
+        },
+        [
+          {
+            "item": "create:precision_mechanism"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:ancient_origin_ball_lid"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:ancient_origin_ball_lid"
+        },
+        [
+          {
+            "item": "minecraft:nether_star"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:ancient_origin_ball_lid"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "create_encapsulated:ancient_origin_ball_lid"
+  }
+}

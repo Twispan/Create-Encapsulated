@@ -1,0 +1,73 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create_encapsulated:poke_ball_base"
+  },
+  "results": [
+    {
+      "id": "create_encapsulated:ancient_origin_ball_base"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:poke_ball_base"
+        },
+        [
+          {
+            "item": "create_encapsulated:origin_alloy"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:poke_ball_base"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:poke_ball_base"
+        },
+        [
+          {
+            "item": "create:sand_paper"
+          },
+          {
+            "item": "create:red_sand_paper"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:poke_ball_base"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:poke_ball_base"
+        },
+        [
+          {
+            "item": "cobblemon:tumblestone"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:poke_ball_base"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "create_encapsulated:poke_ball_base"
+  }
+}

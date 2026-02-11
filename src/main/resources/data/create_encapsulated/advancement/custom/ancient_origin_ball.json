@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:ancient_origin_ball"
+    },
+    "title": "Master? I've hardly know 'er!",
+    "description": "Create a replica of the Origin Ball; the tool once used to contain The Almighty Sinnoh",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "create_encapsulated:custom/origin_alloy",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:ancient_origin_ball"
+            ]
+          }
+        ],
+        "recipe_id": ""
+      }
+    }
+  }
+}

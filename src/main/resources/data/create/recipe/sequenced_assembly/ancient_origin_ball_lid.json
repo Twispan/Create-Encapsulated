@@ -1,0 +1,73 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create_encapsulated:split_red_apricorn"
+  },
+  "results": [
+    {
+      "id": "create_encapsulated:ancient_origin_ball_lid"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_red_apricorn"
+        },
+        [
+          {
+            "item": "create_encapsulated:origin_alloy"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_red_apricorn"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_red_apricorn"
+        },
+        [
+          {
+            "item": "create:sand_paper"
+          },
+          {
+            "item": "create:red_sand_paper"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_red_apricorn"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_red_apricorn"
+        },
+        [
+          {
+            "item": "create:brass_ingot"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_red_apricorn"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "create_encapsulated:split_red_apricorn"
+  }
+}

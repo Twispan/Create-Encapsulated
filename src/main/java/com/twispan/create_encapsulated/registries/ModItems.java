@@ -100,9 +100,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> ANCIENTULTRABALLLID = ITEMS.register("ancient_ultra_ball_lid",
             () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> ORIGINBALLLID = ITEMS.register("origin_ball_lid",
+    public static final DeferredItem<Item> ORIGINBALLLID = ITEMS.register("ancient_origin_ball_lid",
             () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> ORIGINBALLBASE = ITEMS.register("origin_ball_base",
+    public static final DeferredItem<Item> ORIGINBALLBASE = ITEMS.register("ancient_origin_ball_base",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> ORIGINALLOY = ITEMS.register("origin_alloy",
             () -> new Item(new Item.Properties()));

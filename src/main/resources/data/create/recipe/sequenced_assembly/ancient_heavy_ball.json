@@ -1,0 +1,52 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create_encapsulated:ancient_heavy_ball_lid"
+  },
+  "results": [
+    {
+      "id": "cobblemon:ancient_heavy_ball"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:ancient_heavy_ball_lid"
+        },
+        [
+          {
+            "item": "create_encapsulated:poke_ball_base"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:ancient_heavy_ball_lid"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:ancient_heavy_ball_lid"
+        },
+        [
+          {
+            "item": "create:copper_nugget"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:ancient_heavy_ball_lid"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "create_encapsulated:ancient_heavy_ball_lid"
+  }
+}

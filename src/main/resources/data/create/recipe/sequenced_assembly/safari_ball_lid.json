@@ -5,7 +5,7 @@
   },
   "results": [
     {
-      "id": "create_encapsulated:lure_ball_lid"
+      "id": "create_encapsulated:safari_ball_lid"
     }
   ],
   "sequence": [
@@ -18,7 +18,7 @@
         {
           "type": "neoforge:single",
           "amount": 250,
-          "fluid": "create_encapsulated:blue_paint"
+          "fluid": "create_encapsulated:red_paint"
         }
       ],
       "results": [
@@ -37,24 +37,6 @@
           "type": "neoforge:single",
           "amount": 250,
           "fluid": "create_encapsulated:green_paint"
-        }
-      ],
-      "results": [
-        {
-          "id": "create_encapsulated:split_green_apricorn"
-        }
-      ]
-    },
-    {
-      "type": "create:filling",
-      "ingredients": [
-        {
-          "item": "create_encapsulated:split_green_apricorn"
-        },
-        {
-          "type": "neoforge:single",
-          "amount": 250,
-          "fluid": "create_encapsulated:yellow_paint"
         }
       ],
       "results": [

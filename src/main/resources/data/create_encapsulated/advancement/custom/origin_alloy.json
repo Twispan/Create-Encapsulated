@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "id": "create_encapsulated:origin_alloy"
+    },
+    "title": "Condensing of Power",
+    "description": "Assemble a fragment of Origin Alloy",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "create_encapsulated:custom/paint_lid",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_encapsulated:origin_alloy"
+            ]
+          }
+        ],
+        "recipe_id": ""
+      }
+    }
+  }
+}

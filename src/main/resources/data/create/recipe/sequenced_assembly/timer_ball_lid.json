@@ -1,0 +1,70 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create_encapsulated:split_white_apricorn"
+  },
+  "results": [
+    {
+      "id": "create_encapsulated:timer_ball_lid"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_white_apricorn"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:red_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_white_apricorn"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_white_apricorn"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:black_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_white_apricorn"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_white_apricorn"
+        },
+        [
+          {
+            "item": "minecraft:redstone"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_white_apricorn"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "create_encapsulated:split_white_apricorn"
+  }
+}
