@@ -8,9 +8,14 @@
     {
       "item": "create_encapsulated:red_paint"
     },
-    {
-      "tag": "c:nuggets/zinc"
-    }
+    [
+      {
+        "item": "create:zinc_nugget"
+      },
+      {
+        "item": "minecraft:iron_nugget"
+      }
+    ]
   ],
   "result": {
     "id": "create_encapsulated:ancient_great_ball_lid"

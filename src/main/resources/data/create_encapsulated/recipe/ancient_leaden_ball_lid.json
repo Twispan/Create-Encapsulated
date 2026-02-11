@@ -9,11 +9,16 @@
       "item": "minecraft:iron_nugget"
     },
     {
-      "tag": "c:nuggets/zinc"
-    },
-    {
       "item": "create_encapsulated:white_paint"
-    }
+    },
+    [
+      {
+        "item": "create:zinc_nugget"
+      },
+      {
+        "item": "minecraft:iron_nugget"
+      }
+    ]
   ],
   "result": {
     "id": "create_encapsulated:ancient_leaden_ball_lid"

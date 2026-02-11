@@ -35,7 +35,10 @@
         },
         [
           {
-            "tag": "c:nuggets/zinc"
+            "item": "create:zinc_nugget"
+          },
+          {
+            "item": "minecraft:iron_nugget"
           }
         ]
       ],

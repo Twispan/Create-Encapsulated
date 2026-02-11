@@ -3,16 +3,22 @@
   "category": "misc",
   "ingredients": [
     {
+      "item": "create_encapsulated:park_ball_lid"
+    },
+    {
       "item": "create_encapsulated:poke_ball_base"
     },
-    {
-      "tag": "c:nuggets/zinc"
-    },
-    {
-      "item": "create_encapsulated:park_ball_lid"
-    }
+    [
+      {
+        "item": "create:zinc_nugget"
+      },
+      {
+        "item": "minecraft:iron_nugget"
+      }
+    ]
   ],
   "result": {
+    "count": 1,
     "id": "cobblemon:park_ball"
   }
 }

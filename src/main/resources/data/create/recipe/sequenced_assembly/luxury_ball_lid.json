@@ -46,16 +46,16 @@
       ]
     },
     {
-      "type": "create:deploying",
+      "type": "create:filling",
       "ingredients": [
         {
           "item": "create_encapsulated:split_black_apricorn"
         },
-        [
-          {
-            "item": "minecraft:gold_nugget"
-          }
-        ]
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:white_paint"
+        }
       ],
       "results": [
         {

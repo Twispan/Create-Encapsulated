@@ -6,9 +6,6 @@
       "item": "minecraft:black_dye"
     },
     {
-      "item": "minecraft:glass_bottle"
-    },
-    {
       "item": "create:wheat_flour"
     },
     {
@@ -19,6 +16,7 @@
   ],
   "results": [
     {
+      "amount": 250,
       "id": "create_encapsulated:black_paint"
     }
   ]

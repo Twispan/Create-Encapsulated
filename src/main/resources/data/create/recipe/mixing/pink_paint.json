@@ -19,7 +19,10 @@
   ],
   "results": [
     {
-      "id": "create_encapsulated:pink_paint"
-    }
-  ]
-}
+      "results": [
+        {
+          "amount": 250,
+          "id": "create_encapsulated:pink_paint"
+        }
+      ]
+    },

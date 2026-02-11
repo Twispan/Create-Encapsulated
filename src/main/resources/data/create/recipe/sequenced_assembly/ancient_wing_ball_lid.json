@@ -36,6 +36,9 @@
         [
           {
             "item": "create:zinc_nugget"
+          },
+          {
+            "item": "minecraft:iron_nugget"
           }
         ]
       ],

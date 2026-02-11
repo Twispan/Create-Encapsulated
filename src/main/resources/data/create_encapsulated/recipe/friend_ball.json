@@ -3,16 +3,21 @@
   "category": "misc",
   "ingredients": [
     {
+      "item": "create_encapsulated:sport_ball_lid"
+    },
+    {
       "item": "create_encapsulated:poke_ball_base"
     },
-    {
-      "tag": "c:nuggets/zinc"
-    },
-    {
-      "item": "create_encapsulated:friend_ball_lid"
-    }
+    [
+      {
+        "item": "create:zinc_nugget"
+      },
+      {
+        "item": "minecraft:iron_nugget"
+      }
+    ]
   ],
   "result": {
-    "id": "cobblemon:friend_ball"
+    "id": "cobblemon:sport_ball"
   }
 }

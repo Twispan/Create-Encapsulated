@@ -1,1 +1,1 @@
-This is a mod that completely overhauls the Apricorn mechanic from Cobblemon to fit within the Create mod's progression.
+This is a mod that completely overhauls the Apricorn mechanic from Cobblemon to fit within the Create mod's progression. 
