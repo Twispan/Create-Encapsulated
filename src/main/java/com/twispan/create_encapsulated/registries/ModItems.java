@@ -1,8 +1,6 @@
 package com.twispan.create_encapsulated.registries;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.fluid.PaintColor;
-import com.twispan.create_encapsulated.fluid.PaintFluid;
 import com.twispan.create_encapsulated.item.Paint;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;

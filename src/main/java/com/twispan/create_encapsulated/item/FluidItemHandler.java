@@ -7,12 +7,12 @@ import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
 import org.jetbrains.annotations.NotNull;
 
-public class PaintFluidHandler implements IFluidHandlerItem {
+public class FluidItemHandler implements IFluidHandlerItem {
     private ItemStack container;
     private final FluidStack fluidStack;
     private static final int CAPACITY = 250; // 250mb = 1/4 bucket
 
-    public PaintFluidHandler(ItemStack container, FluidStack fluidStack) {
+    public FluidItemHandler(ItemStack container, FluidStack fluidStack) {
         this.container = container;
         this.fluidStack = fluidStack;
     }
@@ -70,7 +70,7 @@ public class PaintFluidHandler implements IFluidHandlerItem {
         if (action.execute()) {
             fluidStack.shrink(drained);
 
-            // Transform the paint item into an empty bottle
+            // Transform the item into an empty bottle
             if (container.getCount() == 1) {
                 container = new ItemStack(Items.GLASS_BOTTLE);
             } else {

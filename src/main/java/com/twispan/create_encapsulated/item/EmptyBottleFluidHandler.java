@@ -1,12 +1,14 @@
 package com.twispan.create_encapsulated.item;
 
-import com.twispan.create_encapsulated.fluid.PaintColor;
-import com.twispan.create_encapsulated.fluid.PaintFluidType;
+import com.twispan.create_encapsulated.fluid.MedicinalBrewFluidType;
+import com.twispan.create_encapsulated.fluid.paint.PaintColor;
+import com.twispan.create_encapsulated.fluid.paint.PaintFluidType;
 import com.twispan.create_encapsulated.registries.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
 import org.jetbrains.annotations.NotNull;
+import com.cobblemon.mod.common.CobblemonItems;
 
 public class EmptyBottleFluidHandler implements IFluidHandlerItem {
     private ItemStack container;
@@ -45,29 +47,35 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
     @Override
     public int fill(FluidStack resource, FluidAction action) {
         // This is called when the bottle extracts fluid FROM a container
-        if (resource.isEmpty() || !(resource.getFluidType() instanceof PaintFluidType paintFluidType)) {
+        if (resource.isEmpty()) {
             return 0;
         }
-
         int fillAmount = Math.min(CAPACITY, resource.getAmount());
 
         if (action.execute() && fillAmount == CAPACITY) { // Only fill if you can fill completely
-            // Get the paint color from the fluid type
-            PaintColor color = paintFluidType.getPaintColor();
+            if ((resource.getFluidType() instanceof PaintFluidType paintFluidType)) {
+                // Get the paint color from the fluid type
+                PaintColor color = paintFluidType.getPaintColor();
 
-            // Transform the empty bottle into the corresponding paint item
-            ItemStack paintItem = switch (color) {
-                case RED -> new ItemStack(ModItems.REDPAINT.get());
-                case BLUE -> new ItemStack(ModItems.BLUEPAINT.get());
-                case GREEN -> new ItemStack(ModItems.GREENPAINT.get());
-                case YELLOW -> new ItemStack(ModItems.YELLOWPAINT.get());
-                case PINK -> new ItemStack(ModItems.PINKPAINT.get());
-                case BLACK -> new ItemStack(ModItems.BLACKPAINT.get());
-                case WHITE -> new ItemStack(ModItems.WHITEPAINT.get());
-            };
+                // Transform the empty bottle into the corresponding paint item
+                ItemStack paintItem = switch (color) {
+                    case RED -> new ItemStack(ModItems.REDPAINT.get());
+                    case BLUE -> new ItemStack(ModItems.BLUEPAINT.get());
+                    case GREEN -> new ItemStack(ModItems.GREENPAINT.get());
+                    case YELLOW -> new ItemStack(ModItems.YELLOWPAINT.get());
+                    case PINK -> new ItemStack(ModItems.PINKPAINT.get());
+                    case BLACK -> new ItemStack(ModItems.BLACKPAINT.get());
+                    case WHITE -> new ItemStack(ModItems.WHITEPAINT.get());
+                };
 
-            // Transform the container
-            container = paintItem.copy();
+                // Transform the container
+                container = paintItem.copy();
+            }
+
+            if ((resource.getFluidType() instanceof MedicinalBrewFluidType)) {
+                container = new ItemStack(CobblemonItems.MEDICINAL_BREW);
+            }
+
         }
 
         return fillAmount;

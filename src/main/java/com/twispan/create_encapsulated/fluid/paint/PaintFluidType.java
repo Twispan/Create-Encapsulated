@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.fluid;
+package com.twispan.create_encapsulated.fluid.paint;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -6,8 +6,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.material.FluidState;
 import net.neoforged.neoforge.fluids.FluidType;
-
-import javax.annotation.Nullable;
 
 public class PaintFluidType extends FluidType {
     private final PaintColor color;

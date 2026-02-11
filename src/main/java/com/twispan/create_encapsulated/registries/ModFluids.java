@@ -1,9 +1,11 @@
 package com.twispan.create_encapsulated.registries;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.fluid.PaintColor;
-import com.twispan.create_encapsulated.fluid.PaintFluid;
-import com.twispan.create_encapsulated.fluid.PaintFluidType;
+import com.twispan.create_encapsulated.fluid.MedicinalBrewFluid;
+import com.twispan.create_encapsulated.fluid.MedicinalBrewFluidType;
+import com.twispan.create_encapsulated.fluid.paint.PaintColor;
+import com.twispan.create_encapsulated.fluid.paint.PaintFluid;
+import com.twispan.create_encapsulated.fluid.paint.PaintFluidType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.fluids.FluidType;
@@ -108,4 +110,16 @@ public class ModFluids {
 
     public static final DeferredHolder<Fluid, PaintFluid.Source> WHITE_PAINT =
             FLUIDS.register("white_paint", () -> new PaintFluid.Source(WHITE_PAINT_TYPE));
+
+    // Medicinal Brew
+    public static final DeferredHolder<FluidType, MedicinalBrewFluidType> MEDICINAL_BREW_TYPE =
+            FLUID_TYPES.register("medicinal_brew", () -> new MedicinalBrewFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300)
+            ));
+
+    public static final DeferredHolder<Fluid, MedicinalBrewFluid.Source> MEDICINAL_BREW =
+            FLUIDS.register("medicinal_brew", () -> new MedicinalBrewFluid.Source(MEDICINAL_BREW_TYPE));
 }

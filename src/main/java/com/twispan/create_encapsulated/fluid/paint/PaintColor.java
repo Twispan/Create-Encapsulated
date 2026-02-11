@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.fluid;
+package com.twispan.create_encapsulated.fluid.paint;
 
 public enum PaintColor {
     RED(0xFF5A3A),

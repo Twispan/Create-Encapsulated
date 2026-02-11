@@ -1,5 +1,6 @@
 package com.twispan.create_encapsulated.fluid;
 
+import com.twispan.create_encapsulated.fluid.paint.PaintFluid;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.Item;
@@ -16,21 +17,20 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.fluids.FluidType;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import org.jetbrains.annotations.NotNull;
 
-public abstract class PaintFluid extends Fluid {
-    private final DeferredHolder<FluidType, PaintFluidType> type;
+public class MedicinalBrewFluid extends Fluid {
+    private final DeferredHolder<FluidType, MedicinalBrewFluidType> type;
 
-    protected PaintFluid(DeferredHolder<FluidType, PaintFluidType> type) {
-        this.type = type;
-    }
+    protected MedicinalBrewFluid(DeferredHolder<FluidType, MedicinalBrewFluidType> type) {this.type = type; }
 
     @Override
-    public FluidType getFluidType() {
+    public @NotNull FluidType getFluidType() {
         return type.get();
     }
 
     @Override
-    public Item getBucket() {
+    public @NotNull Item getBucket() {
         return Items.AIR; // No bucket
     }
 
@@ -55,7 +55,7 @@ public abstract class PaintFluid extends Fluid {
     }
 
     @Override
-    protected BlockState createLegacyBlock(FluidState state) {
+    protected @NotNull BlockState createLegacyBlock(FluidState state) {
         return Blocks.AIR.defaultBlockState(); // No world block
     }
 
@@ -65,8 +65,13 @@ public abstract class PaintFluid extends Fluid {
     }
 
     @Override
-    public Vec3 getFlow(BlockGetter blockGetter, BlockPos pos, FluidState fluidState) {
+    public @NotNull Vec3 getFlow(BlockGetter blockGetter, BlockPos pos, FluidState fluidState) {
         return Vec3.ZERO; // No flow since this fluid doesn't exist in world
+    }
+
+    @Override
+    public int getTickDelay(LevelReader levelReader) {
+        return 0;
     }
 
     @Override
@@ -80,18 +85,13 @@ public abstract class PaintFluid extends Fluid {
     }
 
     @Override
-    public VoxelShape getShape(FluidState fluidState, BlockGetter blockGetter, BlockPos pos) {
+    public @NotNull VoxelShape getShape(FluidState fluidState, BlockGetter blockGetter, BlockPos pos) {
         return Shapes.empty(); // No collision shape
     }
 
-    public static class Source extends PaintFluid {
-        public Source(DeferredHolder<FluidType, PaintFluidType> type) {
+    public static class Source extends MedicinalBrewFluid {
+        public Source(DeferredHolder<FluidType, MedicinalBrewFluidType> type) {
             super(type);
-        }
-
-        @Override
-        public int getTickDelay(LevelReader levelReader) {
-            return 0;
         }
     }
 }
