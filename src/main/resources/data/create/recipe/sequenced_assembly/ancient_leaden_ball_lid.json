@@ -17,6 +17,9 @@
         },
         [
           {
+            "item": "create:zinc_nugget"
+          },
+          {
             "item": "minecraft:iron_nugget"
           }
         ]
@@ -52,9 +55,6 @@
           "item": "create_encapsulated:split_black_apricorn"
         },
         [
-          {
-            "item": "create:zinc_nugget"
-          },
           {
             "item": "minecraft:iron_nugget"
           }

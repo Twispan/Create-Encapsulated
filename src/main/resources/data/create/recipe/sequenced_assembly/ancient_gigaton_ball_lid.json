@@ -17,7 +17,7 @@
         },
         [
           {
-            "item": "minecraft:iron_nugget"
+            "item": "create:brass_nugget"
           }
         ]
       ],
@@ -53,7 +53,7 @@
         },
         [
           {
-            "item": "create:brass_nugget"
+            "item": "minecraft:iron_nugget"
           }
         ]
       ],

@@ -64,16 +64,16 @@
       ]
     },
     {
-      "type": "create:deploying",
+      "type": "create:filling",
       "ingredients": [
         {
           "item": "create_encapsulated:beast_ball_lid"
         },
-        [
-          {
-            "item": "create_encapsulated:blue_paint"
-          }
-        ]
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:blue_paint"
+        }
       ],
       "results": [
         {
@@ -82,16 +82,16 @@
       ]
     },
     {
-      "type": "create:deploying",
+      "type": "create:filling",
       "ingredients": [
         {
           "item": "create_encapsulated:beast_ball_lid"
         },
-        [
-          {
-            "item": "create_encapsulated:red_paint"
-          }
-        ]
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:red_paint"
+        }
       ],
       "results": [
         {

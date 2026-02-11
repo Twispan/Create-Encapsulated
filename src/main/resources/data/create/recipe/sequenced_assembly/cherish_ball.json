@@ -1,7 +1,7 @@
 {
   "type": "create:sequenced_assembly",
   "ingredient": {
-    "item": "create_encapsulated:cherish_ball_lid"
+    "item": "create_encapsulated:poke_ball_base"
   },
   "results": [
     {
@@ -13,17 +13,17 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "create_encapsulated:cherish_ball_lid"
+          "item": "create_encapsulated:poke_ball_base"
         },
         [
           {
-            "item": "create_encapsulated:poke_ball_base"
+            "item": "create_encapsulated:split_red_apricorn"
           }
         ]
       ],
       "results": [
         {
-          "id": "create_encapsulated:cherish_ball_lid"
+          "id": "create_encapsulated:poke_ball_base"
         }
       ]
     },
@@ -31,7 +31,64 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "create_encapsulated:cherish_ball_lid"
+          "item": "create_encapsulated:poke_ball_base"
+        },
+        [
+          {
+            "item": "create:sand_paper"
+          },
+          {
+            "item": "create:red_sand_paper"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:poke_ball_base"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:poke_ball_base"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:red_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:poke_ball_base"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:poke_ball_base"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:black_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:poke_ball_base"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:poke_ball_base"
         },
         [
           {
@@ -41,12 +98,12 @@
       ],
       "results": [
         {
-          "id": "create_encapsulated:cherish_ball_lid"
+          "id": "create_encapsulated:poke_ball_base"
         }
       ]
     }
   ],
   "transitional_item": {
-    "id": "create_encapsulated:cherish_ball_lid"
+    "id": "create_encapsulated:poke_ball_base"
   }
 }

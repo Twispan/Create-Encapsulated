@@ -6,9 +6,6 @@
       "item": "minecraft:green_dye"
     },
     {
-      "item": "minecraft:glass_bottle"
-    },
-    {
       "item": "create:wheat_flour"
     },
     {
@@ -19,10 +16,8 @@
   ],
   "results": [
     {
-      "results": [
-        {
-          "amount": 250,
-          "id": "create_encapsulated:green_paint"
-        }
-      ]
-    },
+      "amount": 250,
+      "id": "create_encapsulated:green_paint"
+    }
+  ]
+}

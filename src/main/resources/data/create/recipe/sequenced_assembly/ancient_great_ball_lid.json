@@ -10,24 +10,6 @@
   ],
   "sequence": [
     {
-      "type": "create:filling",
-      "ingredients": [
-        {
-          "item": "create_encapsulated:split_blue_apricorn"
-        },
-        {
-          "type": "neoforge:single",
-          "amount": 250,
-          "fluid": "create_encapsulated:red_paint"
-        }
-      ],
-      "results": [
-        {
-          "id": "create_encapsulated:split_blue_apricorn"
-        }
-      ]
-    },
-    {
       "type": "create:deploying",
       "ingredients": [
         {
@@ -41,6 +23,24 @@
             "item": "minecraft:iron_nugget"
           }
         ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_blue_apricorn"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_blue_apricorn"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:red_paint"
+        }
       ],
       "results": [
         {

@@ -10,24 +10,6 @@
   ],
   "sequence": [
     {
-      "type": "create:filling",
-      "ingredients": [
-        {
-          "item": "create_encapsulated:split_black_apricorn"
-        },
-        {
-          "type": "neoforge:single",
-          "amount": 250,
-          "fluid": "create_encapsulated:yellow_paint"
-        }
-      ],
-      "results": [
-        {
-          "id": "create_encapsulated:split_black_apricorn"
-        }
-      ]
-    },
-    {
       "type": "create:deploying",
       "ingredients": [
         {
@@ -38,6 +20,24 @@
             "item": "create:brass_nugget"
           }
         ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:split_black_apricorn"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:split_black_apricorn"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:yellow_paint"
+        }
       ],
       "results": [
         {

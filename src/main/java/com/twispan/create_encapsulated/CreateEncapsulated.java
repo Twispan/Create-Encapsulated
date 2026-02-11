@@ -107,7 +107,6 @@ public class CreateEncapsulated {
             event.accept(ModItems.DREAMBALLLID);
             event.accept(ModItems.MASTERBALLLID);
             event.accept(ModItems.BEASTBALLLID);
-            event.accept(ModItems.CHERISHBALLLID);
             event.accept(ModItems.FEATHERBALLLID);
             event.accept(ModItems.WINGBALLLID);
             event.accept(ModItems.JETBALLLID);

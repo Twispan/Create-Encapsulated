@@ -54,7 +54,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DREAMBALLLID);
                         output.accept(ModItems.MASTERBALLLID);
                         output.accept(ModItems.BEASTBALLLID);
-                        output.accept(ModItems.CHERISHBALLLID);
                         output.accept(ModItems.FEATHERBALLLID);
                         output.accept(ModItems.WINGBALLLID);
                         output.accept(ModItems.JETBALLLID);

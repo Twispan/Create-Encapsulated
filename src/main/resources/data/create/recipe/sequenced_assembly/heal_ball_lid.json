@@ -18,7 +18,7 @@
         {
           "type": "neoforge:single",
           "amount": 250,
-          "fluid": "create_encapsulated:white_paint"
+          "fluid": "create_encapsulated:yellow_paint"
         }
       ],
       "results": [
@@ -36,7 +36,7 @@
         {
           "type": "neoforge:single",
           "amount": 250,
-          "fluid": "create_encapsulated:yellow_paint"
+          "fluid": "create_encapsulated:white_paint"
         }
       ],
       "results": [
