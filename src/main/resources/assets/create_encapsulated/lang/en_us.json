@@ -62,5 +62,7 @@
   "fluid_type.create_encapsulated.black_paint": "Black Paint",
   "fluid_type.create_encapsulated.white_paint": "White Paint",
 
+  "fluid_type.create_encapsulated.medicinal_brew": "Medicinal Brew",
+
   "creativetab.create_encapsulated.pokeballcomponents_items": "Poké Ball Components"
 }

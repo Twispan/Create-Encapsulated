@@ -1,0 +1,20 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "cobblemon:energy_root"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 1000,
+      "fluid": "create_encapsulated:pp_up"
+    }
+  ],
+  "results": [
+    {
+      "amount": 1000,
+      "id": "create_encapsulated:pp_max"
+    }
+  ]
+}

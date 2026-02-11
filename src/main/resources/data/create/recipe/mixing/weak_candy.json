@@ -1,0 +1,39 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "cobblemon:kelpsy_berry"
+    },
+    {
+      "item": "cobblemon:kelpsy_berry"
+    },
+    {
+      "item": "cobblemon:kelpsy_berry"
+    },
+    {
+      "item": "cobblemon:kelpsy_berry"
+    },
+    {
+      "item": "cobblemon:enigma_berry"
+    },
+    {
+      "item": "cobblemon:enigma_berry"
+    },
+    {
+      "item": "cobblemon:enigma_berry"
+    },
+    {
+      "item": "cobblemon:enigma_berry"
+    },
+    {
+      "item": "cobblemon:exp_candy_xl"
+    }
+  ],
+  "results": [
+    {
+      "count": 3,
+      "id": "cobblemon:weak_candy"
+    }
+  ]
+}

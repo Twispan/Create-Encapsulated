@@ -1,0 +1,21 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create:honey"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:star_sweet"
+    }
+  ]
+}

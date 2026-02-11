@@ -1,0 +1,32 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "cobblemon:tamato_berry"
+    },
+    {
+      "item": "cobblemon:tamato_berry"
+    },
+    {
+      "item": "cobblemon:tamato_berry"
+    },
+    {
+      "item": "cobblemon:tamato_berry"
+    },
+    {
+      "item": "cobblemon:exp_candy_xl"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 1000,
+      "fluid": "create:honey"
+    }
+  ],
+  "results": [
+    {
+      "count": 3,
+      "id": "cobblemon:quick_candy"
+    }
+  ]
+}

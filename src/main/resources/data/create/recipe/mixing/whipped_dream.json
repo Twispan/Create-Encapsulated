@@ -1,0 +1,26 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create:honey"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 1000,
+      "fluid": "minecraft:milk"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:whipped_dream"
+    }
+  ]
+}

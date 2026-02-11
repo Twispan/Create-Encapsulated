@@ -1,0 +1,22 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:dirt"
+    },
+    {
+      "item": "minecraft:mud"
+    },
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "item": "minecraft:clay"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:peat_block"
+    }
+  ]
+}
