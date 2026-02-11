@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 25,
+      "item": "create_encapsulated:calcium"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:genius_feather"
+    }
+  ]
+}

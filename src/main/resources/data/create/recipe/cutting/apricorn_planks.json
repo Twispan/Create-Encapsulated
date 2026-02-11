@@ -2,7 +2,7 @@
   "type": "create:cutting",
   "ingredients": [
     {
-      "item": "cobblemon:apricorn_planks"
+      "tag": "planks"
     }
   ],
   "processing_time": 100,
