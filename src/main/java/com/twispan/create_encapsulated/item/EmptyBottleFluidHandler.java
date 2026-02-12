@@ -108,6 +108,15 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
             case PINK -> new ItemStack(ModItems.PINKPAINT.get());
             case BLACK -> new ItemStack(ModItems.BLACKPAINT.get());
             case WHITE -> new ItemStack(ModItems.WHITEPAINT.get());
+            case PURPLE -> new ItemStack(ModItems.PURPLEPAINT.get());
+            case MAGENTA -> new ItemStack(ModItems.MAGENTAPAINT.get());
+            case LIME -> new ItemStack(ModItems.LIMEPAINT.get());
+            case CYAN -> new ItemStack(ModItems.CYANPAINT.get());
+            case LIGHTBLUE -> new ItemStack(ModItems.LIGHTBLUEPAINT.get());
+            case ORANGE -> new ItemStack(ModItems.ORANGEPAINT.get());
+            case BROWN -> new ItemStack(ModItems.BROWNPAINT.get());
+            case LIGHTGRAY -> new ItemStack(ModItems.LIGHTGRAYPAINT.get());
+            case GRAY -> new ItemStack(ModItems.GRAYPAINT.get());
         };
     }
 
