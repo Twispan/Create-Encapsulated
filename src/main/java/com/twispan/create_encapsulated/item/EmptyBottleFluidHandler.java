@@ -5,6 +5,8 @@ import com.twispan.create_encapsulated.fluid.paint.PaintColor;
 import com.twispan.create_encapsulated.fluid.paint.PaintFluidType;
 import com.twispan.create_encapsulated.fluid.potions.PotionFluidType;
 import com.twispan.create_encapsulated.fluid.potions.PotionType;
+import com.twispan.create_encapsulated.fluid.vitamins.VitaminFluidType;
+import com.twispan.create_encapsulated.fluid.vitamins.VitaminType;
 import com.twispan.create_encapsulated.registries.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.fluids.FluidStack;
@@ -47,6 +49,7 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
         return  stack.getFluidType() instanceof PaintFluidType ||
                 stack.getFluidType() instanceof PotionFluidType ||
                 stack.getFluidType() instanceof MedicinalBrewFluidType ||
+                stack.getFluidType() instanceof VitaminFluidType ||
                 stack.getFluid() == NeoForgeMod.MILK.get();
 
     }
@@ -62,18 +65,7 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
         if (action.execute() && fillAmount == CAPACITY) { // Only fill if you can fill completely
             if ((resource.getFluidType() instanceof PaintFluidType paintFluidType)) {
                 // Get the paint color from the fluid type
-                PaintColor color = paintFluidType.getPaintColor();
-
-                // Transform the empty bottle into the corresponding paint item
-                ItemStack paintItem = switch (color) {
-                    case RED -> new ItemStack(ModItems.REDPAINT.get());
-                    case BLUE -> new ItemStack(ModItems.BLUEPAINT.get());
-                    case GREEN -> new ItemStack(ModItems.GREENPAINT.get());
-                    case YELLOW -> new ItemStack(ModItems.YELLOWPAINT.get());
-                    case PINK -> new ItemStack(ModItems.PINKPAINT.get());
-                    case BLACK -> new ItemStack(ModItems.BLACKPAINT.get());
-                    case WHITE -> new ItemStack(ModItems.WHITEPAINT.get());
-                };
+                ItemStack paintItem = getPaintItem(paintFluidType);
 
                 // Transform the container
                 container = paintItem.copy();
@@ -93,9 +85,30 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
             if (resource.getFluid() == NeoForgeMod.MILK.get()) {
                 container = new ItemStack(CobblemonItems.MOOMOO_MILK);
             }
+
+            if (resource.getFluidType() instanceof VitaminFluidType vitaminFluidType) {
+                ItemStack vitaminItem = getVitaminItem(vitaminFluidType);
+
+                container = vitaminItem.copy();
+            }
         }
 
         return fillAmount;
+    }
+
+    private static @NotNull ItemStack getPaintItem(PaintFluidType paintFluidType) {
+        PaintColor color = paintFluidType.getPaintColor();
+
+        // Transform the empty bottle into the corresponding paint item
+        return switch (color) {
+            case RED -> new ItemStack(ModItems.REDPAINT.get());
+            case BLUE -> new ItemStack(ModItems.BLUEPAINT.get());
+            case GREEN -> new ItemStack(ModItems.GREENPAINT.get());
+            case YELLOW -> new ItemStack(ModItems.YELLOWPAINT.get());
+            case PINK -> new ItemStack(ModItems.PINKPAINT.get());
+            case BLACK -> new ItemStack(ModItems.BLACKPAINT.get());
+            case WHITE -> new ItemStack(ModItems.WHITEPAINT.get());
+        };
     }
 
     private static @NotNull ItemStack getPotionItem(PotionFluidType potionFluidType) {
@@ -108,6 +121,22 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
             case HYPER -> new ItemStack(CobblemonItems.HYPER_POTION);
             case MAX -> new ItemStack(CobblemonItems.MAX_POTION);
             case FULL_RESTORE -> new ItemStack(CobblemonItems.FULL_RESTORE);
+        };
+    }
+
+    private static @NotNull ItemStack getVitaminItem(VitaminFluidType vitaminFluidType) {
+        VitaminType type = vitaminFluidType.getType();
+
+        // Transform the empty bottle into the corresponding vitamin item
+        return switch (type) {
+            case CARBOS -> new ItemStack(CobblemonItems.CARBOS);
+            case CALCIUM -> new ItemStack(CobblemonItems.CALCIUM);
+            case HP_UP -> new ItemStack(CobblemonItems.HP_UP);
+            case PROTEIN -> new ItemStack(CobblemonItems.PROTEIN);
+            case PP_UP -> new ItemStack(CobblemonItems.PP_UP);
+            case PP_MAX -> new ItemStack(CobblemonItems.PP_MAX);
+            case IRON -> new ItemStack(CobblemonItems.IRON);
+            case ZINC -> new ItemStack(CobblemonItems.ZINC);
         };
     }
 

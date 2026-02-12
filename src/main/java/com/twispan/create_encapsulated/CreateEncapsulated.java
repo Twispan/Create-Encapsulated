@@ -158,6 +158,7 @@ public class CreateEncapsulated {
                 },
                 CobblemonItems.MEDICINAL_BREW
         );
+
         // Register fluid handler capability for potions
         event.registerItem(
                 Capabilities.FluidHandler.ITEM,
@@ -192,6 +193,63 @@ public class CreateEncapsulated {
                 (stack, context) -> new FluidItemHandler(stack,
                         new FluidStack(ModFluids.FULL_RESTORE.get(), 250)),
                 CobblemonItems.FULL_RESTORE
+        );
+
+        // Register fluid handler capability for vitamins
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.CARBOS.get(), 250)),
+                CobblemonItems.CARBOS
+        );
+
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.CALCIUM.get(), 250)),
+                CobblemonItems.CALCIUM
+        );
+
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.HP_UP.get(), 250)),
+                CobblemonItems.HP_UP
+        );
+
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.PROTEIN.get(), 250)),
+                CobblemonItems.PROTEIN
+        );
+
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.PP_UP.get(), 250)),
+                CobblemonItems.PP_UP
+        );
+
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.PP_MAX.get(), 250)),
+                CobblemonItems.PP_MAX
+        );
+
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.IRON.get(), 250)),
+                CobblemonItems.IRON
+        );
+
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.ZINC.get(), 250)),
+                CobblemonItems.ZINC
         );
 
         // Milk (for moomoo milk)

@@ -9,6 +9,9 @@ import com.twispan.create_encapsulated.fluid.paint.PaintFluidType;
 import com.twispan.create_encapsulated.fluid.potions.PotionFluid;
 import com.twispan.create_encapsulated.fluid.potions.PotionFluidType;
 import com.twispan.create_encapsulated.fluid.potions.PotionType;
+import com.twispan.create_encapsulated.fluid.vitamins.VitaminFluid;
+import com.twispan.create_encapsulated.fluid.vitamins.VitaminFluidType;
+import com.twispan.create_encapsulated.fluid.vitamins.VitaminType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.fluids.FluidType;
@@ -190,4 +193,108 @@ public class ModFluids {
 
     public static final DeferredHolder<Fluid, PotionFluid> FULL_RESTORE =
             FLUIDS.register("full_restore", () -> new PotionFluid.Source(FULL_RESTORE_TYPE));
+
+    // Calcium
+    public static final DeferredHolder<FluidType, VitaminFluidType> CALCIUM_TYPE =
+            FLUID_TYPES.register("calcium", () -> new VitaminFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300),
+                    VitaminType.CALCIUM
+            ));
+
+    public static final DeferredHolder<Fluid, VitaminFluid> CALCIUM =
+            FLUIDS.register("calcium", () -> new VitaminFluid.Source(CALCIUM_TYPE));
+
+    // Carbos
+    public static final DeferredHolder<FluidType, VitaminFluidType> CARBOS_TYPE =
+                FLUID_TYPES.register("carbos", () -> new VitaminFluidType(
+                        FluidType.Properties.create()
+                                .density(2000)
+                                .viscosity(6000)
+                                .temperature(300),
+                        VitaminType.CARBOS
+                ));
+
+    public static final DeferredHolder<Fluid, VitaminFluid> CARBOS =
+            FLUIDS.register("carbos", () -> new VitaminFluid.Source(CARBOS_TYPE));
+
+    // HP UP
+    public static final DeferredHolder<FluidType, VitaminFluidType> HP_UP_TYPE =
+                FLUID_TYPES.register("hp_up", () -> new VitaminFluidType(
+                        FluidType.Properties.create()
+                                .density(2000)
+                                .viscosity(6000)
+                                .temperature(300),
+                        VitaminType.HP_UP
+                ));
+
+    public static final DeferredHolder<Fluid, VitaminFluid> HP_UP =
+            FLUIDS.register("hp_up", () -> new VitaminFluid.Source(HP_UP_TYPE));
+
+    // Iron
+    public static final DeferredHolder<FluidType, VitaminFluidType> IRON_TYPE =
+            FLUID_TYPES.register("iron", () -> new VitaminFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300),
+                    VitaminType.IRON
+            ));
+
+    public static final DeferredHolder<Fluid, VitaminFluid> IRON =
+            FLUIDS.register("iron", () -> new VitaminFluid.Source(IRON_TYPE));
+
+    // PP UP
+    public static final DeferredHolder<FluidType, VitaminFluidType> PP_UP_TYPE =
+            FLUID_TYPES.register("pp_up", () -> new VitaminFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300),
+                    VitaminType.PP_UP
+            ));
+
+    public static final DeferredHolder<Fluid, VitaminFluid> PP_UP =
+            FLUIDS.register("pp_up", () -> new VitaminFluid.Source(PP_UP_TYPE));
+
+    // PP MAX
+    public static final DeferredHolder<FluidType, VitaminFluidType> PP_MAX_TYPE =
+            FLUID_TYPES.register("pp_max", () -> new VitaminFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300),
+                    VitaminType.PP_MAX
+            ));
+
+    public static final DeferredHolder<Fluid, VitaminFluid> PP_MAX =
+            FLUIDS.register("pp_max", () -> new VitaminFluid.Source(PP_MAX_TYPE));
+
+    // Protein
+    public static final DeferredHolder<FluidType, VitaminFluidType> PROTEIN_TYPE =
+            FLUID_TYPES.register("protein", () -> new VitaminFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300),
+                    VitaminType.PROTEIN
+            ));
+
+    public static final DeferredHolder<Fluid, VitaminFluid> PROTEIN =
+            FLUIDS.register("protein", () -> new VitaminFluid.Source(PROTEIN_TYPE));
+
+    // Zinc
+    public static final DeferredHolder<FluidType, VitaminFluidType> ZINC_TYPE =
+            FLUID_TYPES.register("zinc", () -> new VitaminFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300),
+                    VitaminType.ZINC
+            ));
+
+    public static final DeferredHolder<Fluid, VitaminFluid> ZINC =
+            FLUIDS.register("zinc", () -> new VitaminFluid.Source(ZINC_TYPE));
 }
