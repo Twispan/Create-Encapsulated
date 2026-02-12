@@ -11,6 +11,7 @@ import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
 import org.jetbrains.annotations.NotNull;
 import com.cobblemon.mod.common.CobblemonItems;
+import net.neoforged.neoforge.common.NeoForgeMod;
 
 public class EmptyBottleFluidHandler implements IFluidHandlerItem {
     private ItemStack container;
@@ -43,7 +44,11 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
     @Override
     public boolean isFluidValid(int tank, @NotNull FluidStack stack) {
         // Only accept paint fluids
-        return stack.getFluidType() instanceof PaintFluidType;
+        return  stack.getFluidType() instanceof PaintFluidType ||
+                stack.getFluidType() instanceof PotionFluidType ||
+                stack.getFluidType() instanceof MedicinalBrewFluidType ||
+                stack.getFluid() == NeoForgeMod.MILK.get();
+
     }
 
     @Override
@@ -85,6 +90,9 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
                 container = potionItem.copy();
             }
 
+            if (resource.getFluid() == NeoForgeMod.MILK.get()) {
+                container = new ItemStack(CobblemonItems.MOOMOO_MILK);
+            }
         }
 
         return fillAmount;

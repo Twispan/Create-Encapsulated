@@ -13,6 +13,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.common.NeoForgeMod;
 import net.neoforged.neoforge.fluids.FluidStack;
 import org.slf4j.Logger;
 
@@ -69,7 +70,7 @@ public class CreateEncapsulated {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-
+        NeoForgeMod.enableMilkFluid();
     }
 
     // Add the example block item to the building blocks tab
@@ -191,6 +192,14 @@ public class CreateEncapsulated {
                 (stack, context) -> new FluidItemHandler(stack,
                         new FluidStack(ModFluids.FULL_RESTORE.get(), 250)),
                 CobblemonItems.FULL_RESTORE
+        );
+
+        // Milk (for moomoo milk)
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(NeoForgeMod.MILK.get(), 250)),
+                CobblemonItems.MOOMOO_MILK
         );
 
         // Empty bottle handler
