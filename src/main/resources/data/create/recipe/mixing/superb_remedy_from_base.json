@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "cobblemon:remedy"
+    },
+    {
+      "tag": "cobblemon:remedy_berries"
+    },
+    {
+      "item": "cobblemon:energy_root"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:superb_remedy"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "minecraft:glow_lichen"
+    }
+  ],
+  "processing_time": 200,
+  "results": [
+    {
+      "count": 1,
+      "id": "cobblemon:bright_powder"
+    },
+    {
+      "chance": 0.25,
+      "count": 1,
+      "id": "cobblemon:bright_powder"
+    }
+  ]
+}

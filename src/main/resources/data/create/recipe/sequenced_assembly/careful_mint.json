@@ -1,0 +1,70 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "cobblemon:cyan_mint_leaf"
+  },
+  "results": [
+    {
+      "id": "cobblemon:careful_mint"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "cobblemon:cyan_mint_leaf"
+        },
+        [
+          {
+            "item": "cobblemon:pink_mint_leaf"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "cobblemon:cyan_mint_leaf"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "cobblemon:cyan_mint_leaf"
+        },
+        [
+          {
+            "item": "cobblemon:pink_mint_leaf"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "cobblemon:cyan_mint_leaf"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "cobblemon:cyan_mint_leaf"
+        },
+        [
+          {
+            "item": "cobblemon:pink_mint_leaf"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "cobblemon:cyan_mint_leaf"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "cobblemon:cyan_mint_leaf"
+  }
+}

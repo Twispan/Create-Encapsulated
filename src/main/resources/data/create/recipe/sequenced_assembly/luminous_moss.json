@@ -1,0 +1,52 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "minecraft:bowl"
+  },
+  "results": [
+    {
+      "id": "cobblemon:luminous_moss"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:bowl"
+        },
+        [
+          {
+            "item": "minecraft:glow_berries"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "minecraft:bowl"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:bowl"
+        },
+        [
+          {
+            "item": "minecraft:moss_block"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "minecraft:bowl"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "minecraft:bowl"
+  }
+}

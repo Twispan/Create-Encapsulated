@@ -1,0 +1,16 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "cobblemon:fine_remedy"
+    },
+    {
+      "item": "cobblemon:energy_root"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:superb_remedy"
+    }
+  ]
+}

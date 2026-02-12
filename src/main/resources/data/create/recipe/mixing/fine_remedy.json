@@ -1,0 +1,16 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "cobblemon:remedy"
+    },
+    {
+      "tag": "cobblemon:remedy_berries"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:fine_remedy"
+    }
+  ]
+}

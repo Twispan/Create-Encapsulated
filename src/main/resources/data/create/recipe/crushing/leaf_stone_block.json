@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "cobblemon:leaf_stone_block"
+    }
+  ],
+  "processing_time": 400,
+  "results": [
+    {
+      "count": 9,
+      "id": "cobblemon:leaf_stone"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "cobblemon:red_mint_leaf"
+  },
+  "results": [
+    {
+      "id": "cobblemon:calm_mint"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "cobblemon:red_mint_leaf"
+        },
+        [
+          {
+            "item": "cobblemon:pink_mint_leaf"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "cobblemon:red_mint_leaf"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "cobblemon:red_mint_leaf"
+        },
+        [
+          {
+            "item": "cobblemon:pink_mint_leaf"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "cobblemon:red_mint_leaf"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "cobblemon:red_mint_leaf"
+        },
+        [
+          {
+            "item": "cobblemon:pink_mint_leaf"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "cobblemon:red_mint_leaf"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "cobblemon:red_mint_leaf"
+  }
+}
