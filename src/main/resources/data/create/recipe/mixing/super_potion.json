@@ -2,28 +2,14 @@
   "type": "create:mixing",
   "heat_requirement": "heated",
   "ingredients": [
-    [
-      {
-        "item": "cobblemon:hondew_berry"
-      },
-      {
-        "item": "cobblemon:figy_berry"
-      },
-      {
-        "item": "cobblemon:iapapa_berry"
-      },
-      {
-        "item": "cobblemon:mago_berry"
-      },
-      {
-        "item": "cobblemon:wiki_berry"
-      },
-      {
-        "type": "neoforge:single",
-        "amount": 1000,
-        "fluid": "create_encapsulated:potion"
-      }
-    ]
+    {
+      "tag": "cobblemon:super_potion_ingredients"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 1000,
+      "fluid": "create_encapsulated:potion"
+    }
   ],
   "results": [
     {
