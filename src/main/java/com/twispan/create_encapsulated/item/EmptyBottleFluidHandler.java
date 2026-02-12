@@ -3,6 +3,8 @@ package com.twispan.create_encapsulated.item;
 import com.twispan.create_encapsulated.fluid.MedicinalBrewFluidType;
 import com.twispan.create_encapsulated.fluid.paint.PaintColor;
 import com.twispan.create_encapsulated.fluid.paint.PaintFluidType;
+import com.twispan.create_encapsulated.fluid.potions.PotionFluidType;
+import com.twispan.create_encapsulated.fluid.potions.PotionType;
 import com.twispan.create_encapsulated.registries.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.fluids.FluidStack;
@@ -76,9 +78,29 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
                 container = new ItemStack(CobblemonItems.MEDICINAL_BREW);
             }
 
+            if ((resource.getFluidType() instanceof PotionFluidType potionFluidType)) {
+                // Get potion type
+                ItemStack potionItem = getPotionItem(potionFluidType);
+
+                container = potionItem.copy();
+            }
+
         }
 
         return fillAmount;
+    }
+
+    private static @NotNull ItemStack getPotionItem(PotionFluidType potionFluidType) {
+        PotionType type = potionFluidType.getType();
+
+        // Transform the empty bottle into the corresponding potion item
+        return switch (type) {
+            case POTION -> new ItemStack(CobblemonItems.POTION);
+            case SUPER -> new ItemStack(CobblemonItems.SUPER_POTION);
+            case HYPER -> new ItemStack(CobblemonItems.HYPER_POTION);
+            case MAX -> new ItemStack(CobblemonItems.MAX_POTION);
+            case FULL_RESTORE -> new ItemStack(CobblemonItems.FULL_RESTORE);
+        };
     }
 
     @Override

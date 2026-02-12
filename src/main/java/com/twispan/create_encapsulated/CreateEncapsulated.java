@@ -157,7 +157,43 @@ public class CreateEncapsulated {
                 },
                 CobblemonItems.MEDICINAL_BREW
         );
+        // Register fluid handler capability for potions
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.POTION.get(), 250)),
+                CobblemonItems.POTION
+        );
 
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.SUPER_POTION.get(), 250)),
+                CobblemonItems.SUPER_POTION
+        );
+
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.HYPER_POTION.get(), 250)),
+                CobblemonItems.HYPER_POTION
+        );
+
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.MAX_POTION.get(), 250)),
+                CobblemonItems.MAX_POTION
+        );
+
+        event.registerItem(
+                Capabilities.FluidHandler.ITEM,
+                (stack, context) -> new FluidItemHandler(stack,
+                        new FluidStack(ModFluids.FULL_RESTORE.get(), 250)),
+                CobblemonItems.FULL_RESTORE
+        );
+
+        // Empty bottle handler
         event.registerItem(
                 Capabilities.FluidHandler.ITEM,
                 (stack, context) -> new EmptyBottleFluidHandler(stack),

@@ -6,6 +6,9 @@ import com.twispan.create_encapsulated.fluid.MedicinalBrewFluidType;
 import com.twispan.create_encapsulated.fluid.paint.PaintColor;
 import com.twispan.create_encapsulated.fluid.paint.PaintFluid;
 import com.twispan.create_encapsulated.fluid.paint.PaintFluidType;
+import com.twispan.create_encapsulated.fluid.potions.PotionFluid;
+import com.twispan.create_encapsulated.fluid.potions.PotionFluidType;
+import com.twispan.create_encapsulated.fluid.potions.PotionType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.fluids.FluidType;
@@ -122,4 +125,69 @@ public class ModFluids {
 
     public static final DeferredHolder<Fluid, MedicinalBrewFluid.Source> MEDICINAL_BREW =
             FLUIDS.register("medicinal_brew", () -> new MedicinalBrewFluid.Source(MEDICINAL_BREW_TYPE));
+
+    // Potion
+    public static final DeferredHolder<FluidType, PotionFluidType> POTION_TYPE =
+            FLUID_TYPES.register("potion", () -> new PotionFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300),
+                    PotionType.POTION
+            ));
+
+    public static final DeferredHolder<Fluid, PotionFluid> POTION =
+            FLUIDS.register("potion", () -> new PotionFluid.Source(POTION_TYPE));
+
+    // Super Potion
+    public static final DeferredHolder<FluidType, PotionFluidType> SUPER_POTION_TYPE =
+            FLUID_TYPES.register("super_potion", () -> new PotionFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300),
+                    PotionType.SUPER
+            ));
+
+    public static final DeferredHolder<Fluid, PotionFluid> SUPER_POTION =
+            FLUIDS.register("super_potion", () -> new PotionFluid.Source(SUPER_POTION_TYPE));
+
+    // Hyper Potion
+    public static final DeferredHolder<FluidType, PotionFluidType> HYPER_POTION_TYPE =
+            FLUID_TYPES.register("hyper_potion", () -> new PotionFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300),
+                    PotionType.HYPER
+            ));
+
+    public static final DeferredHolder<Fluid, PotionFluid> HYPER_POTION =
+            FLUIDS.register("hyper_potion", () -> new PotionFluid.Source(HYPER_POTION_TYPE));
+
+    // Max Potion
+    public static final DeferredHolder<FluidType, PotionFluidType> MAX_POTION_TYPE =
+            FLUID_TYPES.register("max_potion", () -> new PotionFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300),
+                    PotionType.MAX
+            ));
+
+    public static final DeferredHolder<Fluid, PotionFluid> MAX_POTION =
+            FLUIDS.register("max_potion", () -> new PotionFluid.Source(MAX_POTION_TYPE));
+
+    // Full Restore
+    public static final DeferredHolder<FluidType, PotionFluidType> FULL_RESTORE_TYPE =
+            FLUID_TYPES.register("full_restore", () -> new PotionFluidType(
+                    FluidType.Properties.create()
+                            .density(2000)
+                            .viscosity(6000)
+                            .temperature(300),
+                    PotionType.FULL_RESTORE
+            ));
+
+    public static final DeferredHolder<Fluid, PotionFluid> FULL_RESTORE =
+            FLUIDS.register("full_restore", () -> new PotionFluid.Source(FULL_RESTORE_TYPE));
 }
