@@ -1,0 +1,8 @@
+{
+  "values": [
+    "create_encapsulated:ether",
+    "create_encapsulated:max_ether",
+    "create_encapsulated:elixir",
+    "create_encapsulated:max_elixir"
+  ]
+}

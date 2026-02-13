@@ -23,7 +23,16 @@
               "create_encapsulated:green_paint",
               "create_encapsulated:pink_paint",
               "create_encapsulated:black_paint",
-              "create_encapsulated:white_paint"
+              "create_encapsulated:white_paint",
+              "create_encapsulated:purple_paint",
+              "create_encapsulated:cyan_paint",
+              "create_encapsulated:light_blue_paint",
+              "create_encapsulated:light_gray_paint",
+              "create_encapsulated:lime_paint",
+              "create_encapsulated:gray_paint",
+              "create_encapsulated:brown_paint",
+              "create_encapsulated:magenta_paint",
+              "create_encapsulated:orange_paint"
             ]
           }
         ]

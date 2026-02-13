@@ -1,0 +1,9 @@
+{
+  "values": [
+    "create_encapsulated:potion",
+    "create_encapsulated:super_potion",
+    "create_encapsulated:hyper_potion",
+    "create_encapsulated:max_potion",
+    "create_encapsulated:full_restore"
+  ]
+}

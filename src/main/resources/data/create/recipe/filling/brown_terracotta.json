@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:terracotta"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 25,
+      "fluid": "create_encapsulated:brown_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:brown_terracotta"
+    }
+  ]
+}

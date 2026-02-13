@@ -1,1 +1,1 @@
-This is a mod that completely overhauls the Apricorn mechanic from Cobblemon to fit within the Create mod's progression. 
+Create: Encapsulated overhauls Cobblemon's recipe system to better fit within the Create mod's progression. 

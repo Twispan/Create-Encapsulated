@@ -4,8 +4,7 @@
       "id": "create_encapsulated:white_paint"
     },
     "title": "Taste the Rainbow",
-    "description": "Drink every single paint color. Why would you do this?",
-    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Drink every color of Paint; Why would you do this?",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

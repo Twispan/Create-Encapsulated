@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 25,
+      "fluid": "create_encapsulated:black_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:black_stained_glass"
+    }
+  ]
+}

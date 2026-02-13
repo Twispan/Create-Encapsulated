@@ -1,0 +1,10 @@
+{
+  "values": [
+    "create_encapsulated:antidote",
+    "create_encapsulated:burn_heal",
+    "create_encapsulated:ice_heal",
+    "create_encapsulated:paralyze_heal",
+    "create_encapsulated:awakening",
+    "create_encapsulated:full_heal"
+  ]
+}

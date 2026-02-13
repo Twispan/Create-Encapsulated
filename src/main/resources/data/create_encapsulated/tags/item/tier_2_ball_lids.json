@@ -1,0 +1,18 @@
+{
+  "values": [
+    "create_encapsulated:great_ball_lid",
+    "create_encapsulated:ancient_great_ball_lid",
+    "create_encapsulated:ancient_wing_ball_lid",
+    "create_encapsulated:ancient_leaden_ball_lid",
+    "create_encapsulated:fast_ball_lid",
+    "create_encapsulated:level_ball_lid",
+    "create_encapsulated:lure_ball_lid",
+    "create_encapsulated:heavy_ball_lid",
+    "create_encapsulated:friend_ball_lid",
+    "create_encapsulated:moon_ball_lid",
+    "create_encapsulated:sport_ball_lid",
+    "create_encapsulated:park_ball_lid",
+    "create_encapsulated:net_ball_lid",
+    "create_encapsulated:nest_ball_lid"
+  ]
+}

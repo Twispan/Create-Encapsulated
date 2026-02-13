@@ -1,0 +1,12 @@
+{
+  "values": [
+    "create_encapsulated:calcium",
+    "create_encapsulated:iron",
+    "create_encapsulated:zinc",
+    "create_encapsulated:carbos",
+    "create_encapsulated:protein",
+    "create_encapsulated:hp_up",
+    "create_encapsulated:pp_up",
+    "create_encapsulated:pp_max"
+  ]
+}

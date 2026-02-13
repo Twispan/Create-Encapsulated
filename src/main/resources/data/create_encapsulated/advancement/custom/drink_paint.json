@@ -1,15 +1,14 @@
 {
   "display": {
     "icon": {
-      "id": "create_encapsulated:red_paint"
+      "id": "minecraft:glass_bottle"
     },
     "title": "Was it worth it?",
-    "description": "Drink a bottle of paint and regret it later",
-    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Drink a bottle of paint and regret your decision later",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": false
+    "hidden": true
   },
   "parent": "create_encapsulated:custom/get_paint",
   "criteria": {

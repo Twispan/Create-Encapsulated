@@ -1,0 +1,14 @@
+{
+  "values": [
+    "create_encapsulated:timer_ball_lid",
+    "create_encapsulated:dusk_ball_lid",
+    "create_encapsulated:dive_ball_lid",
+    "create_encapsulated:quick_ball_lid",
+    "create_encapsulated:ultra_ball_lid",
+    "create_encapsulated:love_ball_lid",
+    "create_encapsulated:repeat_ball_lid",
+    "create_encapsulated:ancient_ultra_ball_lid",
+    "create_encapsulated:ancient_jet_ball_lid",
+    "create_encapsulated:ancient_gigaton_ball_lid"
+  ]
+}

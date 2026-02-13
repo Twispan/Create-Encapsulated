@@ -5,9 +5,9 @@
       "item": "minecraft:feather"
     },
     {
-      "type": "neoforge:tag",
+      "type": "neoforge:single",
       "amount": 25,
-      "item": "create_encapsulated:calcium"
+      "fluid": "create_encapsulated:calcium"
     }
   ],
   "results": [

@@ -1,0 +1,20 @@
+{
+  "values": [
+    "create_encapsulated:medicinal_brew",
+    "create_encapsulated:potion",
+    "create_encapsulated:super_potion",
+    "create_encapsulated:hyper_potion",
+    "create_encapsulated:max_potion",
+    "create_encapsulated:full_restore",
+    "create_encapsulated:antidote",
+    "create_encapsulated:burn_heal",
+    "create_encapsulated:ice_heal",
+    "create_encapsulated:paralyze_heal",
+    "create_encapsulated:awakening",
+    "create_encapsulated:full_heal",
+    "create_encapsulated:ether",
+    "create_encapsulated:max_ether",
+    "create_encapsulated:elixir",
+    "create_encapsulated:max_elixir"
+  ]
+}
