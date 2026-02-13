@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:candle"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:purple_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:purple_candle"
+    }
+  ]
+}

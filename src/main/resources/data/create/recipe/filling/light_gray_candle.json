@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:candle"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:light_gray_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:light_gray_candle"
+    }
+  ]
+}

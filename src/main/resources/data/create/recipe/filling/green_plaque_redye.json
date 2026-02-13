@@ -1,0 +1,62 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "cobblemon:blue_plaque"
+      },
+      {
+        "item": "cobblemon:brown_plaque"
+      },
+      {
+        "item": "cobblemon:cyan_plaque"
+      },
+      {
+        "item": "cobblemon:gray_plaque"
+      },
+      {
+        "item": "cobblemon:black_plaque"
+      },
+      {
+        "item": "cobblemon:light_blue_plaque"
+      },
+      {
+        "item": "cobblemon:light_gray_plaque"
+      },
+      {
+        "item": "cobblemon:lime_plaque"
+      },
+      {
+        "item": "cobblemon:magenta_plaque"
+      },
+      {
+        "item": "cobblemon:orange_plaque"
+      },
+      {
+        "item": "cobblemon:pink_plaque"
+      },
+      {
+        "item": "cobblemon:purple_plaque"
+      },
+      {
+        "item": "cobblemon:red_plaque"
+      },
+      {
+        "item": "cobblemon:yellow_plaque"
+      },
+      {
+        "item": "cobblemon:white_plaque"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:green_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:green_plaque"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "plaque_redye",
+  "ingredients": [
+    {
+      "tag": "cobblemon:plaques"
+    },
+    {
+      "item": "create_encapsulated:blue_paint"
+    }
+  ],
+  "result": {
+    "id": "cobblemon:blue_plaque"
+  }
+}
+
