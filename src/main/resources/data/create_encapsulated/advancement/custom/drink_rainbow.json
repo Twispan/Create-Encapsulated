@@ -1,0 +1,99 @@
+{
+  "display": {
+    "icon": {
+      "id": "create_encapsulated:white_paint"
+    },
+    "title": "Taste the Rainbow",
+    "description": "Drink every single paint color. Why would you do this?",
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "create_encapsulated:custom/drink_paint",
+  "criteria": {
+    "drank_red": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "RED" }
+    },
+    "drank_blue": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "BLUE" }
+    },
+    "drank_green": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "GREEN" }
+    },
+    "drank_yellow": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "YELLOW" }
+    },
+    "drank_pink": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "PINK" }
+    },
+    "drank_purple": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "PURPLE" }
+    },
+    "drank_magenta": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "MAGENTA" }
+    },
+    "drank_lime": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "LIME" }
+    },
+    "drank_cyan": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "CYAN" }
+    },
+    "drank_lightblue": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "LIGHTBLUE" }
+    },
+    "drank_orange": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "ORANGE" }
+    },
+    "drank_brown": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "BROWN" }
+    },
+    "drank_lightgray": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "LIGHTGRAY" }
+    },
+    "drank_gray": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "GRAY" }
+    },
+    "drank_black": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "BLACK" }
+    },
+    "drank_white": {
+      "trigger": "create_encapsulated:drank_paint",
+      "conditions": { "color": "WHITE" }
+    }
+  },
+  "requirements": [
+    ["drank_red"],
+    ["drank_blue"],
+    ["drank_green"],
+    ["drank_yellow"],
+    ["drank_pink"],
+    ["drank_purple"],
+    ["drank_magenta"],
+    ["drank_lime"],
+    ["drank_cyan"],
+    ["drank_lightblue"],
+    ["drank_orange"],
+    ["drank_brown"],
+    ["drank_lightgray"],
+    ["drank_gray"],
+    ["drank_black"],
+    ["drank_white"]
+  ]
+}
