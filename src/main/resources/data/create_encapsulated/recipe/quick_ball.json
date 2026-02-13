@@ -1,18 +1,29 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    " S ",
+    "ZOB"
+  ],
+  "key": {
+    "#": {
+      "item": "create_encapsulated:quick_ball_lid"
+    },
+    "S": {
+      "item": "create:brass_nugget"
+    },
+    "Z": {
+      "item": "create_encapsulated:blue_paint"
+    },
+    "O": {
       "item": "create_encapsulated:poke_ball_base"
     },
-    {
-      "tag": "c:nuggets/brass"
-    },
-    {
-      "item": "create_encapsulated:quick_ball_lid"
+    "B": {
+      "item": "create_encapsulated:yellow_paint"
     }
-  ],
+  },
   "result": {
-    "id": "cobblemon:quick_ball"
+    "id": "cobblemon:quick_ball",
+    "count": 1
   }
 }

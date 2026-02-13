@@ -44,6 +44,24 @@
           "id": "create_encapsulated:ancient_leaden_ball_lid"
         }
       ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:ancient_gigaton_ball_lid"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:black_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:ancient_gigaton_ball_lid"
+        }
+      ]
     }
   ],
   "transitional_item": {

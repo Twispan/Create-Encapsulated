@@ -1,26 +1,29 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "create_encapsulated:split_black_apricorn"
-    },
-    {
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "SOQ",
+    " K "
+  ],
+  "key": {
+    "#": {
       "item": "minecraft:iron_nugget"
     },
-    {
-      "item": "create_encapsulated:white_paint"
+    "S": {
+      "item": "minecraft:iron_nugget"
     },
-    [
-      {
-        "item": "create:zinc_nugget"
-      },
-      {
-        "item": "minecraft:iron_nugget"
-      }
-    ]
-  ],
+    "O": {
+      "item": "create_encapsulated:split_black_apricorn"
+    },
+    "Q": {
+      "item": "create_encapsulated:gray_paint"
+    },
+    "K": {
+      "item": "cobblemon:black_tumblestone"
+    }
+  },
   "result": {
-    "id": "create_encapsulated:ancient_leaden_ball_lid"
+    "id": "create_encapsulated:ancient_leaden_ball_lid",
+    "count": 1
   }
 }

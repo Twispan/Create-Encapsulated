@@ -47,6 +47,24 @@
           "id": "create_encapsulated:fast_ball_lid"
         }
       ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:fast_ball_lid"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:yellow_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:fast_ball_lid"
+        }
+      ]
     }
   ],
   "transitional_item": {

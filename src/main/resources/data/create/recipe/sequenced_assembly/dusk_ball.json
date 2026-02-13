@@ -35,9 +35,45 @@
         },
         [
           {
-            "tag": "c:nuggets/brass"
+            "item": "create:brass_nugget"
           }
         ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:dusk_ball_lid"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:dusk_ball_lid"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:black_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:dusk_ball_lid"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:dusk_ball_lid"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:green_paint"
+        }
       ],
       "results": [
         {

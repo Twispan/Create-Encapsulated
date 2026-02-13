@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "create_encapsulated:split_blue_apricorn"
+      "item": "create_encapsulated:split_white_apricorn"
     },
     {
-      "item": "create_encapsulated:white_paint"
+      "item": "create_encapsulated:light_blue_paint"
     }
   ],
   "result": {

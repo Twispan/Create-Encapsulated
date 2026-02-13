@@ -18,25 +18,7 @@
         {
           "type": "neoforge:single",
           "amount": 250,
-          "fluid": "create_encapsulated:green_paint"
-        }
-      ],
-      "results": [
-        {
-          "id": "create_encapsulated:split_green_apricorn"
-        }
-      ]
-    },
-    {
-      "type": "create:filling",
-      "ingredients": [
-        {
-          "item": "create_encapsulated:split_green_apricorn"
-        },
-        {
-          "type": "neoforge:single",
-          "amount": 250,
-          "fluid": "create_encapsulated:red_paint"
+          "fluid": "create_encapsulated:brown_paint"
         }
       ],
       "results": [

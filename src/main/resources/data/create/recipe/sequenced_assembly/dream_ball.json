@@ -44,6 +44,42 @@
           "id": "create_encapsulated:dream_ball_lid"
         }
       ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:dream_ball_lid"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:pink_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:dream_ball_lid"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:dream_ball_lid"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:purple_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:dream_ball_lid"
+        }
+      ]
     }
   ],
   "transitional_item": {

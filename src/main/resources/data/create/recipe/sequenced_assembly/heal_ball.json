@@ -35,9 +35,45 @@
         },
         [
           {
-            "tag": "c:nuggets/copper"
+            "item": "create:copper_nugget"
           }
         ]
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:heal_ball_lid"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:heal_ball_lid"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:pink_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:heal_ball_lid"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:heal_ball_lid"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:yellow_paint"
+        }
       ],
       "results": [
         {

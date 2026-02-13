@@ -47,6 +47,24 @@
           "id": "create_encapsulated:park_ball_lid"
         }
       ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:park_ball_lid"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:lime_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:park_ball_lid"
+        }
+      ]
     }
   ],
   "transitional_item": {

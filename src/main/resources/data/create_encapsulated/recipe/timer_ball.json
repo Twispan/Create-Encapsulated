@@ -3,13 +3,16 @@
   "category": "misc",
   "ingredients": [
     {
+      "item": "create_encapsulated:timer_ball_lid"
+    },
+    {
       "item": "create_encapsulated:poke_ball_base"
     },
     {
-      "tag": "c:nuggets/brass"
+      "item": "create_encapsulated:red_paint"
     },
     {
-      "item": "create_encapsulated:timer_ball_lid"
+      "tag": "c:nuggets/brass"
     }
   ],
   "result": {

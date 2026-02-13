@@ -13,30 +13,12 @@
       "type": "create:filling",
       "ingredients": [
         {
-          "item": "create_encapsulated:split_blue_apricorn"
+          "item": "create_encapsulated:split_pink_apricorn"
         },
         {
           "type": "neoforge:single",
           "amount": 250,
-          "fluid": "create_encapsulated:red_paint"
-        }
-      ],
-      "results": [
-        {
-          "id": "create_encapsulated:split_pink_apricorn"
-        }
-      ]
-    },
-    {
-      "type": "create:filling",
-      "ingredients": [
-        {
-          "item": "create_encapsulated:split_blue_apricorn"
-        },
-        {
-          "type": "neoforge:single",
-          "amount": 250,
-          "fluid": "create_encapsulated:blue_paint"
+          "fluid": "create_encapsulated:magenta_paint"
         }
       ],
       "results": [

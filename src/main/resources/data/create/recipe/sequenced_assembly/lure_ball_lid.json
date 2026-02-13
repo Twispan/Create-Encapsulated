@@ -1,7 +1,7 @@
 {
   "type": "create:sequenced_assembly",
   "ingredient": {
-    "item": "create_encapsulated:split_green_apricorn"
+    "item": "create_encapsulated:split_red_apricorn"
   },
   "results": [
     {
@@ -13,17 +13,17 @@
       "type": "create:filling",
       "ingredients": [
         {
-          "item": "create_encapsulated:split_green_apricorn"
+          "item": "create_encapsulated:split_red_apricorn"
         },
         {
           "type": "neoforge:single",
           "amount": 250,
-          "fluid": "create_encapsulated:blue_paint"
+          "fluid": "create_encapsulated:cyan_paint"
         }
       ],
       "results": [
         {
-          "id": "create_encapsulated:split_green_apricorn"
+          "id": "create_encapsulated:split_red_apricorn"
         }
       ]
     },
@@ -31,25 +31,7 @@
       "type": "create:filling",
       "ingredients": [
         {
-          "item": "create_encapsulated:split_green_apricorn"
-        },
-        {
-          "type": "neoforge:single",
-          "amount": 250,
-          "fluid": "create_encapsulated:green_paint"
-        }
-      ],
-      "results": [
-        {
-          "id": "create_encapsulated:split_green_apricorn"
-        }
-      ]
-    },
-    {
-      "type": "create:filling",
-      "ingredients": [
-        {
-          "item": "create_encapsulated:split_green_apricorn"
+          "item": "create_encapsulated:split_red_apricorn"
         },
         {
           "type": "neoforge:single",
@@ -59,12 +41,12 @@
       ],
       "results": [
         {
-          "id": "create_encapsulated:split_green_apricorn"
+          "id": "create_encapsulated:split_red_apricorn"
         }
       ]
     }
   ],
   "transitional_item": {
-    "id": "create_encapsulated:split_green_apricorn"
+    "id": "create_encapsulated:split_red_apricorn"
   }
 }

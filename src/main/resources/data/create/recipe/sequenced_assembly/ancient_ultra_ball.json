@@ -44,6 +44,24 @@
           "id": "create_encapsulated:ancient_ultra_ball_lid"
         }
       ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "cobblemon:black_tumblestone"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:light_gray_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "cobblemon:black_tumblestone"
+        }
+      ]
     }
   ],
   "transitional_item": {

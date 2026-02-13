@@ -44,6 +44,24 @@
           "id": "create_encapsulated:timer_ball_lid"
         }
       ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_encapsulated:timer_ball_lid"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "create_encapsulated:red_paint"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_encapsulated:timer_ball_lid"
+        }
+      ]
     }
   ],
   "transitional_item": {
