@@ -1,0 +1,21 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:gray_paint"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:white_paint"
+    }
+  ],
+  "results": [
+    {
+      "amount": 500,
+      "id": "create_encapsulated:light_gray_paint"
+    }
+  ]
+}
