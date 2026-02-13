@@ -1,6 +1,7 @@
 package com.twispan.create_encapsulated;
 
 import com.cobblemon.mod.common.CobblemonItems;
+import com.twispan.create_encapsulated.advancements.ModTriggers;
 import com.twispan.create_encapsulated.client.ModClientSetup;
 import com.twispan.create_encapsulated.item.EmptyBottleFluidHandler;
 import com.twispan.create_encapsulated.item.ModCreativeModeTabs;
@@ -49,6 +50,9 @@ public class CreateEncapsulated {
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+
+        // Advancement trigger
+        ModTriggers.TRIGGERS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
