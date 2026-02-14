@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "create_encapsulated:sport_ball_lid"
+      "item": "create_encapsulated:friend_ball_lid"
     },
     {
       "item": "create_encapsulated:poke_ball_base"
@@ -18,6 +18,6 @@
     ]
   ],
   "result": {
-    "id": "cobblemon:sport_ball"
+    "id": "cobblemon:friend_ball"
   }
 }
