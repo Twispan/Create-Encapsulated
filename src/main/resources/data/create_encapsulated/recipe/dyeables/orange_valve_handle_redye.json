@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:orange_paint"
+    },
+    [
+      {
+        "item": "create:blue_valve_handle"
+      },
+      {
+        "item": "create:brown_valve_handle"
+      },
+      {
+        "item": "create:cyan_valve_handle"
+      },
+      {
+        "item": "create:gray_valve_handle"
+      },
+      {
+        "item": "create:green_valve_handle"
+      },
+      {
+        "item": "create:light_blue_valve_handle"
+      },
+      {
+        "item": "create:light_gray_valve_handle"
+      },
+      {
+        "item": "create:lime_valve_handle"
+      },
+      {
+        "item": "create:magenta_valve_handle"
+      },
+      {
+        "item": "create:black_valve_handle"
+      },
+      {
+        "item": "create:pink_valve_handle"
+      },
+      {
+        "item": "create:purple_valve_handle"
+      },
+      {
+        "item": "create:red_valve_handle"
+      },
+      {
+        "item": "create:yellow_valve_handle"
+      },
+      {
+        "item": "create:white_valve_handle"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "create:orange_valve_handle"
+  }
+}

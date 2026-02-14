@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:orange_paint"
+    },
+    {
+      "item": "create:copper_valve_handle"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "create:orange_valve_handle"
+  }
+}

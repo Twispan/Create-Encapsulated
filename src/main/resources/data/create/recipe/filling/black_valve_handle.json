@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create:copper_valve_handle"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:black_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:black_valve_handle"
+    }
+  ]
+}

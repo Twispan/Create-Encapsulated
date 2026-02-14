@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:purple_paint"
+    },
+    [
+      {
+        "item": "create:blue_postbox"
+      },
+      {
+        "item": "create:brown_postbox"
+      },
+      {
+        "item": "create:cyan_postbox"
+      },
+      {
+        "item": "create:gray_postbox"
+      },
+      {
+        "item": "create:green_postbox"
+      },
+      {
+        "item": "create:light_blue_postbox"
+      },
+      {
+        "item": "create:light_gray_postbox"
+      },
+      {
+        "item": "create:lime_postbox"
+      },
+      {
+        "item": "create:magenta_postbox"
+      },
+      {
+        "item": "create:orange_postbox"
+      },
+      {
+        "item": "create:pink_postbox"
+      },
+      {
+        "item": "create:black_postbox"
+      },
+      {
+        "item": "create:red_postbox"
+      },
+      {
+        "item": "create:yellow_postbox"
+      },
+      {
+        "item": "create:white_postbox"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "create:purple_postbox"
+  }
+}
