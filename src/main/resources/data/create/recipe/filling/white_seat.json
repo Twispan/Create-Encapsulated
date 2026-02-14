@@ -45,18 +45,18 @@
         "item": "create:yellow_seat"
       },
       {
-        "item": "create:white_seat"
+        "item": "create:black_seat"
       }
     ],
     {
       "type": "neoforge:single",
       "amount": 250,
-      "fluid": "create_encapsulated:black_paint"
+      "fluid": "create_encapsulated:white_paint"
     }
   ],
   "results": [
     {
-      "id": "create:black_seat"
+      "id": "create:white_seat"
     }
   ]
 }

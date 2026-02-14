@@ -27,7 +27,7 @@
         "item": "create:lime_seat"
       },
       {
-        "item": "create:magenta_seat"
+        "item": "create:black_seat"
       },
       {
         "item": "create:orange_seat"
@@ -51,12 +51,12 @@
     {
       "type": "neoforge:single",
       "amount": 250,
-      "fluid": "create_encapsulated:black_paint"
+      "fluid": "create_encapsulated:magenta_paint"
     }
   ],
   "results": [
     {
-      "id": "create:black_seat"
+      "id": "create:magenta_seat"
     }
   ]
 }

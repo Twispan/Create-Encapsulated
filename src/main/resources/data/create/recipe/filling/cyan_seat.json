@@ -9,7 +9,7 @@
         "item": "create:brown_seat"
       },
       {
-        "item": "create:cyan_seat"
+        "item": "create:black_seat"
       },
       {
         "item": "create:gray_seat"
@@ -51,12 +51,12 @@
     {
       "type": "neoforge:single",
       "amount": 250,
-      "fluid": "create_encapsulated:black_paint"
+      "fluid": "create_encapsulated:cyan_paint"
     }
   ],
   "results": [
     {
-      "id": "create:black_seat"
+      "id": "create:cyan_seat"
     }
   ]
 }
