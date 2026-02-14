@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create:copper_valve_handle"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:lime_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:lime_valve_handle"
+    }
+  ]
+}

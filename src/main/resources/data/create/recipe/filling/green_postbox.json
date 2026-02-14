@@ -1,0 +1,62 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "create:blue_postbox"
+      },
+      {
+        "item": "create:brown_postbox"
+      },
+      {
+        "item": "create:cyan_postbox"
+      },
+      {
+        "item": "create:gray_postbox"
+      },
+      {
+        "item": "create:black_postbox"
+      },
+      {
+        "item": "create:light_blue_postbox"
+      },
+      {
+        "item": "create:light_gray_postbox"
+      },
+      {
+        "item": "create:lime_postbox"
+      },
+      {
+        "item": "create:magenta_postbox"
+      },
+      {
+        "item": "create:orange_postbox"
+      },
+      {
+        "item": "create:pink_postbox"
+      },
+      {
+        "item": "create:purple_postbox"
+      },
+      {
+        "item": "create:red_postbox"
+      },
+      {
+        "item": "create:yellow_postbox"
+      },
+      {
+        "item": "create:white_postbox"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 25,
+      "fluid": "create_encapsulated:green_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:green_postbox"
+    }
+  ]
+}
