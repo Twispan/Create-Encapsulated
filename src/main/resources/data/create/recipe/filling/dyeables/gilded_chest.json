@@ -1,0 +1,35 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "cobblemon:black_gilded_chest"
+      },
+      {
+        "item": "cobblemon:blue_gilded_chest"
+      },
+      {
+        "item": "cobblemon:yellow_gilded_chest"
+      },
+      {
+        "item": "cobblemon:pink_gilded_chest"
+      },
+      {
+        "item": "cobblemon:green_gilded_chest"
+      },
+      {
+        "item": "cobblemon:white_gilded_chest"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:red_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:gilded_chest"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    [
+      {
+        "item": "cobblemon:gilded_chest"
+      },
+      {
+        "item": "cobblemon:blue_gilded_chest"
+      },
+      {
+        "item": "cobblemon:black_gilded_chest"
+      },
+      {
+        "item": "cobblemon:pink_gilded_chest"
+      },
+      {
+        "item": "cobblemon:green_gilded_chest"
+      },
+      {
+        "item": "cobblemon:white_gilded_chest"
+      }
+    ],
+    {
+      "item": "create_encapsulated:yellow_paint"
+    }
+  ],
+  "result": {
+    "id": "cobblemon:yellow_gilded_chest"
+  }
+}
+
