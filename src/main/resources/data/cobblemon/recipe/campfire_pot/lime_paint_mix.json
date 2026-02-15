@@ -1,1 +1,13 @@
-{"type":"cobblemon:cooking_pot_shapeless","category":"foods","ingredients":[{"item":"minecraft:green_dye"},{"item":"minecraft:white_dye"},{"item":"create:wheat_flour"},{"item":"minecraft:glass_bottle"}],"result":{"id":"create_encapsulated:lime_paint"},"seasoningTag":"cobblemon:empty","seasoningProcessors":[]}
+{
+  "type": "cobblemon:cooking_pot_shapeless",
+  "category": "foods",
+  "ingredients": [
+    { "item": "minecraft:green_dye" },
+    { "item": "minecraft:white_dye" },
+    { "item": "create:wheat_flour" },
+    { "item": "minecraft:potion" }
+  ],
+  "result": { "id": "create_encapsulated:lime_paint" },
+  "seasoningTag": "cobblemon:empty",
+  "seasoningProcessors": []
+}
