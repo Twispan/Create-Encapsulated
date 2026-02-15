@@ -1,0 +1,35 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "cobblemon:campfire_pot_red"
+      },
+      {
+        "item": "cobblemon:campfire_pot_blue"
+      },
+      {
+        "item": "cobblemon:campfire_pot_black"
+      },
+      {
+        "item": "cobblemon:campfire_pot_green"
+      },
+      {
+        "item": "cobblemon:campfire_pot_pink"
+      },
+      {
+        "item": "cobblemon:campfire_pot_white"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:yellow_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblemon:campfire_pot_yellow"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:black_paint"
+    },
+    [
+      {
+        "item": "cobblemon:campfire_pot_red"
+      },
+      {
+        "item": "cobblemon:campfire_pot_blue"
+      },
+      {
+        "item": "cobblemon:campfire_pot_yellow"
+      },
+      {
+        "item": "cobblemon:campfire_pot_green"
+      },
+      {
+        "item": "cobblemon:campfire_pot_pink"
+      },
+      {
+        "item": "cobblemon:campfire_pot_white"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblemon:campfire_pot_black"
+  }
+}

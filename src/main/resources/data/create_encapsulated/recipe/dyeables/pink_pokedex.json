@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:pink_paint"
+    },
+    [
+      {
+        "item": "cobblemon:pokedex_red"
+      },
+      {
+        "item": "cobblemon:pokedex_blue"
+      },
+      {
+        "item": "cobblemon:pokedex_yellow"
+      },
+      {
+        "item": "cobblemon:pokedex_green"
+      },
+      {
+        "item": "cobblemon:pokedex_black"
+      },
+      {
+        "item": "cobblemon:pokedex_white"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblemon:pokedex_pink"
+  }
+}
