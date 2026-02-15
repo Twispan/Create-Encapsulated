@@ -1,1 +1,2 @@
 Create: Encapsulated overhauls Cobblemon's crafting recipes to be better integrated within the Create mod's progression system. This mod features Poke Ball crafting via lids and Sequential Assembly, as well as a new item system: Paint. Paints are based on the 16 available dyes in Minecraft, but now interchangeable between liquid and portable bottled form.
+Every single medicine item (Potions, Status Heals, etc) now have their own liquid form and associated mixing recipes.
