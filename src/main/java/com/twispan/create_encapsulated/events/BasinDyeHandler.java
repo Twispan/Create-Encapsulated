@@ -80,6 +80,12 @@ public class BasinDyeHandler {
                     return;
                 }
 
+                if (event.getEntity().isShiftKeyDown()) {
+                    // If the player is shifting we're just going to allow any item/block to do their own action
+                    // and not cancel it like usual.
+                    return;
+                }
+
                 if (recolored.get().getItem() == heldStack.getItem()) {
                     event.setCanceled(true);
                     event.setCancellationResult(InteractionResult.SUCCESS);

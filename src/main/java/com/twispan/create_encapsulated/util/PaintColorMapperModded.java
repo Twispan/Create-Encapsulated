@@ -33,7 +33,6 @@ public class PaintColorMapperModded {
         registerDyedBlockList(AllBlocks.TABLE_CLOTHS);
         registerDyedBlockList(AllBlocks.PACKAGE_POSTBOXES);
         registerDyedBlockList(AllBlocks.DYED_VALVE_HANDLES);
-        registerDyedBlockList(AllBlocks.DYED_SAILS);
 
         register(
                 CobblemonItems.WHITE_PLAQUE, CobblemonItems.ORANGE_PLAQUE, CobblemonItems.MAGENTA_PLAQUE,
@@ -55,6 +54,8 @@ public class PaintColorMapperModded {
                 CobblemonItems.CAMPFIRE_POT_BLUE, CobblemonItems.CAMPFIRE_POT_PINK, CobblemonItems.CAMPFIRE_POT_BLACK,
                 CobblemonItems.CAMPFIRE_POT_WHITE
         );
+        Item[] valveFamily = COLOR_FAMILIES.get(AllBlocks.DYED_VALVE_HANDLES.get(DyeColor.WHITE).asItem());
+        COLOR_FAMILIES.put(AllBlocks.COPPER_VALVE_HANDLE.asItem(), valveFamily);
     }
 
     private static void register(Item... items) {
