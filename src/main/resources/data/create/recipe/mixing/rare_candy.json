@@ -20,7 +20,7 @@
     {
       "type": "neoforge:single",
       "amount": 250,
-      "fluid": "create:milk"
+      "fluid": "minecraft:milk"
     }
   ],
   "results": [
