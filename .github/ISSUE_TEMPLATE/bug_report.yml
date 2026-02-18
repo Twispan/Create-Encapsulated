@@ -1,0 +1,92 @@
+name: Bug Report
+description: Report a bug to help us improve the mod
+title: "[BUG] "
+labels: ["🪲 Bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: | 
+        Bug report. Please fill out all of the required fields.
+        Any bug report with missing fields or incomplete information will be closed.
+        
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: Describe the bug in a concise manner.
+      placeholder: The game crashes when I use paint...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide a list with clear steps to reproduce the issue
+      placeholder: |
+        1. Place a basin
+        2. Right click the basin with paint
+        3. Crash occurs
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe what you expected to happen.
+      placeholder: The basin should fill with paint...
+    validations:
+      required: true
+
+  - type: input
+    id: mod_version
+    attributes:
+      label: Mod Version
+      description: Specify the exact mod version.
+      placeholder: e.g. 1.0.0+1.21.1
+    validations:
+      required: true
+
+  - type: textarea
+    id: other_mods
+    attributes:
+      label: Other Mods
+      description: List all of the mods in your current installation.
+      placeholder: |
+        If you have Sinatra connector or you're using a Fabric to Forge/NeoForge bridge, 
+        please also specify your Mod Loader.
+        - Sodium
+        - Amendments
+        - Create: Steam n' Rails
+    validations:
+      required: true
+
+  - type: textarea
+    id: crash_report
+    attributes:
+      label: Crash Report (Optional)
+      description: If your installation crashed, please paste your latest.log or upload it to https://pastebin.com/ and provide the link.
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have made sure this issue has not been reported yet.
+          required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots (Optional)
+      description: |
+        If applicable, please add screenshots to explain your issue.
+        You can drag and drop images directly into this box.
+      placeholder: Drop and drag images here...
+    validations:
+      required: false
