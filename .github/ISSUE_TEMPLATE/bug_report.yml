@@ -53,8 +53,7 @@ body:
       label: Other Mods
       description: List all of the mods in your current installation.
       placeholder: |
-        If you have Sinatra connector or you're using a Fabric to Forge/NeoForge bridge, 
-        please also specify your Mod Loader.
+        If you have Sinytra connector, please make sure you verify it's not because of that mod.
         - Sodium
         - Amendments
         - Create: Steam n' Rails
