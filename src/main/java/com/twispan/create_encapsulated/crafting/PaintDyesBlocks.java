@@ -60,12 +60,14 @@ public class PaintDyesBlocks extends ShapelessRecipe {
         if (targetStack.isEmpty() || paintStack.isEmpty()) return ItemStack.EMPTY;
 
         Paint paintItem = (Paint) paintStack.getItem();
-        if (paintItem.getColor() == null) return ItemStack.EMPTY;
-
-        ItemStack finalTargetStack = targetStack;
-        return PaintColorMapper.recolor(targetStack, paintItem.getColor())
-                .or(() -> PaintColorMapperModded.recolor(finalTargetStack, paintItem.getColor()))
-                .orElse(ItemStack.EMPTY);
+        if (paintItem.getColor() != null) {
+            ItemStack finalTargetStack = targetStack;
+            var recolored = PaintColorMapper.recolor(finalTargetStack, paintItem.getColor())
+                    .or(() -> PaintColorMapperModded.recolor(finalTargetStack, paintItem.getColor()));
+            if (recolored.isPresent() && recolored.get().getItem() == finalTargetStack.getItem()) return ItemStack.EMPTY;
+            else if (recolored.isPresent()) return recolored.get();
+        }
+        return ItemStack.EMPTY;
     }
 
     @Override

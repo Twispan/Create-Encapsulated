@@ -35,6 +35,12 @@ public class PaintColorMapperModded {
         registerDyedBlockList(AllBlocks.DYED_VALVE_HANDLES);
 
         register(
+                CobblemonItems.WHITE_PLAQUE, CobblemonItems.ORANGE_PLAQUE, CobblemonItems.MAGENTA_PLAQUE,
+                CobblemonItems.LIGHT_BLUE_PLAQUE, CobblemonItems.YELLOW_PLAQUE, CobblemonItems.LIME_PLAQUE,
+                CobblemonItems.PINK_PLAQUE, CobblemonItems.GRAY_PLAQUE, CobblemonItems.LIGHT_GRAY_PLAQUE,
+                CobblemonItems.CYAN_PLAQUE, CobblemonItems.PURPLE_PLAQUE, CobblemonItems.BLUE_PLAQUE,
+                CobblemonItems.BROWN_PLAQUE, CobblemonItems.GREEN_PLAQUE, CobblemonItems.RED_PLAQUE,
+                CobblemonItems.BLACK_PLAQUE
         );
 
         registerSparse(
@@ -52,9 +58,9 @@ public class PaintColorMapperModded {
         COLOR_FAMILIES.put(AllBlocks.COPPER_VALVE_HANDLE.asItem(), valveFamily);
     }
 
-    private static void register() {
-        for (Item item : new Item[]{CobblemonItems.WHITE_PLAQUE, CobblemonItems.ORANGE_PLAQUE, CobblemonItems.MAGENTA_PLAQUE, CobblemonItems.LIGHT_BLUE_PLAQUE, CobblemonItems.YELLOW_PLAQUE, CobblemonItems.LIME_PLAQUE, CobblemonItems.PINK_PLAQUE, CobblemonItems.GRAY_PLAQUE, CobblemonItems.LIGHT_GRAY_PLAQUE, CobblemonItems.CYAN_PLAQUE, CobblemonItems.PURPLE_PLAQUE, CobblemonItems.BLUE_PLAQUE, CobblemonItems.BROWN_PLAQUE, CobblemonItems.GREEN_PLAQUE, CobblemonItems.RED_PLAQUE, CobblemonItems.BLACK_PLAQUE}) {
-            COLOR_FAMILIES.put(item, new Item[]{CobblemonItems.WHITE_PLAQUE, CobblemonItems.ORANGE_PLAQUE, CobblemonItems.MAGENTA_PLAQUE, CobblemonItems.LIGHT_BLUE_PLAQUE, CobblemonItems.YELLOW_PLAQUE, CobblemonItems.LIME_PLAQUE, CobblemonItems.PINK_PLAQUE, CobblemonItems.GRAY_PLAQUE, CobblemonItems.LIGHT_GRAY_PLAQUE, CobblemonItems.CYAN_PLAQUE, CobblemonItems.PURPLE_PLAQUE, CobblemonItems.BLUE_PLAQUE, CobblemonItems.BROWN_PLAQUE, CobblemonItems.GREEN_PLAQUE, CobblemonItems.RED_PLAQUE, CobblemonItems.BLACK_PLAQUE});
+    private static void register(Item... items) {
+        for (Item item : items) {
+            COLOR_FAMILIES.put(item, items);
         }
     }
 
