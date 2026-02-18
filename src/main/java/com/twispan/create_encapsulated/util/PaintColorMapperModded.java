@@ -59,7 +59,6 @@ public class PaintColorMapperModded {
     }
 
     private static void register(Item... items) {
-        if (items.length != 16) throw new IllegalArgumentException("Color family must have exactly 16 items.");
         for (Item item : items) {
             COLOR_FAMILIES.put(item, items);
         }
@@ -107,6 +106,8 @@ public class PaintColorMapperModded {
         if (result == null) return Optional.empty();
 
         ItemStack resultStack = new ItemStack(result, 1);
+
+        // Preserve NBT
         resultStack.applyComponentsAndValidate(stack.getComponentsPatch());
         return Optional.of(resultStack);
     }

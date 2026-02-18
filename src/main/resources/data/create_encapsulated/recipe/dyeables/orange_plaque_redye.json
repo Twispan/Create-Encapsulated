@@ -1,15 +1,60 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "plaque_redye",
+  "type": "create_encapsulated:paintable",
+  "category": "misc",
   "ingredients": [
     {
-      "tag": "cobblemon:plaques"
-    },
-    {
       "item": "create_encapsulated:orange_paint"
-    }
+    },
+    [
+      {
+        "item": "cobblemon:blue_plaque"
+      },
+      {
+        "item": "cobblemon:brown_plaque"
+      },
+      {
+        "item": "cobblemon:cyan_plaque"
+      },
+      {
+        "item": "cobblemon:gray_plaque"
+      },
+      {
+        "item": "cobblemon:green_plaque"
+      },
+      {
+        "item": "cobblemon:light_blue_plaque"
+      },
+      {
+        "item": "cobblemon:light_gray_plaque"
+      },
+      {
+        "item": "cobblemon:lime_plaque"
+      },
+      {
+        "item": "cobblemon:magenta_plaque"
+      },
+      {
+        "item": "cobblemon:black_plaque"
+      },
+      {
+        "item": "cobblemon:pink_plaque"
+      },
+      {
+        "item": "cobblemon:purple_plaque"
+      },
+      {
+        "item": "cobblemon:red_plaque"
+      },
+      {
+        "item": "cobblemon:yellow_plaque"
+      },
+      {
+        "item": "cobblemon:white_plaque"
+      }
+    ]
   ],
   "result": {
+    "count": 1,
     "id": "cobblemon:orange_plaque"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "create_encapsulated:paintable",
   "category": "misc",
   "ingredients": [
     {
