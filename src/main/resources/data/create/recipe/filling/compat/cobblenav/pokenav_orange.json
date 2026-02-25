@@ -1,0 +1,65 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "cobblenav:pokenav_item_blue"
+      },
+      {
+        "item": "cobblenav:pokenav_item_base"
+      },
+      {
+        "item": "cobblenav:pokenav_item_brown"
+      },
+      {
+        "item": "cobblenav:pokenav_item_cyan"
+      },
+      {
+        "item": "cobblenav:pokenav_item_gray"
+      },
+      {
+        "item": "cobblenav:pokenav_item_green"
+      },
+      {
+        "item": "cobblenav:pokenav_item_light_blue"
+      },
+      {
+        "item": "cobblenav:pokenav_item_light_gray"
+      },
+      {
+        "item": "cobblenav:pokenav_item_lime"
+      },
+      {
+        "item": "cobblenav:pokenav_item_magenta"
+      },
+      {
+        "item": "cobblenav:pokenav_item_black"
+      },
+      {
+        "item": "cobblenav:pokenav_item_pink"
+      },
+      {
+        "item": "cobblenav:pokenav_item_purple"
+      },
+      {
+        "item": "cobblenav:pokenav_item_red"
+      },
+      {
+        "item": "cobblenav:pokenav_item_yellow"
+      },
+      {
+        "item": "cobblenav:pokenav_item_white"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:orange_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblenav:pokenav_item_orange"
+    }
+  ]
+}
