@@ -1,0 +1,35 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "mega_showdown:mega_bracelet_red"
+      },
+      {
+        "item": "mega_showdown:mega_bracelet_blue"
+      },
+      {
+        "item": "mega_showdown:mega_bracelet_yellow"
+      },
+      {
+        "item": "mega_showdown:mega_bracelet_green"
+      },
+      {
+        "item": "mega_showdown:mega_bracelet_pink"
+      },
+      {
+        "item": "mega_showdown:mega_bracelet_black"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:white_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "mega_showdown:mega_bracelet"
+    }
+  ]
+}

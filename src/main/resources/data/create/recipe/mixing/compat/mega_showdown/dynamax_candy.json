@@ -1,0 +1,22 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "cobblemon:exp_candy_m"
+    },
+    {
+      "item": "mega_showdown:max_mushroom"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create:honey"
+    }
+  ],
+  "results": [
+    {
+      "id": "mega_showdown:dynamax_candy"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "item": "mega_showdown:mega_bracelet"
+      },
+      {
+        "item": "mega_showdown:mega_bracelet_blue"
+      },
+      {
+        "item": "mega_showdown:mega_bracelet_black"
+      },
+      {
+        "item": "mega_showdown:mega_bracelet_yellow"
+      },
+      {
+        "item": "mega_showdown:mega_bracelet_green"
+      },
+      {
+        "item": "mega_showdown:mega_bracelet_pink"
+      },
+      {
+        "item": "mega_showdown:mega_bracelet_red"
+      }
+    ],
+    {
+      "item": "create_encapsulated:blue_paint"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:mega_bracelet_blue"
+  }
+}

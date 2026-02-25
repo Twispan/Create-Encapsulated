@@ -1,0 +1,35 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "mega_showdown:z_ring_red"
+      },
+      {
+        "item": "mega_showdown:z_ring"
+      },
+      {
+        "item": "mega_showdown:z_ring_yellow"
+      },
+      {
+        "item": "mega_showdown:z_ring_green"
+      },
+      {
+        "item": "mega_showdown:z_ring_pink"
+      },
+      {
+        "item": "mega_showdown:z_ring_black"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:blue_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "mega_showdown:z_ring_blue"
+    }
+  ]
+}

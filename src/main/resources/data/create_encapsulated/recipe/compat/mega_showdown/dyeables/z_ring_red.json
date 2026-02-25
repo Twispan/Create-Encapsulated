@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "item": "mega_showdown:z_ring"
+      },
+      {
+        "item": "mega_showdown:z_ring_blue"
+      },
+      {
+        "item": "mega_showdown:z_ring_black"
+      },
+      {
+        "item": "mega_showdown:z_ring_yellow"
+      },
+      {
+        "item": "mega_showdown:z_ring_green"
+      },
+      {
+        "item": "mega_showdown:z_ring_pink"
+      },
+      {
+        "item": "mega_showdown:z_ring_red"
+      }
+    ],
+    {
+      "item": "create_encapsulated:red_paint"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mega_showdown:z_ring_red"
+  }
+}
