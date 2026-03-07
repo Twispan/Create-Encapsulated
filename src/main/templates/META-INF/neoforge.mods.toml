@@ -91,3 +91,16 @@ description='''${mod_description}'''
 # stop your mod loading on the server for example.
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"
+[[dependencies.${mod_id}]]
+    modId="cobblemon"
+    type="required"
+    versionRange="[1.7.0,)" # Medicinal Brew introduction
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="create"
+    type="required"
+    versionRange="[6.0.0,)" # Create's 1.21.1 first release, shouldn't have issues.
+    ordering="NONE"
+    side="BOTH"
