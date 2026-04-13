@@ -9,11 +9,14 @@
       "item": "create:wheat_flour"
     },
     {
-      "item": "minecraft:light_blue_dye"
+      "item": "minecraft:red_dye"
+    },
+    {
+      "item": "minecraft:green_dye"
     }
   ],
   "result": {
-    "id": "create_encapsulated:light_blue_paint"
+    "id": "create_encapsulated:brown_paint"
   },
   "seasoningTag": "cobblemon:empty",
   "seasoningProcessors": []
