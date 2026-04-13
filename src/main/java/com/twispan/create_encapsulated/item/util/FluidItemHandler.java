@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.item;
+package com.twispan.create_encapsulated.item.util;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;

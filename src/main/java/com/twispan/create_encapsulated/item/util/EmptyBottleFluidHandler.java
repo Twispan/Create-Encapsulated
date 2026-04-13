@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.item;
+package com.twispan.create_encapsulated.item.util;
 
 import com.twispan.create_encapsulated.fluid.MedicinalBrewFluidType;
 import com.twispan.create_encapsulated.fluid.other_medicine.OMedicineFluidType;
