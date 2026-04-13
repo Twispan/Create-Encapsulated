@@ -2,11 +2,19 @@
   "type": "cobblemon:cooking_pot_shapeless",
   "category": "foods",
   "ingredients": [
-    { "item": "minecraft:lime_dye" },
-    { "item": "create:wheat_flour" },
-    { "item": "c:potions/bottle" }
+    {
+      "tag": "c:potions/bottle"
+    },
+    {
+      "item": "create:wheat_flour"
+    },
+    {
+      "item": "minecraft:lime_dye"
+    }
   ],
-  "result": { "id": "create_encapsulated:lime_paint" },
+  "result": {
+    "id": "create_encapsulated:lime_paint"
+  },
   "seasoningTag": "cobblemon:empty",
   "seasoningProcessors": []
 }

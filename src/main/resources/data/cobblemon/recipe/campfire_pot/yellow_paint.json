@@ -2,11 +2,19 @@
   "type": "cobblemon:cooking_pot_shapeless",
   "category": "foods",
   "ingredients": [
-    { "item": "minecraft:yellow_dye" },
-    { "item": "create:wheat_flour" },
-    { "item": "c:potions/bottle" }
+    {
+      "tag": "c:potions/bottle"
+    },
+    {
+      "item": "create:wheat_flour"
+    },
+    {
+      "item": "minecraft:yellow_dye"
+    }
   ],
-  "result": { "id": "create_encapsulated:yellow_paint" },
+  "result": {
+    "id": "create_encapsulated:yellow_paint"
+  },
   "seasoningTag": "cobblemon:empty",
   "seasoningProcessors": []
 }
