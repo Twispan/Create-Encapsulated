@@ -10,7 +10,7 @@
     },
     {
       "item": "minecraft:light_gray_dye"
-    },
+    }
   ],
   "result": {
     "id": "create_encapsulated:light_gray_paint"
