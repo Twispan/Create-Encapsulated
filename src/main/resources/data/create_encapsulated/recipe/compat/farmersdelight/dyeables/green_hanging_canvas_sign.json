@@ -1,0 +1,64 @@
+{
+  "type": "create_encapsulated:paintable",
+  "category": "building",
+  "group": "canvas_sign",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:green_paint"
+    },
+    [
+      {
+        "item": "farmersdelight:hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:blue_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:brown_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:cyan_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:gray_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:black_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:light_blue_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:light_gray_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:lime_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:magenta_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:orange_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:pink_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:purple_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:red_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:yellow_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:white_hanging_canvas_sign"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:green_hanging_canvas_sign"
+  }
+}

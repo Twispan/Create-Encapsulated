@@ -1,0 +1,65 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "farmersdelight:hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:blue_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:brown_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:cyan_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:gray_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:green_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:light_blue_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:light_gray_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:lime_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:magenta_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:orange_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:pink_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:purple_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:red_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:yellow_hanging_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:black_hanging_canvas_sign"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:white_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "farmersdelight:white_hanging_canvas_sign"
+    }
+  ]
+}

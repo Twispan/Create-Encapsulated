@@ -1,0 +1,65 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "farmersdelight:canvas_sign"
+      },
+      {
+        "item": "farmersdelight:blue_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:brown_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:cyan_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:gray_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:green_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:light_blue_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:light_gray_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:lime_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:magenta_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:orange_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:pink_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:purple_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:red_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:yellow_canvas_sign"
+      },
+      {
+        "item": "farmersdelight:white_canvas_sign"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:lime_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "farmersdelight:lime_canvas_sign"
+    }
+  ]
+}
