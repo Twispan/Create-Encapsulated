@@ -5,6 +5,23 @@
     {
       "item": "create:experience_nugget"
     },
+    [
+      {
+        "item": "cobblemon:razz_berry"
+      },
+      {
+        "item": "cobblemon:nanab_berry"
+      },
+      {
+        "item": "cobblemon:bluk_berry"
+      },
+      {
+        "item": "cobblemon:wepear_berry"
+      },
+      {
+        "item": "cobblemon:pinap_berry"
+      }
+    ],
     {
       "type": "neoforge:single",
       "amount": 100,
