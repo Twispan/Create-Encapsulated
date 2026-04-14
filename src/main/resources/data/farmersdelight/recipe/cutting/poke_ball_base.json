@@ -1,0 +1,19 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:wooden_slabs"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 1,
+        "id": "create_encapsulated:poke_ball_base"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}

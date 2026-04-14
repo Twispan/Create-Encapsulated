@@ -1,0 +1,19 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "cobblemon:black_apricorn"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "create_encapsulated:split_black_apricorn"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}
