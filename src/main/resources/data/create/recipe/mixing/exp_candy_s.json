@@ -22,7 +22,7 @@
     },
     {
       "type": "neoforge:single",
-      "amount": 100,
+      "amount": 50,
       "fluid": "create:honey"
     }
   ],
