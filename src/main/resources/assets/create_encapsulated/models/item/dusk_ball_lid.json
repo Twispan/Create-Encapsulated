@@ -2,11 +2,11 @@
   "parent": "minecraft:item/handheld",
   "loader": "neoforge:separate_transforms",
   "base": {
-    "parent": "create_encapsulated:item/great_ball_lid_3d"
+    "parent": "create_encapsulated:item/dusk_ball_lid_3d"
   },
   "perspectives": {
     "gui": {
-      "parent": "create_encapsulated:item/great_ball_lid_2d"
+      "parent": "create_encapsulated:item/dusk_ball_lid_2d"
     }
   }
 }
