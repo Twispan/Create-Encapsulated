@@ -1,0 +1,20 @@
+{
+  "type": "cobblemon:cooking_pot_shapeless",
+  "category": "foods",
+  "ingredients": [
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "cobblemon:exp_candy_m"
+    },
+    {
+      "item": "mega_showdown:max_mushroom"
+    }
+  ],
+  "result": {
+    "id": "mega_showdown:dynamax_candy"
+  },
+  "seasoningTag": "cobblemon:empty",
+  "seasoningProcessors": []
+}

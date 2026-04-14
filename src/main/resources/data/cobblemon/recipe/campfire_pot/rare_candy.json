@@ -3,8 +3,6 @@
   "category": "foods",
   "ingredients": [
     { "item": "cobblemon:exp_candy_xl" },
-    { "item": "cobblemon:exp_candy_xl" },
-    { "item": "cobblemon:exp_candy_xl" },
     { "item": "minecraft:sugar" },
     { "item": "cobblemon:pep_up_flower" },
     { "item": "minecraft:honey_bottle" }
