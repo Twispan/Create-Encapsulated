@@ -1,0 +1,20 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "legendarymonuments:distortion_origin_ore"
+    }
+  ],
+  "processing_time": 350,
+  "results": [
+    {
+      "count": 1,
+      "id": "create_encapsulated:origin_alloy"
+    },
+    {
+      "chance": 0.25,
+      "count": 1,
+      "id": "legendarymonuments:distortion_deepslate"
+    }
+  ]
+}
