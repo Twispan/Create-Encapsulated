@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "create_encapsulated:black_paint"
+      "item": "create_encapsulated:light_gray_paint"
     },
     [
       {
@@ -55,7 +55,7 @@
   ],
   "result": {
     "count": 1,
-    "id": "cobblemon:black_plaque"
+    "id": "cobblemon:light_gray_plaque"
   }
 }
 
