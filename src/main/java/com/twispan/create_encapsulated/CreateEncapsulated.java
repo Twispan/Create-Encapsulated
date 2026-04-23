@@ -2,6 +2,7 @@ package com.twispan.create_encapsulated;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import com.twispan.create_encapsulated.advancements.ModTriggers;
+import com.twispan.create_encapsulated.block.ModBlocks;
 import com.twispan.create_encapsulated.client.ModClientSetup;
 import com.twispan.create_encapsulated.crafting.ModRecipeSerializers;
 import com.twispan.create_encapsulated.events.BasinDyeHandler;
@@ -67,8 +68,11 @@ public class CreateEncapsulated {
         ModFluids.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+        ModBlocks.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(BasinDyeHandler::onRightClickBlock);
+
+
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
