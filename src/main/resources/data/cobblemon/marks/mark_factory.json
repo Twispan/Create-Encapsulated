@@ -1,0 +1,9 @@
+{
+	"name": "cobblemon.mark.mark_factory",
+	"title": "cobblemon.mark.mark_factory.title",
+	"titleColor": "977043",
+	"description": "cobblemon.mark.mark_factory.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_factory.png",
+	"chance": 0.06,
+	"indexNumber": 321
+}

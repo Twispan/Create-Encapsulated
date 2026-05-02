@@ -1,0 +1,25 @@
+{
+  "values": [
+    "create:hand_crank",
+    "create:windmill_bearing",
+    "create:water_wheel",
+    "create:large_water_wheel",
+    "create:schematicannon",
+    "create:millstone",
+    "create:crushing_wheel",
+    "create:mechanical_mixer",
+    "create:mechanical_bearing",
+    "create:mechanical_drill",
+    "create:mechanical_press",
+    "create:mechanical_arm",
+    "create:mechanical_saw",
+    "create:mechanical_harvester",
+    "create:mechanical_crafter",
+    "create:deployer",
+    "create:spout",
+    "create:blaze_burner",
+    "create:steam_engine",
+    "create:encased_fan"
+
+  ]
+}

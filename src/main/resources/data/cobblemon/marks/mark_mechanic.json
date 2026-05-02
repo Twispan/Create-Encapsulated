@@ -1,0 +1,9 @@
+{
+	"name": "cobblemon.mark.mark_mechanic",
+	"title": "cobblemon.mark.mark_mechanic.title",
+	"titleColor": "E8B45B",
+	"description": "cobblemon.mark.mark_mechanic.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_mechanic.png",
+	"chance": 0.06,
+	"indexNumber": 320
+}

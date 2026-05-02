@@ -1,0 +1,25 @@
+{
+  "cobblemon.mark.mark_mechanic": "Mechanic Mark",
+  "cobblemon.mark.mark_mechanic.title": "%1$s the Resourceful",
+  "cobblemon.mark.mark_mechanic.desc": "A mark for a resourceful Pokémon.",
+  "cobblemon.mark.mark_factory": "Factory Mark",
+  "cobblemon.mark.mark_factory.title": "%1$s the Industrious",
+  "cobblemon.mark.mark_factory.desc": "A mark for an industrious Pokémon.",
+  "cobblemon.mark.mark_engineer": "Engineer Mark",
+  "cobblemon.mark.mark_engineer.title": "%1$s the Railfan",
+  "cobblemon.mark.mark_engineer.desc": "A mark for a Pokémon that dreams of riding the rails.",
+  "cobblemon.mark.mark_aeronaut": "Aeronaut Mark",
+  "cobblemon.mark.mark_aeronaut.title": "%1$s the Cloud-Skipper",
+  "cobblemon.mark.mark_aeronaut.desc": "A mark for a Pokémon found at the sky's limit.",
+  "cobblemon.mark.mark_core": "Core Mark",
+  "cobblemon.mark.mark_core.title": "%1$s the Excavator",
+  "cobblemon.mark.mark_core.desc": "A mark for a Pokémon found deep below the surface.",
+  "cobblemon.mark.mark_delivery": "Delivery Mark",
+  "cobblemon.mark.mark_delivery.title": "%1$s the Courier",
+  "cobblemon.mark.mark_delivery.desc": "A mark for a Pokémon that enjoys relaying messages.",
+  "cobblemon.mark.mark_shopkeep": "Shopkeep Mark",
+  "cobblemon.mark.mark_shopkeep.title": "%1$s the Merchant",
+  "cobblemon.mark.mark_shopkeep.desc": "A mark for a Pokémon that likes to trade items."
+
+  
+}

@@ -1,0 +1,9 @@
+{
+	"name": "cobblemon.mark.mark_engineer",
+	"title": "cobblemon.mark.mark_engineer.title",
+	"titleColor": "B83F40",
+	"description": "cobblemon.mark.mark_engineer.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_engineer.png",
+	"chance": 0.06,
+	"indexNumber": 322
+}

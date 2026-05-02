@@ -1,0 +1,9 @@
+{
+	"name": "cobblemon.mark.mark_delivery",
+	"title": "cobblemon.mark.mark_delivery.title",
+	"titleColor": "D7B084",
+	"description": "cobblemon.mark.mark_delivery.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_delivery.png",
+	"chance": 0.06,
+	"indexNumber": 323
+}

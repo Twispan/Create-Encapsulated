@@ -1,0 +1,25 @@
+t.x = q.pokemon_entity.x;
+t.y = q.pokemon_entity.y;
+t.z = q.pokemon_entity.z;
+
+t.world = q.pokemon_entity.world;
+
+t.biome = q.pokemon_entity.biome;
+
+t.biome.is_in('#minecraft:is_overworld') && t.y > 300 ? {
+    q.pokemon_entity.add_potential_marks('cobblemon:mark_aeronaut');
+};
+
+t.biome.is_in('#minecraft:is_overworld') && t.y < -40 ? {
+    q.pokemon_entity.add_potential_marks('cobblemon:mark_core');
+};
+
+q.pokemon_entity.add_potential_marks(
+    'cobblemon:mark_mechanic',
+    'cobblemon:mark_engineer',
+    'cobblemon:mark_factory',
+    'cobblemon:mark_delivery',
+    'cobblemon:mark_shopkeep'
+
+);
+

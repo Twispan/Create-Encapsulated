@@ -1,0 +1,9 @@
+{
+	"name": "cobblemon.mark.mark_aeronaut",
+	"title": "cobblemon.mark.mark_aeronaut.title",
+	"titleColor": "81C0F1",
+	"description": "cobblemon.mark.mark_aeronaut.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_aeronaut.png",
+	"chance": 0.45,
+	"indexNumber": 329
+}

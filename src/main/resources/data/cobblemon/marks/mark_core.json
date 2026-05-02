@@ -1,0 +1,9 @@
+{
+	"name": "cobblemon.mark.mark_core",
+	"title": "cobblemon.mark.mark_core.title",
+	"titleColor": "98A3A3",
+	"description": "cobblemon.mark.mark_core.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_core.png",
+	"chance": 0.13,
+	"indexNumber": 330
+}
