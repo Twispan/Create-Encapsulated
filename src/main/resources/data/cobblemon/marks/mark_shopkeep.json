@@ -1,9 +1,9 @@
 {
 	"name": "cobblemon.mark.mark_shopkeep",
 	"title": "cobblemon.mark.mark_shopkeep.title",
-	"titleColor": "4890D8",
+	"titleColor": "3B86D1",
 	"description": "cobblemon.mark.mark_shopkeep.desc",
 	"texture": "cobblemon:textures/gui/mark/mark_shopkeep.png",
-	"chance": 0.06,
+	"chance": 0.07,
 	"indexNumber": 324
 }
