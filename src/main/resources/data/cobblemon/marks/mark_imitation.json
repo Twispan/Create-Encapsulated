@@ -1,0 +1,9 @@
+{
+	"name": "cobblemon.mark.mark_imitation",
+	"title": "cobblemon.mark.mark_imitation.title",
+	"titleColor": "868978",
+	"description": "cobblemon.mark.mark_imitation.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_imitation.png",
+	"chance": 0.07,
+	"indexNumber": 325
+}

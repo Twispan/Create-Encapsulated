@@ -1,0 +1,9 @@
+{
+	"name": "cobblemon.mark.mark_piping",
+	"title": "cobblemon.mark.mark_piping.title",
+	"titleColor": "E47B55",
+	"description": "cobblemon.mark.mark_piping.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_piping.png",
+	"chance": 0.07,
+	"indexNumber": 326
+}
