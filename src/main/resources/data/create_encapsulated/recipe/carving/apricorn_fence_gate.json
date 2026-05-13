@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "tag": "cobblemon:apricorn_logs"
+  },
+  "result": {
+    "id": "cobblemon:apricorn_fence_gate",
+    "count": 1
+  }
+}

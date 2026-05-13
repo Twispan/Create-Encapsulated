@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "cobblemon:apricorn_planks"
+  },
+  "result": {
+    "id": "cobblemon:apricorn_slab",
+    "count": 1
+  }
+}

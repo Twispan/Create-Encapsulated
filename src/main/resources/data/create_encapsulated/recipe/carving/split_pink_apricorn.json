@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "cobblemon:pink_apricorn"
+  },
+  "result": {
+    "id": "create_encapsulated:split_pink_apricorn",
+    "count": 2
+  }
+}

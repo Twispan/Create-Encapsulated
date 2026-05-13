@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "minecraft:bamboo_mosaic_planks"
+  },
+  "result": {
+    "id": "minecraft:bamboo_mosaic_slab",
+    "count": 1
+  }
+}
