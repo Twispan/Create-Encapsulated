@@ -1,7 +1,7 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "tag": "minecraft:mangrove_logs"
+    "item": "minecraft:mangrove_planks"
   },
   "result": {
     "id": "minecraft:mangrove_fence_gate",

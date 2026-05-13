@@ -1,7 +1,7 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "tag": "minecraft:oak_logs"
+    "item": "minecraft:oak_planks"
   },
   "result": {
     "id": "minecraft:oak_fence_gate",

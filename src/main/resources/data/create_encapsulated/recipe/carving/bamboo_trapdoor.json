@@ -1,10 +1,10 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "tag": "minecraft:bamboo_blocks"
+    "item": "minecraft:bamboo_planks"
   },
   "result": {
     "id": "minecraft:bamboo_trapdoor",
-    "count": 1
+    "count": 2
   }
 }

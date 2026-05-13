@@ -1,7 +1,7 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "tag": "minecraft:spruce_logs"
+    "item": "minecraft:spruce_planks"
   },
   "result": {
     "id": "minecraft:spruce_fence_gate",

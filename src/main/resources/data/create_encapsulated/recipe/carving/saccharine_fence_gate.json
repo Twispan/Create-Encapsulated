@@ -1,7 +1,7 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "tag": "cobblemon:saccharine_logs"
+    "item": "cobblemon:saccharine_planks"
   },
   "result": {
     "id": "cobblemon:saccharine_fence_gate",

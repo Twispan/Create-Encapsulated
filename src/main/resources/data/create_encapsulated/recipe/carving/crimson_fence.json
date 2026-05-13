@@ -1,7 +1,7 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "tag": "minecraft:crimson_stems"
+    "item": "minecraft:crimson_planks"
   },
   "result": {
     "id": "minecraft:crimson_fence",

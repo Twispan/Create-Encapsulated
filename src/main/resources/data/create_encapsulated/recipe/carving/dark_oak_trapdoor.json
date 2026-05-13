@@ -1,10 +1,10 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "tag": "minecraft:dark_oak_logs"
+    "item": "minecraft:dark_oak_planks"
   },
   "result": {
     "id": "minecraft:dark_oak_trapdoor",
-    "count": 1
+    "count": 2
   }
 }
