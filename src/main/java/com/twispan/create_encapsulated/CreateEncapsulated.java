@@ -2,16 +2,20 @@ package com.twispan.create_encapsulated;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import com.twispan.create_encapsulated.advancements.ModTriggers;
-import com.twispan.create_encapsulated.block.ModBlocks;
+import com.twispan.create_encapsulated.registries.blocks.ModBlockEntities;
+import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import com.twispan.create_encapsulated.client.ModClientSetup;
+import com.twispan.create_encapsulated.config.CEConfig;
 import com.twispan.create_encapsulated.crafting.ModRecipeSerializers;
+import com.twispan.create_encapsulated.registries.ModRecipeTypes;
 import com.twispan.create_encapsulated.events.BasinDyeHandler;
 import com.twispan.create_encapsulated.item.util.EmptyBottleFluidHandler;
-import com.twispan.create_encapsulated.item.ModCreativeModeTabs;
+import com.twispan.create_encapsulated.registries.items.ModCreativeModeTabs;
 import com.twispan.create_encapsulated.item.Paint;
 import com.twispan.create_encapsulated.item.util.FluidItemHandler;
 import com.twispan.create_encapsulated.registries.ModFluids;
-import com.twispan.create_encapsulated.registries.ModItems;
+import com.twispan.create_encapsulated.registries.items.ModItems;
+import com.twispan.create_encapsulated.registries.ModMenuTypes;
 import net.minecraft.world.item.Items;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLEnvironment;
@@ -68,14 +72,16 @@ public class CreateEncapsulated {
         ModFluids.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
-        ModBlocks.register(modEventBus);
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(BasinDyeHandler::onRightClickBlock);
-
+        ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
 
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modContainer.registerConfig(ModConfig.Type.COMMON, CEConfig.SPEC);
 
         // Register client-side events only on the client
         if (FMLEnvironment.dist == Dist.CLIENT) {
@@ -149,6 +155,8 @@ public class CreateEncapsulated {
             event.accept(ModItems.BROWNPAINT);
             event.accept(ModItems.LIGHTGRAYPAINT);
             event.accept(ModItems.GRAYPAINT);
+            event.accept(ModItems.CARVING_BLADE);
+            event.accept(ModBlocks.CARVING_TABLE.asItem());
         }
     }
 
@@ -372,7 +380,6 @@ public class CreateEncapsulated {
                 Items.GLASS_BOTTLE
         );
     }
-
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

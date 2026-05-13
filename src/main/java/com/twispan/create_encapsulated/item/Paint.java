@@ -7,7 +7,7 @@ import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import com.twispan.create_encapsulated.advancements.ModTriggers;
 import com.twispan.create_encapsulated.fluid.paint.PaintColor;
 import com.twispan.create_encapsulated.fluid.paint.PaintFluidType;
-import com.twispan.create_encapsulated.registries.ModItems;
+import com.twispan.create_encapsulated.registries.items.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;

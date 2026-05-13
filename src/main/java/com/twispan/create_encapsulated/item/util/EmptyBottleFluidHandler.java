@@ -9,7 +9,7 @@ import com.twispan.create_encapsulated.fluid.potions.PotionFluidType;
 import com.twispan.create_encapsulated.fluid.potions.PotionType;
 import com.twispan.create_encapsulated.fluid.vitamins.VitaminFluidType;
 import com.twispan.create_encapsulated.fluid.vitamins.VitaminType;
-import com.twispan.create_encapsulated.registries.ModItems;
+import com.twispan.create_encapsulated.registries.items.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;

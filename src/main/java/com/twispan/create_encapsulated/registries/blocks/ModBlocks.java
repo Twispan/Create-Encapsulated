@@ -1,10 +1,12 @@
-package com.twispan.create_encapsulated.block;
+package com.twispan.create_encapsulated.registries.blocks;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.registries.ModItems;
+import com.twispan.create_encapsulated.block.CarvingTable;
+import com.twispan.create_encapsulated.registries.items.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -29,4 +31,7 @@ public class ModBlocks {
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
+
+    public static final DeferredBlock<Block> CARVING_TABLE = registerBlock("carving_table",
+            () -> new CarvingTable(BlockBehaviour.Properties.of()));
 }

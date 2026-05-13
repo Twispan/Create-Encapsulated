@@ -1,18 +1,22 @@
-package com.twispan.create_encapsulated.item;
+package com.twispan.create_encapsulated.registries.items;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.registries.ModItems;
+import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
+@EventBusSubscriber(modid = CreateEncapsulated.MODID, value = Dist.CLIENT)
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister
             .create(Registries.CREATIVE_MODE_TAB, CreateEncapsulated.MODID);
@@ -83,8 +87,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GRAYPAINT);
                     }).build());
 
-{
+    @SubscribeEvent
+    public static void addToTabs(BuildCreativeModeTabContentsEvent event) {
 
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ModBlocks.CARVING_TABLE.asItem());
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.CARVING_BLADE);
+        }
     }
 
     public static void register(IEventBus eventBus) {

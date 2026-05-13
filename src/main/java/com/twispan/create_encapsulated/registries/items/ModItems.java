@@ -1,9 +1,9 @@
-package com.twispan.create_encapsulated.registries;
+package com.twispan.create_encapsulated.registries.items;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
 import com.twispan.create_encapsulated.item.Paint;
+import com.twispan.create_encapsulated.item.singular.CarvingBlade;
 import net.minecraft.world.item.Item;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -139,4 +139,7 @@ public class ModItems {
             () -> new Paint(new Item.Properties().stacksTo(64), LIGHTGRAY_PAINT));
     public static final DeferredItem<Item> GRAYPAINT = ITEMS.register("gray_paint",
             () -> new Paint(new Item.Properties().stacksTo(64), GRAY_PAINT));
+
+    public static final DeferredItem<Item> CARVING_BLADE = ITEMS.register("carving_blade",
+            () -> new CarvingBlade(new Item.Properties().durability(250).setNoRepair()));
 }

@@ -10,6 +10,7 @@
   "item.create_encapsulated.split_pink_apricorn": "Split Pink Apricorn",
   "item.create_encapsulated.split_black_apricorn": "Split Black Apricorn",
   "item.create_encapsulated.split_white_apricorn": "Split White Apricorn",
+  "item.create_encapsulated.carving_blade": "Carving Blade",
 
   "death.attack.tasted_rainbow": "%1$s tasted the rainbow",
 
@@ -110,5 +111,11 @@
   "fluid_type.create_encapsulated.elixir": "Elixir",
   "fluid_type.create_encapsulated.max_elixir": "Max Elixir",
 
-  "creativetab.create_encapsulated.pokeballcomponents_items": "Poké Ball Components"
+  "creativetab.create_encapsulated.pokeballcomponents_items": "Poké Ball Components",
+
+  "create_encapsulated.configuration.allowAxeStripping": "Allow Axe Stripping",
+  "config.create_encapsulated.allowAxeStripping.tooltip": "Axes will behave normally and strip logs.",
+
+  "create_encapsulated.configuration.allowWrenchUncasing": "Allow Wrench Uncasing",
+  "config.create_encapsulated.allowWrenchUncasing.tooltip": "Wrenches will be able to uncase kinetic blocks."
 }

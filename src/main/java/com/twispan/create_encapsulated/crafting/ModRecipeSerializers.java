@@ -95,4 +95,7 @@ public class ModRecipeSerializers {
                             return STREAM_CODEC;
                         }
                     });
+
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<CarvingRecipe>> CARVING =
+            RECIPE_SERIALIZERS.register("carving", CarvingRecipe.Serializer::new);
 }
