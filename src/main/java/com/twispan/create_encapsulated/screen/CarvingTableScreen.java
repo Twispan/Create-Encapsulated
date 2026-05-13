@@ -10,7 +10,6 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import org.jetbrains.annotations.NotNull;
@@ -36,7 +35,7 @@ public class CarvingTableScreen extends AbstractContainerScreen<CarvingTableMenu
     }
 
     @Override
-    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
+    public void render(@NotNull GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         this.containerChanged();
         super.render(guiGraphics, mouseX, mouseY, partialTick);
         this.renderTooltip(guiGraphics, mouseX, mouseY);
@@ -52,11 +51,18 @@ public class CarvingTableScreen extends AbstractContainerScreen<CarvingTableMenu
 
         guiGraphics.blit(GUI_TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
-        int scrollbarX = x + 105;
-        int scrollbarY = y + 15;
-        int scrollbarTexY = this.displayRecipes ? 0 : 12;
-        guiGraphics.blit(GUI_TEXTURE, scrollbarX + 14, scrollbarY + (int)(41.0F * this.scrollOffs),
-                176 + scrollbarTexY, 0, 12, 15);
+        if (this.canScroll()) {
+            int scrollbarX = x + 105;
+            int scrollbarY = y + 15;
+            int scrollbarTexY = this.displayRecipes ? 0 : 12;
+            guiGraphics.blit(GUI_TEXTURE, scrollbarX + 14, scrollbarY + (int)(41.0F * this.scrollOffs),
+                    176 + scrollbarTexY, 0, 12, 15);
+        } else {
+            int scrollbarX = x + 105;
+            int scrollbarY = y + 15;
+            guiGraphics.blit(GUI_TEXTURE, scrollbarX + 14, scrollbarY,
+                    176 + 12, 0, 12, 15);
+        }
 
         int recipeAreaX = x + 52;
         int recipeAreaY = y + 14;
