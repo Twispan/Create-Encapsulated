@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "cobblemon:apricorn_wood"
+  },
+  "result": {
+    "id": "cobblemon:stripped_apricorn_wood",
+    "count": 1
+  }
+}

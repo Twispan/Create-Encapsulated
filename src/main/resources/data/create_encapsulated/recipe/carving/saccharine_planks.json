@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "tag": "cobblemon:saccharine_logs"
+  },
+  "result": {
+    "id": "cobblemon:saccharine_planks",
+    "count": 4
+  }
+}

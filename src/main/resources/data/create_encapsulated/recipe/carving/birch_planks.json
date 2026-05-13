@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "tag": "minecraft:birch_logs"
+  },
+  "result": {
+    "id": "minecraft:birch_planks",
+    "count": 4
+  }
+}
