@@ -1,10 +1,10 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "item": "natures_spirit:cypress_log"
+    "item": "quark:vertical_blossom_planks"
   },
   "result": {
-    "id": "natures_spirit:stripped_cypress_log",
+    "id": "quark:blossom_stairs",
     "count": 1
   }
 }

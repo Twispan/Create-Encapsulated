@@ -1,10 +1,10 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "item": "minecraft:ancient_log"
+    "item": "quark:vertical_azalea_planks"
   },
   "result": {
-    "id": "minecraft:stripped_ancient_log",
+    "id": "quark:azalea_planks",
     "count": 1
   }
 }

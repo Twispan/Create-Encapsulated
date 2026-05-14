@@ -1,10 +1,10 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "item": "natures_spirit:cypress_log"
+    "item": "quark:azalea_wood"
   },
   "result": {
-    "id": "natures_spirit:stripped_cypress_log",
+    "id": "quark:azalea_log",
     "count": 1
   }
 }
