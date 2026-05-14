@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "create_encapsulated:block/carving_table",
-		"particle": "create_encapsulated:block/carving_table"
+		"particle": "block/oak_planks"
 	},
 	"elements": [
 		{
