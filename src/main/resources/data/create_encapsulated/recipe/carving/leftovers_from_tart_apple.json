@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "cobblemon:tart_apple"
+  },
+  "result": {
+    "id": "cobblemon:leftovers",
+    "count": 1
+  }
+}
