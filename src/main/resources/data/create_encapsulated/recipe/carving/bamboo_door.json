@@ -1,10 +1,10 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "item": "minecraft:warped_planks"
+    "item": "minecraft:bamboo_planks"
   },
   "result": {
-    "id": "minecraft:warped_fence",
+    "id": "minecraft:bamboo_door",
     "count": 1
   }
 }
