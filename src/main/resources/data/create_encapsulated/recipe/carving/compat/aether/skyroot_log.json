@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "aether:skyroot_wood"
+  },
+  "result": {
+    "id": "aether:skyroot_log",
+    "count": 1
+  }
+}

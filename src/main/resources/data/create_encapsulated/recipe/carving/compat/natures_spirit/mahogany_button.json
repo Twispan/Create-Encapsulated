@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "natures_spirit:mahogany_planks"
+  },
+  "result": {
+    "id": "natures_spirit:mahogany_button",
+    "count": 4
+  }
+}

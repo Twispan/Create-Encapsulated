@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "minecraft:ancient_log"
+  },
+  "result": {
+    "id": "minecraft:stripped_ancient_log",
+    "count": 1
+  }
+}

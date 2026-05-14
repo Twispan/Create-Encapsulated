@@ -1,10 +1,10 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "item": "minecraft:acacia_planks"
+    "item": "quark:ancient_planks"
   },
   "result": {
-    "id": "minecraft:acacia_pressure_plate",
+    "id": "quark:ancient_planks_vertical_slab",
     "count": 2
   }
 }

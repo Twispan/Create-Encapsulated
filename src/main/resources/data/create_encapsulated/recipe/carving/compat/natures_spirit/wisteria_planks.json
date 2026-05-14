@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "tag": "natures_spirit:wisteria_logs"
+  },
+  "result": {
+    "id": "natures_spirit:wisteria_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "ars_nouveau:archwood_planks"
+  },
+  "result": {
+    "id": "ars_nouveau:archwood_door",
+    "count": 1
+  }
+}
