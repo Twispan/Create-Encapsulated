@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "minecraft:mangrove_sign"
+  },
+  "result": {
+    "id": "supplementaries:way_sign_mangrove",
+    "count": 2
+  }
+}

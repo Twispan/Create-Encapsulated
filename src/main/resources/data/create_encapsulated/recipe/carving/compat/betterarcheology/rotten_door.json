@@ -1,10 +1,10 @@
 {
   "type": "create_encapsulated:carving",
   "ingredient": {
-    "item": "quark:vertical_ancient_planks"
+    "item": "betterarcheology:rotten_planks"
   },
   "result": {
-    "id": "quark:ancient_planks_stairs",
+    "id": "betterarcheology:rotten_door",
     "count": 1
   }
 }

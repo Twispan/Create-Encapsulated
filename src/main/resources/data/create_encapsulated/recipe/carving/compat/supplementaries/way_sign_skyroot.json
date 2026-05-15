@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "aether:skyroot_sign"
+  },
+  "result": {
+    "id": "supplementaries:aether/way_sign_skyroot",
+    "count": 2
+  }
+}

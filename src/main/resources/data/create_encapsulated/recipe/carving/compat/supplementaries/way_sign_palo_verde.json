@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "natures_spirit:palo_verde_sign"
+  },
+  "result": {
+    "id": "supplementaries:natures_spirit/way_sign_palo_verde",
+    "count": 2
+  }
+}

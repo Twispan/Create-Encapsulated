@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "minecraft:acacia_sign"
+  },
+  "result": {
+    "id": "supplementaries:way_sign_acacia",
+    "count": 2
+  }
+}

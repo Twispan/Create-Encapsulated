@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "betterarcheology:rotten_planks"
+  },
+  "result": {
+    "id": "betterarcheology:rotten_trapdoor",
+    "count": 2
+  }
+}
