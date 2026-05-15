@@ -1,0 +1,65 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "supplementaries:present_blue"
+      },
+      {
+        "item": "supplementaries:present"
+      },
+      {
+        "item": "supplementaries:present_brown"
+      },
+      {
+        "item": "supplementaries:present_cyan"
+      },
+      {
+        "item": "supplementaries:present_gray"
+      },
+      {
+        "item": "supplementaries:present_green"
+      },
+      {
+        "item": "supplementaries:present_light_blue"
+      },
+      {
+        "item": "supplementaries:present_light_gray"
+      },
+      {
+        "item": "supplementaries:present_lime"
+      },
+      {
+        "item": "supplementaries:present_magenta"
+      },
+      {
+        "item": "supplementaries:present_orange"
+      },
+      {
+        "item": "supplementaries:present_pink"
+      },
+      {
+        "item": "supplementaries:present_purple"
+      },
+      {
+        "item": "supplementaries:present_red"
+      },
+      {
+        "item": "supplementaries:present_yellow"
+      },
+      {
+        "item": "supplementaries:present_white"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:black_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "supplementaries:present_black"
+    }
+  ]
+}
