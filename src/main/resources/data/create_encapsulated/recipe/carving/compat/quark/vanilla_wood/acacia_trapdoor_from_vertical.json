@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "quark:vertical_acacia_planks"
+  },
+  "result": {
+    "id": "minecraft:acacia_trapdoor",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "minecraft:birch_planks"
+  },
+  "result": {
+    "id": "quark:vertical_birch_planks",
+    "count": 1
+  }
+}

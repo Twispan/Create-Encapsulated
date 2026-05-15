@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "minecraft:spruce_wood"
+  },
+  "result": {
+    "id": "quark:spruce_post",
+    "count": 4
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "minecraft:cherry_planks"
+  },
+  "result": {
+    "id": "quark:vertical_cherry_planks",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "minecraft:birch_wood"
+  },
+  "result": {
+    "id": "quark:birch_post",
+    "count": 4
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "minecraft:cherry_log"
+  },
+  "result": {
+    "id": "quark:hollow_cherry_log",
+    "count": 1
+  }
+}

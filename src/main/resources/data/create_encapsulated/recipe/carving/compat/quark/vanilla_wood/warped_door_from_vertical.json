@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "quark:vertical_warped_planks"
+  },
+  "result": {
+    "id": "minecraft:warped_door",
+    "count": 1
+  }
+}

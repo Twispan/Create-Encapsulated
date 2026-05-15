@@ -1,0 +1,10 @@
+{
+  "type": "create_encapsulated:carving",
+  "ingredient": {
+    "item": "minecraft:jungle_wood"
+  },
+  "result": {
+    "id": "quark:jungle_post",
+    "count": 4
+  }
+}
