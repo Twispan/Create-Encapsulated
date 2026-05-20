@@ -1,0 +1,64 @@
+{
+  "type": "create_encapsulated:paintable",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:cyan_paint"
+    },
+    [
+      {
+        "item": "supplementaries:candle_holder_blue"
+      },
+      {
+        "item": "supplementaries:candle_holder"
+      },
+      {
+        "item": "supplementaries:candle_holder_brown"
+      },
+      {
+        "item": "supplementaries:candle_holder_cyan"
+      },
+      {
+        "item": "supplementaries:candle_holder_gray"
+      },
+      {
+        "item": "supplementaries:candle_holder_green"
+      },
+      {
+        "item": "supplementaries:candle_holder_light_blue"
+      },
+      {
+        "item": "supplementaries:candle_holder_light_gray"
+      },
+      {
+        "item": "supplementaries:candle_holder_lime"
+      },
+      {
+        "item": "supplementaries:candle_holder_magenta"
+      },
+      {
+        "item": "supplementaries:candle_holder_orange"
+      },
+      {
+        "item": "supplementaries:candle_holder_pink"
+      },
+      {
+        "item": "supplementaries:candle_holder_purple"
+      },
+      {
+        "item": "supplementaries:candle_holder_red"
+      },
+      {
+        "item": "supplementaries:candle_holder_yellow"
+      },
+      {
+        "item": "supplementaries:candle_holder_white"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "supplementaries:candle_holder_cyan"
+  }
+}
+

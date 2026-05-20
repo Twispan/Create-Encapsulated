@@ -1,0 +1,64 @@
+{
+  "type": "create_encapsulated:paintable",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:white_paint"
+    },
+    [
+      {
+        "item": "supplementaries:trapped_present_blue"
+      },
+      {
+        "item": "supplementaries:trapped_present"
+      },
+      {
+        "item": "supplementaries:trapped_present_brown"
+      },
+      {
+        "item": "supplementaries:trapped_present_cyan"
+      },
+      {
+        "item": "supplementaries:trapped_present_gray"
+      },
+      {
+        "item": "supplementaries:trapped_present_green"
+      },
+      {
+        "item": "supplementaries:trapped_present_light_blue"
+      },
+      {
+        "item": "supplementaries:trapped_present_light_gray"
+      },
+      {
+        "item": "supplementaries:trapped_present_lime"
+      },
+      {
+        "item": "supplementaries:trapped_present_magenta"
+      },
+      {
+        "item": "supplementaries:trapped_present_orange"
+      },
+      {
+        "item": "supplementaries:trapped_present_pink"
+      },
+      {
+        "item": "supplementaries:trapped_present_purple"
+      },
+      {
+        "item": "supplementaries:trapped_present_red"
+      },
+      {
+        "item": "supplementaries:trapped_present_yellow"
+      },
+      {
+        "item": "supplementaries:trapped_present_black"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "supplementaries:trapped_present_white"
+  }
+}
+
