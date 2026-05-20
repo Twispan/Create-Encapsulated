@@ -1,0 +1,65 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "natures_spirit:paper_lantern"
+      },
+      {
+        "item": "natures_spirit:black_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:brown_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:cyan_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:gray_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:green_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:light_blue_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:light_gray_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:lime_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:magenta_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:orange_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:pink_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:purple_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:red_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:yellow_paper_lantern"
+      },
+      {
+        "item": "natures_spirit:white_paper_lantern"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:blue_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "natures_spirit:blue_paper_lantern"
+    }
+  ]
+}

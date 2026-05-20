@@ -1,0 +1,61 @@
+{
+  "type": "create_encapsulated:paintable",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:lime_paint"
+    },
+    [
+      {
+        "item": "natures_spirit:blue_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:brown_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:cyan_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:gray_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:green_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:light_blue_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:light_gray_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:black_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:magenta_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:orange_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:pink_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:purple_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:red_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:yellow_chalk_stairs"
+      },
+      {
+        "item": "natures_spirit:white_chalk_stairs"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "natures_spirit:lime_chalk_stairs"
+  }
+}
+

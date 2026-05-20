@@ -1,0 +1,65 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "natures_spirit:kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:blue_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:brown_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:cyan_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:gray_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:green_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:light_blue_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:light_gray_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:lime_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:magenta_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:orange_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:pink_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:purple_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:red_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:yellow_kaolin_slab"
+      },
+      {
+        "item": "natures_spirit:black_kaolin_slab"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:white_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "natures_spirit:white_kaolin_slab"
+    }
+  ]
+}
