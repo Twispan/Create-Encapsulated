@@ -1,0 +1,62 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "simulated:blue_portable_engine"
+      },
+      {
+        "item": "simulated:brown_portable_engine"
+      },
+      {
+        "item": "simulated:cyan_portable_engine"
+      },
+      {
+        "item": "simulated:gray_portable_engine"
+      },
+      {
+        "item": "simulated:green_portable_engine"
+      },
+      {
+        "item": "simulated:light_blue_portable_engine"
+      },
+      {
+        "item": "simulated:light_gray_portable_engine"
+      },
+      {
+        "item": "simulated:lime_portable_engine"
+      },
+      {
+        "item": "simulated:magenta_portable_engine"
+      },
+      {
+        "item": "simulated:orange_portable_engine"
+      },
+      {
+        "item": "simulated:pink_portable_engine"
+      },
+      {
+        "item": "simulated:purple_portable_engine"
+      },
+      {
+        "item": "simulated:black_portable_engine"
+      },
+      {
+        "item": "simulated:yellow_portable_engine"
+      },
+      {
+        "item": "simulated:white_portable_engine"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:red_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "simulated:red_portable_engine"
+    }
+  ]
+}

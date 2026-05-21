@@ -1,0 +1,65 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "quark:shingles_slab"
+      },
+      {
+        "item": "quark:blue_shingles_slab"
+      },
+      {
+        "item": "quark:brown_shingles_slab"
+      },
+      {
+        "item": "quark:cyan_shingles_slab"
+      },
+      {
+        "item": "quark:gray_shingles_slab"
+      },
+      {
+        "item": "quark:green_shingles_slab"
+      },
+      {
+        "item": "quark:light_blue_shingles_slab"
+      },
+      {
+        "item": "quark:light_gray_shingles_slab"
+      },
+      {
+        "item": "quark:lime_shingles_slab"
+      },
+      {
+        "item": "quark:magenta_shingles_slab"
+      },
+      {
+        "item": "quark:orange_shingles_slab"
+      },
+      {
+        "item": "quark:black_shingles_slab"
+      },
+      {
+        "item": "quark:purple_shingles_slab"
+      },
+      {
+        "item": "quark:red_shingles_slab"
+      },
+      {
+        "item": "quark:yellow_shingles_slab"
+      },
+      {
+        "item": "quark:white_shingles_slab"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:pink_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "quark:pink_shingles_slab"
+    }
+  ]
+}

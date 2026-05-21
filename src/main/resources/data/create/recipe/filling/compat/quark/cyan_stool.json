@@ -1,0 +1,62 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "quark:blue_stool"
+      },
+      {
+        "item": "quark:brown_stool"
+      },
+      {
+        "item": "quark:black_stool"
+      },
+      {
+        "item": "quark:gray_stool"
+      },
+      {
+        "item": "quark:green_stool"
+      },
+      {
+        "item": "quark:light_blue_stool"
+      },
+      {
+        "item": "quark:light_gray_stool"
+      },
+      {
+        "item": "quark:lime_stool"
+      },
+      {
+        "item": "quark:magenta_stool"
+      },
+      {
+        "item": "quark:orange_stool"
+      },
+      {
+        "item": "quark:pink_stool"
+      },
+      {
+        "item": "quark:purple_stool"
+      },
+      {
+        "item": "quark:red_stool"
+      },
+      {
+        "item": "quark:yellow_stool"
+      },
+      {
+        "item": "quark:white_stool"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:cyan_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "quark:cyan_stool"
+    }
+  ]
+}

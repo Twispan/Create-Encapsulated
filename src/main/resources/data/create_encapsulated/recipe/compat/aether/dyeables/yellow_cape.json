@@ -1,0 +1,25 @@
+{
+  "type": "create_encapsulated:paintable",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:yellow_paint"
+    },
+    [
+      {
+        "item": "aether:red_cape"
+      },
+      {
+        "item": "aether:blue_cape"
+      },
+      {
+        "item": "aether:white_cape"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "aether:yellow_cape"
+  }
+}
+

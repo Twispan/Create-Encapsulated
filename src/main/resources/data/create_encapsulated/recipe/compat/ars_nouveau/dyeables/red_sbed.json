@@ -1,0 +1,31 @@
+{
+  "type": "create_encapsulated:paintable",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:red_paint"
+    },
+    [
+      {
+        "item": "ars_nouveau:orange_sbed"
+      },
+      {
+        "item": "ars_nouveau:blue_sbed"
+      },
+      {
+        "item": "ars_nouveau:yellow_sbed"
+      },
+      {
+        "item": "ars_nouveau:purple_sbed"
+      },
+      {
+        "item": "ars_nouveau:green_sbed"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "ars_nouveau:red_sbed"
+  }
+}
+

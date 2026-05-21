@@ -1,0 +1,61 @@
+{
+  "type": "create_encapsulated:paintable",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:pink_paint"
+    },
+    [
+      {
+        "item": "aeronautics:blue_envelope"
+      },
+      {
+        "item": "aeronautics:brown_envelope"
+      },
+      {
+        "item": "aeronautics:cyan_envelope"
+      },
+      {
+        "item": "aeronautics:gray_envelope"
+      },
+      {
+        "item": "aeronautics:green_envelope"
+      },
+      {
+        "item": "aeronautics:light_blue_envelope"
+      },
+      {
+        "item": "aeronautics:light_gray_envelope"
+      },
+      {
+        "item": "aeronautics:lime_envelope"
+      },
+      {
+        "item": "aeronautics:magenta_envelope"
+      },
+      {
+        "item": "aeronautics:orange_envelope"
+      },
+      {
+        "item": "aeronautics:black_envelope"
+      },
+      {
+        "item": "aeronautics:purple_envelope"
+      },
+      {
+        "item": "aeronautics:red_envelope"
+      },
+      {
+        "item": "aeronautics:yellow_envelope"
+      },
+      {
+        "item": "aeronautics:white_envelope"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "aeronautics:pink_envelope"
+  }
+}
+

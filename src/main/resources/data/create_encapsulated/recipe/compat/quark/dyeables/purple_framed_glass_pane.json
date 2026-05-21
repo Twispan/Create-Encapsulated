@@ -1,0 +1,64 @@
+{
+  "type": "create_encapsulated:paintable",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:purple_paint"
+    },
+    [
+      {
+        "item": "quark:blue_framed_glass_pane"
+      },
+      {
+        "item": "quark:framed_glass_pane"
+      },
+      {
+        "item": "quark:brown_framed_glass_pane"
+      },
+      {
+        "item": "quark:cyan_framed_glass_pane"
+      },
+      {
+        "item": "quark:gray_framed_glass_pane"
+      },
+      {
+        "item": "quark:green_framed_glass_pane"
+      },
+      {
+        "item": "quark:light_blue_framed_glass_pane"
+      },
+      {
+        "item": "quark:light_gray_framed_glass_pane"
+      },
+      {
+        "item": "quark:lime_framed_glass_pane"
+      },
+      {
+        "item": "quark:magenta_framed_glass_pane"
+      },
+      {
+        "item": "quark:orange_framed_glass_pane"
+      },
+      {
+        "item": "quark:pink_framed_glass_pane"
+      },
+      {
+        "item": "quark:black_framed_glass_pane"
+      },
+      {
+        "item": "quark:red_framed_glass_pane"
+      },
+      {
+        "item": "quark:yellow_framed_glass_pane"
+      },
+      {
+        "item": "quark:white_framed_glass_pane"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "quark:purple_framed_glass_pane"
+  }
+}
+

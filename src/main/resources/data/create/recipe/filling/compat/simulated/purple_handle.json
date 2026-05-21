@@ -1,0 +1,65 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "simulated:iron_handle"
+      },
+      {
+        "item": "simulated:blue_handle"
+      },
+      {
+        "item": "simulated:brown_handle"
+      },
+      {
+        "item": "simulated:cyan_handle"
+      },
+      {
+        "item": "simulated:gray_handle"
+      },
+      {
+        "item": "simulated:green_handle"
+      },
+      {
+        "item": "simulated:light_blue_handle"
+      },
+      {
+        "item": "simulated:light_gray_handle"
+      },
+      {
+        "item": "simulated:lime_handle"
+      },
+      {
+        "item": "simulated:magenta_handle"
+      },
+      {
+        "item": "simulated:orange_handle"
+      },
+      {
+        "item": "simulated:pink_handle"
+      },
+      {
+        "item": "simulated:black_handle"
+      },
+      {
+        "item": "simulated:red_handle"
+      },
+      {
+        "item": "simulated:yellow_handle"
+      },
+      {
+        "item": "simulated:white_handle"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:purple_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "simulated:purple_handle"
+    }
+  ]
+}

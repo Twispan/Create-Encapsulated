@@ -1,0 +1,62 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "aeronautics:blue_envelope"
+      },
+      {
+        "item": "aeronautics:brown_envelope"
+      },
+      {
+        "item": "aeronautics:cyan_envelope"
+      },
+      {
+        "item": "aeronautics:gray_envelope"
+      },
+      {
+        "item": "aeronautics:green_envelope"
+      },
+      {
+        "item": "aeronautics:light_blue_envelope"
+      },
+      {
+        "item": "aeronautics:light_gray_envelope"
+      },
+      {
+        "item": "aeronautics:lime_envelope"
+      },
+      {
+        "item": "aeronautics:magenta_envelope"
+      },
+      {
+        "item": "aeronautics:orange_envelope"
+      },
+      {
+        "item": "aeronautics:pink_envelope"
+      },
+      {
+        "item": "aeronautics:purple_envelope"
+      },
+      {
+        "item": "aeronautics:red_envelope"
+      },
+      {
+        "item": "aeronautics:yellow_envelope"
+      },
+      {
+        "item": "aeronautics:white_envelope"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_encapsulated:black_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "aeronautics:black_envelope"
+    }
+  ]
+}
