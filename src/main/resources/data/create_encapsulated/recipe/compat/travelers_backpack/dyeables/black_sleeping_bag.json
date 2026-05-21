@@ -1,0 +1,61 @@
+{
+  "type": "create_encapsulated:paintable",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:black_paint"
+    },
+    [
+      {
+        "item": "travelersbackpack:blue_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:brown_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:cyan_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:gray_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:green_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:light_blue_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:light_gray_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:lime_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:magenta_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:orange_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:pink_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:purple_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:red_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:yellow_sleeping_bag"
+      },
+      {
+        "item": "travelersbackpack:white_sleeping_bag"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "travelersbackpack:black_sleeping_bag"
+  }
+}
+
