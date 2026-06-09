@@ -1,6 +1,7 @@
 {
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
+	"render_type": "cutout",
 	"textures": {
 		"0": "create_encapsulated:block/carving_table",
 		"particle": "block/oak_planks"

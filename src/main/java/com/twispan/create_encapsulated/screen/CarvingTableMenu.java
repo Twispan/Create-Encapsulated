@@ -8,6 +8,7 @@ import com.twispan.create_encapsulated.registries.ModRecipeTypes;
 import com.twispan.create_encapsulated.registries.items.ModItems;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
@@ -55,7 +56,7 @@ public class CarvingTableMenu extends AbstractContainerMenu {
             @Override
             public void setChanged() {
                 super.setChanged();
-                CarvingTableMenu.this.slotsChanged(this.container);
+                CarvingTableMenu.this.slotsChanged(new SimpleContainer());
             }
         });
 
@@ -69,15 +70,22 @@ public class CarvingTableMenu extends AbstractContainerMenu {
             @Override
             public void setChanged() {
                 super.setChanged();
-                CarvingTableMenu.this.slotsChanged(this.container);
+                CarvingTableMenu.this.slotsChanged(new SimpleContainer());
             }
         });
 
         // Output slot (result)
-        this.addSlot(new Slot(resultContainer, 2, 143, 33) {
+        this.addSlot(new Slot(resultContainer, 0, 143, 33) {
             @Override
             public boolean mayPlace(@NotNull ItemStack stack) {
                 return false;
+            }
+
+            @Override
+            public boolean mayPickup(Player player) {
+                return CarvingTableMenu.this.isValidRecipeIndex(
+                        CarvingTableMenu.this.selectedRecipeIndex
+                );
             }
 
             @Override
@@ -86,18 +94,21 @@ public class CarvingTableMenu extends AbstractContainerMenu {
 
                 blockEntity.itemStackHandler.extractItem(0, 1, false);
 
-                if (!blockEntity.itemStackHandler.getStackInSlot(0).isEmpty() &&
-                    CarvingTableMenu.this.isValidRecipeIndex(CarvingTableMenu.this.selectedRecipeIndex)) {
-                    CarvingTableMenu.this.setupResultSlot(CarvingTableMenu.this.selectedRecipeIndex);
-                } else {
-                    CarvingTableMenu.this.slotsChanged(new SimpleContainer());
+                if (!level.isClientSide) {
+                    level.playSound(null, blockEntity.getBlockPos(),
+                            SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
                 }
 
-                player.playSound(SoundEvents.AXE_STRIP, 1.0F, 1.0F);
+                if (!blockEntity.itemStackHandler.getStackInSlot(0).isEmpty()
+                        && isValidRecipeIndex(selectedRecipeIndex)) {
+                    setupResultSlot(selectedRecipeIndex);
+                } else {
+                    selectedRecipeIndex = -1;
+                    resultContainer.setItem(0, ItemStack.EMPTY);
+                }
 
                 super.onTake(player, stack);
             }
-
         });
 
         this.data = new ContainerData() {
@@ -122,21 +133,19 @@ public class CarvingTableMenu extends AbstractContainerMenu {
             }
         };
 
-        // Player inventory
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 9; col++) {
                 this.addSlot(new Slot(inv, col + row * 9 + 9, 8 + col * 18, 84 + row * 18));
             }
         }
 
-        // Player hotbar
         for (int col = 0; col < 9; col++) {
             this.addSlot(new Slot(inv, col, 8 + col * 18, 142));
         }
 
         this.addDataSlots(this.data);
 
-        broadcastChanges();
+        this.slotsChanged(new SimpleContainer());
     }
 
     @Override
@@ -155,6 +164,8 @@ public class CarvingTableMenu extends AbstractContainerMenu {
         if (inputChanged || (hasTool && !hadRecipes)) {
             if (hasTool && !input.isEmpty()) {
                 this.setupRecipeList(input);
+                if (!this.recipes.isEmpty() && this.selectedRecipeIndex == -1) {
+                }
             } else {
                 this.recipes = List.of();
                 this.selectedRecipeIndex = -1;
@@ -162,7 +173,7 @@ public class CarvingTableMenu extends AbstractContainerMenu {
             }
         }
 
-        if (!tool.is(ModItems.CARVING_BLADE.get()) && !this.recipes.isEmpty()) {
+        if (!hasTool && hadRecipes) {
             this.recipes = List.of();
             this.selectedRecipeIndex = -1;
             this.resultContainer.setItem(0, ItemStack.EMPTY);
@@ -170,15 +181,43 @@ public class CarvingTableMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public void broadcastChanges() {
-        super.broadcastChanges();
+    public void clicked(int slotId, int button, @NotNull ClickType clickType, @NotNull Player player) {
+        if (slotId == 2 && button == 0 && clickType == ClickType.PICKUP) {
+            Slot outputSlot = this.slots.get(2);
+            ItemStack carried = this.getCarried();
+            ItemStack result = outputSlot.getItem();
 
-        ItemStack input = blockEntity.itemStackHandler.getStackInSlot(0);
+            if (!result.isEmpty() && this.isValidRecipeIndex(this.selectedRecipeIndex)) {
+                if (carried.isEmpty() || (ItemStack.isSameItemSameComponents(carried, result) &&
+                        carried.getCount() + result.getCount() <= carried.getMaxStackSize())) {
 
-        if (!ItemStack.isSameItemSameComponents(input, this.lastInput)) {
-            this.lastInput = input.copy();
-            this.setupRecipeList(input);
+                    if (carried.isEmpty()) {
+                        this.setCarried(result.copy());
+                    } else {
+                        carried.grow(result.getCount());
+                    }
+
+                    blockEntity.itemStackHandler.extractItem(0, 1, false);
+
+                    if (!level.isClientSide) {
+                        level.playSound(null, blockEntity.getBlockPos(),
+                                SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    }
+
+                    if (!blockEntity.itemStackHandler.getStackInSlot(0).isEmpty() &&
+                            this.isValidRecipeIndex(this.selectedRecipeIndex)) {
+                        this.setupResultSlot(this.selectedRecipeIndex);
+                    } else {
+                        this.selectedRecipeIndex = -1;
+                        outputSlot.set(ItemStack.EMPTY);
+                    }
+
+                    return;
+                }
+            }
         }
+
+        super.clicked(slotId, button, clickType, player);
     }
 
     private void setupRecipeList(ItemStack input) {
@@ -193,6 +232,7 @@ public class CarvingTableMenu extends AbstractContainerMenu {
         }
     }
 
+    @Override
     public boolean clickMenuButton(@NotNull Player player, int id) {
         if (this.isValidRecipeIndex(id)) {
             this.selectedRecipeIndex = id;
@@ -217,8 +257,12 @@ public class CarvingTableMenu extends AbstractContainerMenu {
 
             if (result.isItemEnabled(this.level.enabledFeatures())) {
                 this.resultContainer.setRecipeUsed(recipe);
-                this.resultContainer.setItem(0, result);
+                this.slots.get(2).set(result);
+            } else {
+                this.resultContainer.setItem(0, ItemStack.EMPTY);
             }
+        } else {
+            this.resultContainer.setItem(0, ItemStack.EMPTY);
         }
     }
 
@@ -236,7 +280,7 @@ public class CarvingTableMenu extends AbstractContainerMenu {
 
     public boolean hasInputItem() {
         return !blockEntity.itemStackHandler.getStackInSlot(0).isEmpty()
-                && blockEntity.itemStackHandler.getStackInSlot(1).is(ModItems.CARVING_BLADE.get()) // Check tool slot
+                && blockEntity.itemStackHandler.getStackInSlot(1).is(ModItems.CARVING_BLADE.get())
                 && !this.recipes.isEmpty();
     }
 
@@ -256,7 +300,7 @@ public class CarvingTableMenu extends AbstractContainerMenu {
             ItemStack input = blockEntity.itemStackHandler.getStackInSlot(0);
             ItemStack tool = blockEntity.itemStackHandler.getStackInSlot(1);
 
-            if (input.isEmpty() || !tool.is(ModItems.CARVING_BLADE)) return empty;
+            if (input.isEmpty() || !tool.is(ModItems.CARVING_BLADE.get())) return empty;
 
             int craftCount = input.getCount();
             RecipeHolder<CarvingRecipe> recipe = this.recipes.get(this.selectedRecipeIndex);
@@ -271,6 +315,11 @@ public class CarvingTableMenu extends AbstractContainerMenu {
                 }
 
                 blockEntity.itemStackHandler.extractItem(0, 1, false);
+            }
+
+            if (!level.isClientSide) {
+                level.playSound(null, blockEntity.getBlockPos(),
+                        SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
             }
 
             this.slotsChanged(new SimpleContainer());
@@ -288,7 +337,6 @@ public class CarvingTableMenu extends AbstractContainerMenu {
                 }
             }
         }
-        // Machine -> player
         else if (!moveItemStackTo(stack, 3, this.slots.size(), false)) {
             return ItemStack.EMPTY;
         }

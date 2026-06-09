@@ -33,5 +33,6 @@ public class ModBlocks {
     }
 
     public static final DeferredBlock<Block> CARVING_TABLE = registerBlock("carving_table",
-            () -> new CarvingTable(BlockBehaviour.Properties.of()));
+            () -> new CarvingTable(BlockBehaviour.Properties.of()
+                    .noOcclusion()));
 }
