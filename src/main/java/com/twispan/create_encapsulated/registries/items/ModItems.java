@@ -12,8 +12,6 @@ import static com.twispan.create_encapsulated.registries.ModFluids.*;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CreateEncapsulated.MODID);
 
-    public static final DeferredItem<Item> MODLOGO = ITEMS.register("create_encapsulated_logo",
-            () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> INCOMPMASTERBALLLID = ITEMS.register("incomplete_master_ball_lid",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> RAINBOW_PAINT = ITEMS.register("rainbow_paint",
