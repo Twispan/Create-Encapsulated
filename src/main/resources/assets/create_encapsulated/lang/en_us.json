@@ -111,7 +111,7 @@
   "fluid_type.create_encapsulated.elixir": "Elixir",
   "fluid_type.create_encapsulated.max_elixir": "Max Elixir",
 
-  "creativetab.create_encapsulated.pokeballcomponents_items": "Poké Ball Components",
+  "creativetab.create_encapsulated.createencapsulated_items": "Create: Encapsulated",
 
   "create_encapsulated.configuration.allowAxeStripping": "Allow Axe Stripping",
   "config.create_encapsulated.allowAxeStripping.tooltip": "Axes will behave normally and strip logs.",

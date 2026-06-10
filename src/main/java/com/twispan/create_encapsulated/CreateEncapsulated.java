@@ -155,8 +155,6 @@ public class CreateEncapsulated {
             event.accept(ModItems.BROWNPAINT);
             event.accept(ModItems.LIGHTGRAYPAINT);
             event.accept(ModItems.GRAYPAINT);
-            event.accept(ModItems.CARVING_BLADE);
-            event.accept(ModBlocks.CARVING_TABLE.asItem());
         }
     }
 

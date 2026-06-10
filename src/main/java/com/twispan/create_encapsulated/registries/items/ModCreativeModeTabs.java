@@ -21,10 +21,10 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister
             .create(Registries.CREATIVE_MODE_TAB, CreateEncapsulated.MODID);
 
-    public static final Supplier<CreativeModeTab> POKEBALLCOMPONENTS_ITEMS_TAB = CREATIVE_MODE_TAB.register(
-            "pokeballcomponents_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SPLITREDAPRICORN.get()))
-                    .title(Component.translatable("creativetab.create_encapsulated.pokeballcomponents_items"))
+    public static final Supplier<CreativeModeTab> CREATEENCAPSULATED_ITEMS_TAB = CREATIVE_MODE_TAB.register(
+            "createencapsulated_items_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.POKEBALLBASE.get()))
+                    .title(Component.translatable("creativetab.create_encapsulated.createencapsulated_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.POKEBALLBASE);
                         output.accept(ModItems.SPLITREDAPRICORN);
@@ -69,7 +69,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ORIGINBALLLID);
                         output.accept(ModItems.ORIGINBALLBASE);
                         output.accept(ModItems.ORIGINALLOY);
-                        output.accept(ModItems.REDPAINT);
+                        output.accept(ModItems.CARVING_BLADE);
+                        output.accept(ModBlocks.CARVING_TABLE.asItem());
                         output.accept(ModItems.BLUEPAINT);
                         output.accept(ModItems.YELLOWPAINT);
                         output.accept(ModItems.GREENPAINT);
@@ -85,7 +86,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BROWNPAINT);
                         output.accept(ModItems.LIGHTGRAYPAINT);
                         output.accept(ModItems.GRAYPAINT);
-                    }).build());
+                    }).build()
+    );
 
     @SubscribeEvent
     public static void addToTabs(BuildCreativeModeTabContentsEvent event) {
