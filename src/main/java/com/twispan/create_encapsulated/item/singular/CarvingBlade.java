@@ -19,7 +19,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
@@ -60,6 +59,7 @@ public class CarvingBlade extends Item {
     }
 
 
+    // TODO: Clicking on a block should bring up a menu to change the shape of a block
     @Override
     public @NotNull InteractionResult useOn(@NotNull UseOnContext context) {
         Level level = context.getLevel();
@@ -67,44 +67,7 @@ public class CarvingBlade extends Item {
         BlockState state = level.getBlockState(pos);
         Player player = context.getPlayer();
 
-        if (state.getBlock() instanceof CasingBlock casingBlock) {
-            if (player != null && player.isCrouching() && !level.isClientSide) {
-                Item casingIngredient = getCasingIngredient(state);
-                assert casingIngredient != null;
-                Block.popResource(level, pos, new ItemStack(casingIngredient));
-
-                BlockState replacement = Blocks.STRIPPED_OAK_LOG.defaultBlockState();
-                if (casingIngredient.equals(AllItems.STURDY_SHEET.get())) {
-                    replacement = AllBlocks.BRASS_CASING.getDefaultState();
-                }
-                if (state.hasProperty(RotatedPillarBlock.AXIS)) {
-                    replacement = replacement.setValue(RotatedPillarBlock.AXIS,
-                            state.getValue(RotatedPillarBlock.AXIS));
-                }
-
-                level.setBlock(pos, replacement, 3);
-                level.playSound(null, pos, SoundEvents.LANTERN_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
-
-                context.getItemInHand().hurtAndBreak(1, player,
-                        player.getEquipmentSlotForItem(context.getItemInHand()));
-
-                return InteractionResult.SUCCESS;
-            }
-        }
-
-        if (state.getBlock() instanceof IWrenchable wrenchable) {
-            assert player != null;
-            if (player.isCrouching()) {
-                InteractionResult result = wrenchable.onSneakWrenched(state, context);
-
-                if (result.consumesAction()) {
-                    context.getItemInHand().hurtAndBreak(1, player,
-                            player.getEquipmentSlotForItem(context.getItemInHand()));
-                    return result;
-                }
-            }
-        }
-
+        // It only allows for stripping logs, this will be overridden by the menu method
         Block strippedBlock = STRIPPABLES.get(state.getBlock());
         if (strippedBlock != null) {
             if (!level.isClientSide) {
@@ -129,17 +92,5 @@ public class CarvingBlade extends Item {
         }
 
         return InteractionResult.FAIL;
-    }
-
-    private Item getCasingIngredient(BlockState state) {
-        String id = BuiltInRegistries.BLOCK.getKey(state.getBlock()).toString();
-
-        return switch(id) {
-            case "create:andesite_casing" -> AllItems.ANDESITE_ALLOY.get();
-            case "create:brass_casing" -> AllItems.BRASS_INGOT.get();
-            case "create:railway_casing" -> AllItems.STURDY_SHEET.get();
-            case "create:copper_casing" -> Items.COPPER_INGOT;
-            default -> null;
-        };
     }
 }

@@ -117,5 +117,7 @@
   "config.create_encapsulated.allowAxeStripping.tooltip": "Axes will behave normally and strip logs.",
 
   "create_encapsulated.configuration.allowWrenchUncasing": "Allow Wrench Uncasing",
-  "config.create_encapsulated.allowWrenchUncasing.tooltip": "Wrenches will be able to uncase kinetic blocks."
+  "config.create_encapsulated.allowWrenchUncasing.tooltip": "Wrenches will be able to uncase kinetic blocks.",
+
+  "entity.minecraft.villager.create_encapsulated.carpenter": "Carpenter"
 }

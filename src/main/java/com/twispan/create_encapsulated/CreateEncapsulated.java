@@ -2,6 +2,7 @@ package com.twispan.create_encapsulated;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import com.twispan.create_encapsulated.advancements.ModTriggers;
+import com.twispan.create_encapsulated.registries.ModVillagers;
 import com.twispan.create_encapsulated.registries.blocks.ModBlockEntities;
 import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import com.twispan.create_encapsulated.client.ModClientSetup;
@@ -49,6 +50,11 @@ public class CreateEncapsulated {
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public CreateEncapsulated(IEventBus modEventBus, ModContainer modContainer) {
+        // Register ourselves for server and other game events we are interested in.
+        // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
+        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
+        NeoForge.EVENT_BUS.register(this);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -61,24 +67,37 @@ public class CreateEncapsulated {
         // Advancement trigger
         ModTriggers.TRIGGERS.register(modEventBus);
 
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
-        NeoForge.EVENT_BUS.register(this);
-
+        // Register secret item tooltip
         NeoForge.EVENT_BUS.addListener(Paint::onTooltip);
 
+        // Register creative tab
         ModCreativeModeTabs.register(modEventBus);
+
+        // Register fluids
         ModFluids.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
+
+        // Register items
         ModItems.ITEMS.register(modEventBus);
+
+        // Register recipe serializers
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
+
+        // Register right click event for paint on a basin
         NeoForge.EVENT_BUS.addListener(BasinDyeHandler::onRightClickBlock);
+
+        // Register blocks
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+
+        // Register menus
         ModMenuTypes.register(modEventBus);
+
+        // Register recipe types
         ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
 
+        // Register professions & poi (Points of Interest)
+        ModVillagers.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, CEConfig.SPEC);
