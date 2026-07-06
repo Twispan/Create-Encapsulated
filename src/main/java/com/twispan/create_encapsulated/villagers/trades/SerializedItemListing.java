@@ -14,14 +14,17 @@ public record SerializedItemListing(TradeDefinition definition) implements Villa
 
     @Override
     public MerchantOffer getOffer(@NotNull Entity trader, @NotNull RandomSource randomSource) {
-        ItemCost costA = toItemCost(definition.buyItemA());
-        Optional<ItemCost> costB = definition.buyItemB().map(SerializedItemListing::toItemCost);
-        ItemStack result = definition.sellItem().copy();
+        ItemStack resolvedA = definition.buyItemA().resolve(randomSource);
+        Optional<ItemStack> resolvedB = definition.buyItemB().map(ingredient -> ingredient.resolve(randomSource));
+        ItemStack resolvedSell = definition.sellItem().resolve(randomSource);
+
+        ItemCost costA = toItemCost(resolvedA);
+        Optional<ItemCost> costB = resolvedB.map(SerializedItemListing::toItemCost);
 
         return new MerchantOffer(
                 costA,
                 costB,
-                result,
+                resolvedSell,
                 definition.maxUses(),
                 definition().xp(),
                 definition.priceMultiplier()
