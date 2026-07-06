@@ -10,7 +10,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 
 import java.util.List;
 import java.util.Optional;
@@ -42,8 +41,6 @@ public record TradeIngredient(Optional<ResourceLocation> item, Optional<List<Res
                     return DataResult.error(() -> "Unknown item id in 'ids' list: " + id);
                 }
             }
-        } else {
-            return DataResult.error(() -> "'ids' list cannot be empty");
         }
         return DataResult.success(ingredient);
     }
