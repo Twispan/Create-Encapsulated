@@ -3,7 +3,7 @@
   "level": 2,
   "buy_item": {"tag": "create_encapsulated:paint", "count": 1},
   "sell_item": {"id": "minecraft:emerald", "count": 1},
-  "max_uses": 12,
+  "max_uses": 10,
   "xp": 3,
   "price_multiplier": 0.05
 }

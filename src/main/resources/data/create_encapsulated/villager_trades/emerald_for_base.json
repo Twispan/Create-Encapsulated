@@ -5,5 +5,5 @@
   "sell_item": {"id": "create_encapsulated:poke_ball_base", "count": 1},
   "max_uses": 16,
   "xp": 3,
-  "price_multiplier": 0.05
+  "price_multiplier": 0.02
 }

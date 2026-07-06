@@ -5,5 +5,5 @@
   "sell_item": {"id": "create_encapsulated:carving_blade", "count": 1},
   "max_uses": 10,
   "xp": 1,
-  "price_multiplier": 0.05
+  "price_multiplier": 0.02
 }

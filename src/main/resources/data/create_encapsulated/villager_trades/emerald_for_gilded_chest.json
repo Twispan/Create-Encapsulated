@@ -5,5 +5,5 @@
   "sell_item": {"tag": "cobblemon:gilded_chests", "count": 1},
   "max_uses": 8,
   "xp": 17,
-  "price_multiplier": 0.08
+  "price_multiplier": 0.04
 }

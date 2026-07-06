@@ -5,5 +5,5 @@
   "sell_item": {"tag": "cobblemon:apricorn_poke_balls", "count": 1},
   "max_uses": 16,
   "xp": 30,
-  "price_multiplier": 0.05
+  "price_multiplier": 0.02
 }
