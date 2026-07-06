@@ -1,9 +1,9 @@
 {
   "profession": "create_encapsulated:carpenter",
   "level": 4,
-  "buy_item": {"id": "minecraft:emerald", "count": 7},
+  "buy_item": {"id": "minecraft:emerald", "count": 8},
   "sell_item": {"tag": "cobblemon:gilded_chests", "count": 1},
   "max_uses": 8,
-  "xp": 20,
+  "xp": 17,
   "price_multiplier": 0.08
 }
