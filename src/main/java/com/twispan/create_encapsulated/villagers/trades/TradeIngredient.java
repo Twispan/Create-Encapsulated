@@ -15,19 +15,35 @@ import net.minecraft.world.item.Items;
 import java.util.List;
 import java.util.Optional;
 
-public record TradeIngredient(Optional<ResourceLocation> item, Optional<TagKey<Item>> tag, int count) {
+public record TradeIngredient(Optional<ResourceLocation> item, Optional<List<ResourceLocation>> items, Optional<TagKey<Item>> tag, int count) {
     public static final Codec<TradeIngredient> CODEC = RecordCodecBuilder.<TradeIngredient>create(instance -> instance.group(
             ResourceLocation.CODEC.optionalFieldOf("id").forGetter(TradeIngredient::item),
+            ResourceLocation.CODEC.listOf().optionalFieldOf("ids").forGetter(TradeIngredient::items),
             TagKey.codec(Registries.ITEM).optionalFieldOf("tag").forGetter(TradeIngredient::tag),
             Codec.INT.optionalFieldOf("count", 1).forGetter(TradeIngredient::count)
     ).apply(instance, TradeIngredient::new)).validate(TradeIngredient::validate);
 
     private static DataResult<TradeIngredient> validate(TradeIngredient ingredient) {
-        boolean hasItem = ingredient.item().isPresent();
-        boolean hasTag = ingredient.tag().isPresent();
+        int optionsSet = (ingredient.item().isPresent() ? 1 : 0)
+                + (ingredient.items().isPresent() ? 1 : 0)
+                + (ingredient.tag().isPresent() ? 1 : 0);
 
-        if (!hasItem && !hasTag) {
-            return DataResult.error(() -> "TradeIngredient must specify either 'id' or 'tag'");
+        if (optionsSet != 1) {
+            return DataResult.error(() -> "buy_item, buy_itemB and result must specify EXACTLY one of 'id', 'ids' or 'tag'");
+        }
+
+        if (ingredient.item().isPresent() && !BuiltInRegistries.ITEM.containsKey(ingredient.item.get())) {
+            return DataResult.error(() -> "Unknown item id: " + ingredient.item().get());
+        }
+
+        if (ingredient.items().isPresent()) {
+            for (ResourceLocation id : ingredient.items().get()) {
+                if (!BuiltInRegistries.ITEM.containsKey(id)) {
+                    return DataResult.error(() -> "Unknown item id in 'ids' list: " + id);
+                }
+            }
+        } else {
+            return DataResult.error(() -> "'ids' list cannot be empty");
         }
         return DataResult.success(ingredient);
     }
@@ -36,6 +52,12 @@ public record TradeIngredient(Optional<ResourceLocation> item, Optional<TagKey<I
         if(item.isPresent()) {
             Item resolved = BuiltInRegistries.ITEM.get((item.get()));
             return new ItemStack(resolved, count);
+        }
+
+        if (items.isPresent()) {
+            List<ResourceLocation> list = items.get();
+            ResourceLocation chosen = list.get(randomSource.nextInt(list.size()));
+            return new ItemStack(BuiltInRegistries.ITEM.get(chosen), count);
         }
 
         if (tag.isPresent()) {
@@ -48,6 +70,6 @@ public record TradeIngredient(Optional<ResourceLocation> item, Optional<TagKey<I
                 return new ItemStack(chosen, count);
             }
         }
-        return ItemStack.EMPTY; // I would prefer to add like a placeholder item here, but I think a crash is better lol
+        return ItemStack.EMPTY; // I would prefer to add like a placeholder item here but I think a crash is better lol
     }
 }
