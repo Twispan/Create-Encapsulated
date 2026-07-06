@@ -1,9 +1,9 @@
 {
   "profession": "create_encapsulated:carpenter",
-  "level": 1,
+  "level": 4,
   "buy_item": {"id": "minecraft:emerald", "count": 2},
-  "sell_item": {"id": "create_encapsulated:carving_blade", "count": 1},
-  "max_uses": 10,
-  "xp": 1,
+  "sell_item": {"ids": ["create:andesite_casing","create:cogwheel"], "count": 1},
+  "max_uses": 12,
+  "xp": 10,
   "price_multiplier": 0.05
 }
