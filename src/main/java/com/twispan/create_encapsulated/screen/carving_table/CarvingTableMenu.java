@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.screen;
+package com.twispan.create_encapsulated.screen.carving_table;
 
 import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import com.twispan.create_encapsulated.block.entities.CarvingTableBlockEntity;

@@ -4,16 +4,23 @@ import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.content.decoration.encasing.CasingBlock;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
+import com.twispan.create_encapsulated.crafting.CarvingRecipe;
+import com.twispan.create_encapsulated.registries.ModRecipeTypes;
+import com.twispan.create_encapsulated.screen.carving_blade.CarvingBladeMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -22,6 +29,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class CarvingBlade extends Item {
@@ -58,7 +66,6 @@ public class CarvingBlade extends Item {
         STRIPPABLES.put(Blocks.WARPED_HYPHAE, Blocks.STRIPPED_WARPED_HYPHAE);
     }
 
-
     // TODO: Clicking on a block should bring up a menu to change the shape of a block
     @Override
     public @NotNull InteractionResult useOn(@NotNull UseOnContext context) {
@@ -67,30 +74,29 @@ public class CarvingBlade extends Item {
         BlockState state = level.getBlockState(pos);
         Player player = context.getPlayer();
 
-        // It only allows for stripping logs, this will be overridden by the menu method
-        Block strippedBlock = STRIPPABLES.get(state.getBlock());
-        if (strippedBlock != null) {
-            if (!level.isClientSide) {
-                BlockState strippedState = strippedBlock.defaultBlockState();
-
-                if (state.hasProperty(RotatedPillarBlock.AXIS)) {
-                    strippedState = strippedState.setValue(RotatedPillarBlock.AXIS,
-                            state.getValue(RotatedPillarBlock.AXIS));
-                }
-
-                level.setBlock(pos, strippedState, 3);
-
-                level.playSound(null, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
-
-                if (player != null) {
-                    context.getItemInHand().hurtAndBreak(1, player,
-                            player.getEquipmentSlotForItem(context.getItemInHand()));
-                }
-            }
-
-            return InteractionResult.sidedSuccess(level.isClientSide);
+        if (player == null) {
+            return InteractionResult.FAIL;
         }
 
-        return InteractionResult.FAIL;
+        ItemStack blockAsItem = new ItemStack(state.getBlock().asItem());
+        if (blockAsItem.isEmpty()) {
+            return InteractionResult.FAIL;
+        }
+
+        List<RecipeHolder<CarvingRecipe>> recipes = level.getRecipeManager()
+                .getRecipesFor(ModRecipeTypes.CARVING.get(), new SingleRecipeInput(blockAsItem), level);
+
+        if (recipes.isEmpty()) {
+            return InteractionResult.FAIL;
+        }
+
+        if (!level.isClientSide) {
+            player.openMenu(new SimpleMenuProvider(
+                    (id, inv, p) -> new CarvingBladeMenu(id, inv, level, pos, context.getHand()),
+                    Component.translatable("menu.create_encapsulated.carving_blade")
+            ), pos);
+        }
+
+        return InteractionResult.sidedSuccess(level.isClientSide);
     }
 }

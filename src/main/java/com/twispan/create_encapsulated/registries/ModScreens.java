@@ -1,7 +1,8 @@
 package com.twispan.create_encapsulated.registries;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.screen.CarvingTableScreen;
+import com.twispan.create_encapsulated.screen.carving_blade.CarvingBladeScreen;
+import com.twispan.create_encapsulated.screen.carving_table.CarvingTableScreen;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -15,6 +16,10 @@ public class ModScreens {
         event.register(
                 ModMenuTypes.CARVING_TABLE.get(),
                 CarvingTableScreen::new
+        );
+        event.register(
+                ModMenuTypes.CARVING_BLADE.get(),
+                CarvingBladeScreen::new
         );
     }
 }

@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.screen;
+package com.twispan.create_encapsulated.screen.carving_table;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.twispan.create_encapsulated.CreateEncapsulated;
