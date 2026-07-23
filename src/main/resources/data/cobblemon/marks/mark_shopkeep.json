@@ -4,6 +4,6 @@
 	"titleColor": "3B86D1",
 	"description": "cobblemon.mark.mark_shopkeep.desc",
 	"texture": "cobblemon:textures/gui/mark/mark_shopkeep.png",
-	"chance": 0.07,
+	"chance": 0.057,
 	"indexNumber": 324
 }

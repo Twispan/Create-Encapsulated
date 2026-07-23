@@ -4,6 +4,6 @@
 	"titleColor": "98A3A3",
 	"description": "cobblemon.mark.mark_core.desc",
 	"texture": "cobblemon:textures/gui/mark/mark_core.png",
-	"chance": 0.13,
+	"chance": 0.35,
 	"indexNumber": 330
 }

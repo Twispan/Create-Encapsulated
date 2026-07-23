@@ -4,6 +4,6 @@
 	"titleColor": "D7B084",
 	"description": "cobblemon.mark.mark_delivery.desc",
 	"texture": "cobblemon:textures/gui/mark/mark_delivery.png",
-	"chance": 0.07,
+	"chance": 0.053,
 	"indexNumber": 323
 }

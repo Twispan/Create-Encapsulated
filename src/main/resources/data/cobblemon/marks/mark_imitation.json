@@ -4,6 +4,6 @@
 	"titleColor": "868978",
 	"description": "cobblemon.mark.mark_imitation.desc",
 	"texture": "cobblemon:textures/gui/mark/mark_imitation.png",
-	"chance": 0.07,
+	"chance": 0.02,
 	"indexNumber": 325
 }
