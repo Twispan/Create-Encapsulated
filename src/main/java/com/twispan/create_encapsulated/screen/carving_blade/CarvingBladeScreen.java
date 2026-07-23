@@ -24,9 +24,8 @@ public class CarvingBladeScreen extends AbstractContainerScreen<CarvingBladeMenu
             );
 
     // -- Panel --
-    private static final int PANEL_TEX_W = 192;
+    private static final int PANEL_TEX_W = 168;
     private static final int PANEL_TEX_H = 129;
-    private static final int PANEL_CONTENT_W = 168;
 
     // -- Grid --
     // -- Result area grid definitions --
@@ -65,7 +64,7 @@ public class CarvingBladeScreen extends AbstractContainerScreen<CarvingBladeMenu
     // -- Button screen positions --
     private static final int BTN_GAP = 8;
     private static final int BUTTON_ROW_W = BTN_SIZE_W * 2 + BTN_GAP;
-    private static final int CONFIRM_BUTTON_X = (PANEL_CONTENT_W - BUTTON_ROW_W) / 2;
+    private static final int CONFIRM_BUTTON_X = (PANEL_TEX_W - BUTTON_ROW_W) / 2;
     private static final int CANCEL_BUTTON_X = CONFIRM_BUTTON_X + BTN_SIZE_W + BTN_GAP;
     private static final int CONFIRM_BUTTON_Y = 102;
     private static final int CANCEL_BUTTON_Y = 102;
@@ -114,7 +113,7 @@ public class CarvingBladeScreen extends AbstractContainerScreen<CarvingBladeMenu
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
 
-        guiGraphics.blit(GUI_TEXTURE, x, y, 0, 0, PANEL_CONTENT_W, imageHeight);
+        guiGraphics.blit(GUI_TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
         int recipeAreaX = x + RECIPE_AREA_X;
         int recipeAreaY = y + RECIPE_AREA_Y;
