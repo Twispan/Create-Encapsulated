@@ -6,10 +6,10 @@
       "item": "create_encapsulated:split_green_apricorn"
     },
     {
-      "item": "create_encapsulated:lime_paint"
+      "item": "world_of_color:lime_paint"
     },
     {
-      "item": "create_encapsulated:red_paint"
+      "item": "world_of_color:red_paint"
     }
   ],
   "result": {

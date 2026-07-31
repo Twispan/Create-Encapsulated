@@ -1,8 +1,8 @@
 {
-  "type": "create_encapsulated:paintable",
+  "type": "world_of_color:paintable",
   "ingredients": [
     {
-      "item": "create_encapsulated:blue_paint"
+      "item": "world_of_color:blue_paint"
     },
     [
       {

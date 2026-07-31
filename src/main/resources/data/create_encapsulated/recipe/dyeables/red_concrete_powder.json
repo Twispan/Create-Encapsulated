@@ -1,10 +1,10 @@
 {
-  "type": "create_encapsulated:paintable",
+  "type": "world_of_color:paintable",
   "category": "building",
   "group": "concrete_powder",
   "ingredients": [
     {
-      "item": "create_encapsulated:red_paint"
+      "item": "world_of_color:red_paint"
     },
     {
       "item": "minecraft:sand"

@@ -1,9 +1,9 @@
 {
-  "type": "create_encapsulated:paintable",
+  "type": "world_of_color:paintable",
   "category": "misc",
   "ingredients": [
     {
-      "item": "create_encapsulated:lime_paint"
+      "item": "world_of_color:lime_paint"
     },
     [
       {

@@ -13,7 +13,7 @@
             "tag": "c:chains"
         },
         "D": {
-            "item": "create_encapsulated:yellow_paint"
+            "item": "world_of_color:yellow_paint"
         }
     },
     "result": {

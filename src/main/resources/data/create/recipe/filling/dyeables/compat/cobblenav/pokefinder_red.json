@@ -1,0 +1,35 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    [
+      {
+        "item": "cobblenav:pokefinder_item_white"
+      },
+      {
+        "item": "cobblenav:pokefinder_item_blue"
+      },
+      {
+        "item": "cobblenav:pokefinder_item_yellow"
+      },
+      {
+        "item": "cobblenav:pokefinder_item_green"
+      },
+      {
+        "item": "cobblenav:pokefinder_item_pink"
+      },
+      {
+        "item": "cobblenav:pokefinder_item_black"
+      }
+    ],
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "world_of_color:red_paint"
+    }
+  ],
+  "results": [
+    {
+      "id": "cobblenav:pokefinder_item_red"
+    }
+  ]
+}
