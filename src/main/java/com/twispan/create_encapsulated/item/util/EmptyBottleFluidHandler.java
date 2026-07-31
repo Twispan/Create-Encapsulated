@@ -3,8 +3,6 @@ package com.twispan.create_encapsulated.item.util;
 import com.twispan.create_encapsulated.fluid.MedicinalBrewFluidType;
 import com.twispan.create_encapsulated.fluid.other_medicine.OMedicineFluidType;
 import com.twispan.create_encapsulated.fluid.other_medicine.OMedicines;
-import com.twispan.create_encapsulated.fluid.paint.PaintColor;
-import com.twispan.create_encapsulated.fluid.paint.PaintFluidType;
 import com.twispan.create_encapsulated.fluid.potions.PotionFluidType;
 import com.twispan.create_encapsulated.fluid.potions.PotionType;
 import com.twispan.create_encapsulated.fluid.vitamins.VitaminFluidType;
@@ -48,8 +46,7 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
     @Override
     public boolean isFluidValid(int tank, @NotNull FluidStack stack) {
         // Only accept paint fluids
-        return  stack.getFluidType() instanceof PaintFluidType ||
-                stack.getFluidType() instanceof PotionFluidType ||
+        return  stack.getFluidType() instanceof PotionFluidType ||
                 stack.getFluidType() instanceof MedicinalBrewFluidType ||
                 stack.getFluidType() instanceof VitaminFluidType ||
                 stack.getFluid() == NeoForgeMod.MILK.get();
@@ -65,13 +62,6 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
         int fillAmount = Math.min(CAPACITY, resource.getAmount());
 
         if (action.execute() && fillAmount == CAPACITY) { // Only fill if you can fill completely
-            if ((resource.getFluidType() instanceof PaintFluidType paintFluidType)) {
-                // Get the paint color from the fluid type
-                ItemStack paintItem = getPaintItem(paintFluidType);
-
-                // Transform the container
-                container = paintItem.copy();
-            }
 
             if ((resource.getFluidType() instanceof MedicinalBrewFluidType)) {
                 container = new ItemStack(CobblemonItems.MEDICINAL_BREW);
@@ -102,30 +92,6 @@ public class EmptyBottleFluidHandler implements IFluidHandlerItem {
         }
 
         return fillAmount;
-    }
-
-    private static @NotNull ItemStack getPaintItem(PaintFluidType paintFluidType) {
-        PaintColor color = paintFluidType.getPaintColor();
-
-        // Transform the empty bottle into the corresponding paint item
-        return switch (color) {
-            case RED -> new ItemStack(ModItems.REDPAINT.get());
-            case BLUE -> new ItemStack(ModItems.BLUEPAINT.get());
-            case GREEN -> new ItemStack(ModItems.GREENPAINT.get());
-            case YELLOW -> new ItemStack(ModItems.YELLOWPAINT.get());
-            case PINK -> new ItemStack(ModItems.PINKPAINT.get());
-            case BLACK -> new ItemStack(ModItems.BLACKPAINT.get());
-            case WHITE -> new ItemStack(ModItems.WHITEPAINT.get());
-            case PURPLE -> new ItemStack(ModItems.PURPLEPAINT.get());
-            case MAGENTA -> new ItemStack(ModItems.MAGENTAPAINT.get());
-            case LIME -> new ItemStack(ModItems.LIMEPAINT.get());
-            case CYAN -> new ItemStack(ModItems.CYANPAINT.get());
-            case LIGHTBLUE -> new ItemStack(ModItems.LIGHTBLUEPAINT.get());
-            case ORANGE -> new ItemStack(ModItems.ORANGEPAINT.get());
-            case BROWN -> new ItemStack(ModItems.BROWNPAINT.get());
-            case LIGHTGRAY -> new ItemStack(ModItems.LIGHTGRAYPAINT.get());
-            case GRAY -> new ItemStack(ModItems.GRAYPAINT.get());
-        };
     }
 
     private static @NotNull ItemStack getPotionItem(PotionFluidType potionFluidType) {

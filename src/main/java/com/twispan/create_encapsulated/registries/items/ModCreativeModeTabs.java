@@ -71,21 +71,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ORIGINALLOY);
                         output.accept(ModItems.CARVING_BLADE);
                         output.accept(ModBlocks.CARVING_TABLE.asItem());
-                        output.accept(ModItems.BLUEPAINT);
-                        output.accept(ModItems.YELLOWPAINT);
-                        output.accept(ModItems.GREENPAINT);
-                        output.accept(ModItems.PINKPAINT);
-                        output.accept(ModItems.BLACKPAINT);
-                        output.accept(ModItems.WHITEPAINT);
-                        output.accept(ModItems.PURPLEPAINT);
-                        output.accept(ModItems.MAGENTAPAINT);
-                        output.accept(ModItems.LIMEPAINT);
-                        output.accept(ModItems.CYANPAINT);
-                        output.accept(ModItems.LIGHTBLUEPAINT);
-                        output.accept(ModItems.ORANGEPAINT);
-                        output.accept(ModItems.BROWNPAINT);
-                        output.accept(ModItems.LIGHTGRAYPAINT);
-                        output.accept(ModItems.GRAYPAINT);
                     }).build()
     );
 

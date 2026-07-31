@@ -1,7 +1,6 @@
 package com.twispan.create_encapsulated.registries.items;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.item.Paint;
 import com.twispan.create_encapsulated.item.singular.CarvingBlade;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -14,8 +13,6 @@ public class ModItems {
 
     public static final DeferredItem<Item> INCOMPMASTERBALLLID = ITEMS.register("incomplete_master_ball_lid",
             () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> RAINBOW_PAINT = ITEMS.register("rainbow_paint",
-            () -> new Paint(new Item.Properties(), null));
 
     public static final DeferredItem<Item> POKEBALLBASE = ITEMS.register("poke_ball_base",
             () -> new Item(new Item.Properties()));
@@ -104,39 +101,6 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> ORIGINALLOY = ITEMS.register("origin_alloy",
             () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> REDPAINT = ITEMS.register("red_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), RED_PAINT));
-    public static final DeferredItem<Item> BLUEPAINT = ITEMS.register("blue_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), BLUE_PAINT));
-    public static final DeferredItem<Item> YELLOWPAINT = ITEMS.register("yellow_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), YELLOW_PAINT));
-    public static final DeferredItem<Item> GREENPAINT = ITEMS.register("green_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), GREEN_PAINT));
-    public static final DeferredItem<Item> PINKPAINT = ITEMS.register("pink_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), PINK_PAINT));
-    public static final DeferredItem<Item> BLACKPAINT = ITEMS.register("black_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), BLACK_PAINT));
-    public static final DeferredItem<Item> WHITEPAINT = ITEMS.register("white_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), WHITE_PAINT));
-    public static final DeferredItem<Item> PURPLEPAINT = ITEMS.register("purple_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), PURPLE_PAINT));
-    public static final DeferredItem<Item> MAGENTAPAINT = ITEMS.register("magenta_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), MAGENTA_PAINT));
-    public static final DeferredItem<Item> LIMEPAINT = ITEMS.register("lime_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), LIME_PAINT));
-    public static final DeferredItem<Item> CYANPAINT = ITEMS.register("cyan_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), CYAN_PAINT));
-    public static final DeferredItem<Item> LIGHTBLUEPAINT = ITEMS.register("light_blue_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), LIGHTBLUE_PAINT));
-    public static final DeferredItem<Item> ORANGEPAINT = ITEMS.register("orange_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), ORANGE_PAINT));
-    public static final DeferredItem<Item> BROWNPAINT = ITEMS.register("brown_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), BROWN_PAINT));
-    public static final DeferredItem<Item> LIGHTGRAYPAINT = ITEMS.register("light_gray_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), LIGHTGRAY_PAINT));
-    public static final DeferredItem<Item> GRAYPAINT = ITEMS.register("gray_paint",
-            () -> new Paint(new Item.Properties().stacksTo(64), GRAY_PAINT));
 
     public static final DeferredItem<Item> CARVING_BLADE = ITEMS.register("carving_blade",
             () -> new CarvingBlade(new Item.Properties().durability(250).setNoRepair()));

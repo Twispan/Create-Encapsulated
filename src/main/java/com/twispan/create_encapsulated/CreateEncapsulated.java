@@ -1,18 +1,14 @@
 package com.twispan.create_encapsulated;
 
 import com.cobblemon.mod.common.CobblemonItems;
-import com.twispan.create_encapsulated.advancements.ModTriggers;
 import com.twispan.create_encapsulated.registries.ModVillagers;
 import com.twispan.create_encapsulated.registries.blocks.ModBlockEntities;
 import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import com.twispan.create_encapsulated.client.ModClientSetup;
-import com.twispan.create_encapsulated.config.CEConfig;
 import com.twispan.create_encapsulated.crafting.ModRecipeSerializers;
 import com.twispan.create_encapsulated.registries.ModRecipeTypes;
-import com.twispan.create_encapsulated.events.BasinDyeHandler;
 import com.twispan.create_encapsulated.item.util.EmptyBottleFluidHandler;
 import com.twispan.create_encapsulated.registries.items.ModCreativeModeTabs;
-import com.twispan.create_encapsulated.item.Paint;
 import com.twispan.create_encapsulated.item.util.FluidItemHandler;
 import com.twispan.create_encapsulated.registries.ModFluids;
 import com.twispan.create_encapsulated.registries.items.ModItems;
@@ -64,12 +60,6 @@ public class CreateEncapsulated {
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
-        // Advancement trigger
-        ModTriggers.TRIGGERS.register(modEventBus);
-
-        // Register secret item tooltip
-        NeoForge.EVENT_BUS.addListener(Paint::onTooltip);
-
         // Register creative tab
         ModCreativeModeTabs.register(modEventBus);
 
@@ -83,9 +73,6 @@ public class CreateEncapsulated {
         // Register recipe serializers
         ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
 
-        // Register right click event for paint on a basin
-        NeoForge.EVENT_BUS.addListener(BasinDyeHandler::onRightClickBlock);
-
         // Register blocks
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
@@ -98,9 +85,6 @@ public class CreateEncapsulated {
 
         // Register professions & poi (Points of Interest)
         ModVillagers.register(modEventBus);
-
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, CEConfig.SPEC);
 
         // Register client-side events only on the client
         if (FMLEnvironment.dist == Dist.CLIENT) {
@@ -158,56 +142,10 @@ public class CreateEncapsulated {
             event.accept(ModItems.ORIGINBALLLID);
             event.accept(ModItems.ORIGINBALLBASE);
             event.accept(ModItems.ORIGINALLOY);
-            event.accept(ModItems.REDPAINT);
-            event.accept(ModItems.BLUEPAINT);
-            event.accept(ModItems.YELLOWPAINT);
-            event.accept(ModItems.GREENPAINT);
-            event.accept(ModItems.PINKPAINT);
-            event.accept(ModItems.BLACKPAINT);
-            event.accept(ModItems.WHITEPAINT);
-            event.accept(ModItems.PURPLEPAINT);
-            event.accept(ModItems.MAGENTAPAINT);
-            event.accept(ModItems.LIMEPAINT);
-            event.accept(ModItems.CYANPAINT);
-            event.accept(ModItems.LIGHTBLUEPAINT);
-            event.accept(ModItems.ORANGEPAINT);
-            event.accept(ModItems.BROWNPAINT);
-            event.accept(ModItems.LIGHTGRAYPAINT);
-            event.accept(ModItems.GRAYPAINT);
         }
     }
 
     private void registerCapabilities(RegisterCapabilitiesEvent event) {
-        // Register fluid handler capability for all paint items
-        event.registerItem(
-                Capabilities.FluidHandler.ITEM,
-                (stack, context) -> {
-                    if (stack.getItem() instanceof Paint paintItem) {
-                        return paintItem.getFluid().map(f -> {
-                            FluidStack fluidStack = new FluidStack(f.get(), 250);
-                            return new FluidItemHandler(stack, fluidStack);
-                        }).orElse(null);
-                    }
-                    return null;
-                },
-                ModItems.REDPAINT.get(),
-                ModItems.BLUEPAINT.get(),
-                ModItems.GREENPAINT.get(),
-                ModItems.YELLOWPAINT.get(),
-                ModItems.PINKPAINT.get(),
-                ModItems.BLACKPAINT.get(),
-                ModItems.WHITEPAINT.get(),
-                ModItems.PURPLEPAINT.get(),
-                ModItems.MAGENTAPAINT.get(),
-                ModItems.LIMEPAINT.get(),
-                ModItems.CYANPAINT.get(),
-                ModItems.LIGHTBLUEPAINT.get(),
-                ModItems.ORANGEPAINT.get(),
-                ModItems.BROWNPAINT.get(),
-                ModItems.LIGHTGRAYPAINT.get(),
-                ModItems.GRAYPAINT.get()
-
-        );
         // Register fluid handler capability for medicinal brew
         event.registerItem(
                 Capabilities.FluidHandler.ITEM,
