@@ -13,7 +13,7 @@
             "tag": "c:chains"
         },
         "D": {
-            "item": "create_encapsulated:orange_paint"
+            "item": "world_of_color:orange_paint"
         }
     },
     "result": {

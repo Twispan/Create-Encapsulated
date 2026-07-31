@@ -13,13 +13,13 @@
       "item": "create:brass_nugget"
     },
     "Z": {
-      "item": "create_encapsulated:black_paint"
+      "item": "world_of_color:black_paint"
     },
     "O": {
       "item": "create_encapsulated:poke_ball_base"
     },
     "B": {
-      "item": "create_encapsulated:green_paint"
+      "item": "world_of_color:green_paint"
     }
   },
   "result": {

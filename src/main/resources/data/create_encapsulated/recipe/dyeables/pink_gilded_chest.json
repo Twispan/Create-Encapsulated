@@ -1,5 +1,5 @@
 {
-  "type": "create_encapsulated:paintable",
+  "type": "world_of_color:paintable",
   "ingredients": [
     [
       {
@@ -22,7 +22,7 @@
       }
     ],
     {
-      "item": "create_encapsulated:pink_paint"
+      "item": "world_of_color:pink_paint"
     }
   ],
   "result": {

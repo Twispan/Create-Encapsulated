@@ -1,9 +1,9 @@
 {
-  "type": "create_encapsulated:paintable",
+  "type": "world_of_color:paintable",
   "category": "misc",
   "ingredients": [
     {
-      "item": "create_encapsulated:magenta_paint"
+      "item": "world_of_color:magenta_paint"
     },
     [
       {
