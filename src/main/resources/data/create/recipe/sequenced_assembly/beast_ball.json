@@ -72,7 +72,7 @@
         {
           "type": "neoforge:single",
           "amount": 250,
-          "fluid": "create_encapsulated:blue_paint"
+          "fluid": "world_of_color:blue_paint"
         }
       ],
       "results": [
@@ -90,7 +90,7 @@
         {
           "type": "neoforge:single",
           "amount": 250,
-          "fluid": "create_encapsulated:purple_paint"
+          "fluid": "world_of_color:purple_paint"
         }
       ],
       "results": [

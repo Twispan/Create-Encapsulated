@@ -54,7 +54,7 @@
         {
           "type": "neoforge:single",
           "amount": 250,
-          "fluid": "create_encapsulated:black_paint"
+          "fluid": "world_of_color:black_paint"
         }
       ],
       "results": [
@@ -72,7 +72,7 @@
         {
           "type": "neoforge:single",
           "amount": 250,
-          "fluid": "create_encapsulated:white_paint"
+          "fluid": "world_of_color:white_paint"
         }
       ],
       "results": [
