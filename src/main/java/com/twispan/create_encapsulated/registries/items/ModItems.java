@@ -1,12 +1,9 @@
 package com.twispan.create_encapsulated.registries.items;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.item.singular.CarvingBlade;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import static com.twispan.create_encapsulated.registries.ModFluids.*;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CreateEncapsulated.MODID);
@@ -101,7 +98,4 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> ORIGINALLOY = ITEMS.register("origin_alloy",
             () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> CARVING_BLADE = ITEMS.register("carving_blade",
-            () -> new CarvingBlade(new Item.Properties().durability(250).setNoRepair()));
 }

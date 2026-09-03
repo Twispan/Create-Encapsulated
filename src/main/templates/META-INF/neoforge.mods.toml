@@ -104,3 +104,10 @@ description='''${mod_description}'''
     versionRange="[6.0.0,)" # Create's 1.21.1 first release, shouldn't have issues.
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="world_of_color"
+    type="required"
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"

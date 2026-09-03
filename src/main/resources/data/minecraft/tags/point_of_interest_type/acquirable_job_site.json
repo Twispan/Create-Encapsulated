@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "create_encapsulated:carpenter_poi",
-      "required": false
-    }
-  ]
-}

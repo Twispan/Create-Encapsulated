@@ -1,6 +1,5 @@
 {
   "item.create_encapsulated.incomplete_master_ball_lid": "Incomplete Master Ball Lid",
-  "item.create_encapsulated.rainbow_paint": "Rainbow Paint",
   "item.create_encapsulated.poke_ball_base": "Poké Ball Base",
   "item.create_encapsulated.split_red_apricorn": "Split Red Apricorn",
   "item.create_encapsulated.split_blue_apricorn": "Split Blue Apricorn",
@@ -9,10 +8,6 @@
   "item.create_encapsulated.split_pink_apricorn": "Split Pink Apricorn",
   "item.create_encapsulated.split_black_apricorn": "Split Black Apricorn",
   "item.create_encapsulated.split_white_apricorn": "Split White Apricorn",
-  "item.create_encapsulated.carving_blade": "Carving Blade",
-  "block.create_encapsulated.carving_table": "Carving Table",
-
-  "death.attack.tasted_rainbow": "%1$s tasted the rainbow",
 
   "item.create_encapsulated.great_ball_lid": "Great Ball Lid",
   "item.create_encapsulated.ultra_ball_lid": "Ultra Ball Lid",
@@ -50,40 +45,6 @@
   "item.create_encapsulated.ancient_origin_ball_base": "Ancient Origin Ball Base",
   "item.create_encapsulated.origin_alloy": "Origin Alloy",
 
-  "item.create_encapsulated.red_paint": "Red Paint",
-  "item.create_encapsulated.blue_paint": "Blue Paint",
-  "item.create_encapsulated.yellow_paint": "Yellow Paint",
-  "item.create_encapsulated.green_paint": "Green Paint",
-  "item.create_encapsulated.pink_paint": "Pink Paint",
-  "item.create_encapsulated.black_paint": "Black Paint",
-  "item.create_encapsulated.white_paint": "White Paint",
-  "item.create_encapsulated.purple_paint": "Purple Paint",
-  "item.create_encapsulated.magenta_paint": "Magenta Paint",
-  "item.create_encapsulated.lime_paint": "Lime Paint",
-  "item.create_encapsulated.cyan_paint": "Cyan Paint",
-  "item.create_encapsulated.light_blue_paint": "Light Blue Paint",
-  "item.create_encapsulated.orange_paint": "Orange Paint",
-  "item.create_encapsulated.brown_paint": "Brown Paint",
-  "item.create_encapsulated.light_gray_paint": "Light Gray Paint",
-  "item.create_encapsulated.gray_paint": "Gray Paint",
-
-  "fluid_type.create_encapsulated.red_paint": "Red Paint",
-  "fluid_type.create_encapsulated.blue_paint": "Blue Paint",
-  "fluid_type.create_encapsulated.yellow_paint": "Yellow Paint",
-  "fluid_type.create_encapsulated.green_paint": "Green Paint",
-  "fluid_type.create_encapsulated.pink_paint": "Pink Paint",
-  "fluid_type.create_encapsulated.black_paint": "Black Paint",
-  "fluid_type.create_encapsulated.white_paint": "White Paint",
-  "fluid_type.create_encapsulated.purple_paint": "Purple Paint",
-  "fluid_type.create_encapsulated.magenta_paint": "Magenta Paint",
-  "fluid_type.create_encapsulated.lime_paint": "Lime Paint",
-  "fluid_type.create_encapsulated.cyan_paint": "Cyan Paint",
-  "fluid_type.create_encapsulated.light_blue_paint": "Light Blue Paint",
-  "fluid_type.create_encapsulated.orange_paint": "Orange Paint",
-  "fluid_type.create_encapsulated.brown_paint": "Brown Paint",
-  "fluid_type.create_encapsulated.light_gray_paint": "Light Gray Paint",
-  "fluid_type.create_encapsulated.gray_paint": "Gray Paint",
-
   "fluid_type.create_encapsulated.medicinal_brew": "Medicinal Brew",
   "fluid_type.create_encapsulated.potion": "Potion",
   "fluid_type.create_encapsulated.super_potion": "Super Potion",
@@ -111,9 +72,5 @@
   "fluid_type.create_encapsulated.elixir": "Elixir",
   "fluid_type.create_encapsulated.max_elixir": "Max Elixir",
 
-  "creativetab.create_encapsulated.createencapsulated_items": "Create: Encapsulated",
-
-  "entity.minecraft.villager.create_encapsulated.carpenter": "Carpenter",
-
-  "menu.create_encapsulated.carving_blade": "Carving Blade"
+  "creativetab.create_encapsulated.createencapsulated_items": "Create: Encapsulated"
 }

@@ -1,7 +1,7 @@
 {
   "profession": "create_encapsulated:carpenter",
   "level": 2,
-  "buy_item": {"tag": "create_encapsulated:paint", "count": 1},
+  "buy_item": {"tag": "t", "count": 1},
   "sell_item": {"id": "minecraft:emerald", "count": 1},
   "max_uses": 10,
   "xp": 3,

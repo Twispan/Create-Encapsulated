@@ -1,6 +1,5 @@
 package com.twispan.create_encapsulated.fluid.other_medicine;
 
-import com.twispan.create_encapsulated.fluid.potions.PotionFluidType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.Item;

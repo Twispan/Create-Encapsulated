@@ -1,18 +1,12 @@
 package com.twispan.create_encapsulated;
 
 import com.cobblemon.mod.common.CobblemonItems;
-import com.twispan.create_encapsulated.registries.ModVillagers;
-import com.twispan.create_encapsulated.registries.blocks.ModBlockEntities;
-import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import com.twispan.create_encapsulated.client.ModClientSetup;
-import com.twispan.create_encapsulated.crafting.ModRecipeSerializers;
-import com.twispan.create_encapsulated.registries.ModRecipeTypes;
-import com.twispan.create_encapsulated.item.util.EmptyBottleFluidHandler;
+import com.twispan.create_encapsulated.util.EmptyBottleFluidHandler;
 import com.twispan.create_encapsulated.registries.items.ModCreativeModeTabs;
-import com.twispan.create_encapsulated.item.util.FluidItemHandler;
+import com.twispan.create_encapsulated.util.FluidItemHandler;
 import com.twispan.create_encapsulated.registries.ModFluids;
 import com.twispan.create_encapsulated.registries.items.ModItems;
-import com.twispan.create_encapsulated.registries.ModMenuTypes;
 import net.minecraft.world.item.Items;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLEnvironment;
@@ -28,7 +22,6 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
@@ -69,22 +62,6 @@ public class CreateEncapsulated {
 
         // Register items
         ModItems.ITEMS.register(modEventBus);
-
-        // Register recipe serializers
-        ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
-
-        // Register blocks
-        ModBlocks.register(modEventBus);
-        ModBlockEntities.register(modEventBus);
-
-        // Register menus
-        ModMenuTypes.register(modEventBus);
-
-        // Register recipe types
-        ModRecipeTypes.RECIPE_TYPES.register(modEventBus);
-
-        // Register professions & poi (Points of Interest)
-        ModVillagers.register(modEventBus);
 
         // Register client-side events only on the client
         if (FMLEnvironment.dist == Dist.CLIENT) {

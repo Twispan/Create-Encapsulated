@@ -2,67 +2,67 @@
   "pokemon": ["electrode", "alakazam", "gengar", "jigglypuff", "smeargle"],
   "cosmeticItems": [
     {
-      "consumedItem": "create_encapsulated:white_paint",
+      "consumedItem": "world_of_color:white_paint",
       "aspects": ["color-white", "colour-white"]
     },
     {
-      "consumedItem": "create_encapsulated:orange_paint",
+      "consumedItem": "world_of_color:orange_paint",
       "aspects": ["color-orange", "colour-orange"]
     },
     {
-      "consumedItem": "create_encapsulated:magenta_paint",
+      "consumedItem": "world_of_color:magenta_paint",
       "aspects": ["color-magenta", "colour-magenta"]
     },
     {
-      "consumedItem": "create_encapsulated:light_blue_paint",
+      "consumedItem": "world_of_color:light_blue_paint",
       "aspects": ["color-light_blue", "colour-light_blue"]
     },
     {
-      "consumedItem": "create_encapsulated:yellow_paint",
+      "consumedItem": "world_of_color:yellow_paint",
       "aspects": ["color-yellow", "colour-yellow"]
     },
     {
-      "consumedItem": "create_encapsulated:lime_paint",
+      "consumedItem": "world_of_color:lime_paint",
       "aspects": ["color-lime", "colour-lime"]
     },
     {
-      "consumedItem": "create_encapsulated:pink_paint",
+      "consumedItem": "world_of_color:pink_paint",
       "aspects": ["color-pink", "colour-pink"]
     },
     {
-      "consumedItem": "create_encapsulated:gray_paint",
+      "consumedItem": "world_of_color:gray_paint",
       "aspects": ["color-gray", "colour-gray"]
     },
     {
-      "consumedItem": "create_encapsulated:light_gray_paint",
+      "consumedItem": "world_of_color:light_gray_paint",
       "aspects": ["color-light_gray", "colour-light_gray"]
     },
     {
-      "consumedItem": "create_encapsulated:cyan_paint",
+      "consumedItem": "world_of_color:cyan_paint",
       "aspects": ["color-cyan", "colour-cyan"]
     },
     {
-      "consumedItem": "create_encapsulated:purple_paint",
+      "consumedItem": "world_of_color:purple_paint",
       "aspects": ["color-purple", "colour-purple"]
     },
     {
-      "consumedItem": "create_encapsulated:blue_paint",
+      "consumedItem": "world_of_color:blue_paint",
       "aspects": ["color-blue", "colour-blue"]
     },
     {
-      "consumedItem": "create_encapsulated:brown_paint",
+      "consumedItem": "world_of_color:brown_paint",
       "aspects": ["color-brown", "colour-brown"]
     },
     {
-      "consumedItem": "create_encapsulated:green_paint",
+      "consumedItem": "world_of_color:green_paint",
       "aspects": ["color-green", "colour-green"]
     },
     {
-      "consumedItem": "create_encapsulated:red_paint",
+      "consumedItem": "world_of_color:red_paint",
       "aspects": ["color-red", "colour-red"]
     },
     {
-      "consumedItem": "create_encapsulated:black_paint",
+      "consumedItem": "world_of_color:black_paint",
       "aspects": ["color-black", "colour-black"]
     }
   ]

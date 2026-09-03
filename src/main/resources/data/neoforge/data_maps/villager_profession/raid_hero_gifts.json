@@ -1,7 +1,0 @@
-{
-  "values": {
-    "create_encapsulated:carpenter": {
-      "loot_table": "create_encapsulated:gameplay/hero_of_the_village/carpenter_gift"
-    }
-  }
-}

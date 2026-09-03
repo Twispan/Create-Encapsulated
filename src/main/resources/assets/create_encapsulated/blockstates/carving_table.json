@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "create_encapsulated:block/carving_table" },
-    "facing=south": { "model": "create_encapsulated:block/carving_table", "y": 180 },
-    "facing=west": { "model": "create_encapsulated:block/carving_table", "y": 270 },
-    "facing=east": { "model": "create_encapsulated:block/carving_table", "y": 90 }
-  }
-}
