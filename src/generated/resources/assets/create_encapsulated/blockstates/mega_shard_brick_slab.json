@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "create_encapsulated:block/mega_shard_brick_slab"
+    },
+    "type=double": {
+      "model": "create_encapsulated:block/mega_shard_bricks"
+    },
+    "type=top": {
+      "model": "create_encapsulated:block/mega_shard_brick_slab_top"
+    }
+  }
+}

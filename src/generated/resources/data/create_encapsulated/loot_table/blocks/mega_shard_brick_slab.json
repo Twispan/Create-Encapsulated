@@ -11,7 +11,7 @@
               "add": false,
               "conditions": [
                 {
-                  "block": "create_encapsulated:polished_mega_shard_slab",
+                  "block": "create_encapsulated:mega_shard_brick_slab",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "type": "double"
@@ -25,11 +25,11 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "create_encapsulated:mega_shard_slab"
+          "name": "create_encapsulated:mega_shard_brick_slab"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "create_encapsulated:blocks/polished_mega_shard_slab"
+  "random_sequence": "create_encapsulated:blocks/mega_shard_brick_slab"
 }

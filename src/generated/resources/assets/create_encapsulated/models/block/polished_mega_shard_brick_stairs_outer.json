@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "create_encapsulated:block/polished_mega_shard_bricks",
-    "side": "create_encapsulated:block/polished_mega_shard_bricks",
-    "top": "create_encapsulated:block/polished_mega_shard_bricks"
-  }
-}

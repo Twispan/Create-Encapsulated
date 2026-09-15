@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "create_encapsulated:block/polished_mega_shard"
+  }
+}

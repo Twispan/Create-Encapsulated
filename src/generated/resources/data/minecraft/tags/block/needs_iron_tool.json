@@ -4,21 +4,21 @@
     "create_encapsulated:mega_shard_block",
     "create_encapsulated:polished_origin_alloy",
     "create_encapsulated:origin_alloy_bricks",
-    "create_encapsulated:polished_mega_shard_block",
-    "create_encapsulated:polished_mega_shard_bricks",
+    "create_encapsulated:polished_mega_shard",
+    "create_encapsulated:mega_shard_bricks",
     "create_encapsulated:chiseled_origin_alloy",
-    "create_encapsulated:chiseled_mega_shard_block",
+    "create_encapsulated:chiseled_mega_shard",
     "create_encapsulated:polished_origin_alloy_stairs",
     "create_encapsulated:origin_alloy_brick_stairs",
     "create_encapsulated:polished_mega_shard_stairs",
-    "create_encapsulated:polished_mega_shard_brick_stairs",
+    "create_encapsulated:mega_shard_brick_stairs",
     "create_encapsulated:polished_origin_alloy_slab",
     "create_encapsulated:origin_alloy_brick_slab",
     "create_encapsulated:polished_mega_shard_slab",
-    "create_encapsulated:polished_mega_shard_brick_slab",
+    "create_encapsulated:mega_shard_brick_slab",
     "create_encapsulated:polished_origin_alloy_wall",
     "create_encapsulated:origin_alloy_brick_wall",
     "create_encapsulated:polished_mega_shard_wall",
-    "create_encapsulated:polished_mega_shard_brick_wall"
+    "create_encapsulated:mega_shard_brick_wall"
   ]
 }

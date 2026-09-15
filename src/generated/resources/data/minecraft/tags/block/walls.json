@@ -3,6 +3,6 @@
     "create_encapsulated:polished_origin_alloy_wall",
     "create_encapsulated:origin_alloy_brick_wall",
     "create_encapsulated:polished_mega_shard_wall",
-    "create_encapsulated:polished_mega_shard_brick_wall"
+    "create_encapsulated:mega_shard_brick_wall"
   ]
 }

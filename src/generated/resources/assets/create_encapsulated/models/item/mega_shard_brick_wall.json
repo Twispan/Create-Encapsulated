@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "create_encapsulated:block/polished_mega_shard"
+    "wall": "create_encapsulated:block/mega_shard_bricks"
   }
 }

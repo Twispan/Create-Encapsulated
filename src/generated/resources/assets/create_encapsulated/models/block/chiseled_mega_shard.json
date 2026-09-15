@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "create_encapsulated:block/chiseled_mega_shard_top",
+    "side": "create_encapsulated:block/chiseled_mega_shard_side"
+  }
+}
