@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "create_encapsulated:block/origin_alloy_bricks"
+  }
+}

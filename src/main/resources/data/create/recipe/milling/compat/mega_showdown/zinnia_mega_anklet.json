@@ -1,0 +1,28 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "mega_showdown:zinnia_mega_anklet"
+    }
+  ],
+  "processing_time": 500,
+  "results": [
+    {
+      "count": 1,
+      "id": "mega_showdown:keystone"
+    },
+    {
+      "count": 1,
+      "id": "cobblemon:sky_tumblestone"
+    },
+    {
+      "count": 3,
+      "id": "minecraft:chain"
+    },
+    {
+      "chance": 0.50,
+      "count": 1,
+      "id": "cobblemon:sky_tumblestone"
+    }
+  ]
+}

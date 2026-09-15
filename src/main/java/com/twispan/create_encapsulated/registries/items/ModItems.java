@@ -13,6 +13,9 @@ public class ModItems {
     public static final DeferredItem<Item> INCOMPMASTERBALLLID = ITEMS.register("incomplete_master_ball_lid",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> MEGASHARD = ITEMS.register("mega_shard",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> MODLOGO = ITEMS.register("create_encapsulated_logo",
             () -> new Item(new Item.Properties()));
 
@@ -108,40 +111,40 @@ public class ModItems {
             ITEMS.registerSimpleBlockItem("origin_alloy_block", ModBlocks.ORIGIN_ALLOY_BLOCK);
     public static final DeferredItem<BlockItem> MEGA_SHARD_BLOCK =
             ITEMS.registerSimpleBlockItem("mega_shard_block", ModBlocks.MEGA_SHARD_BLOCK);
-    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_BLOCK =
-            ITEMS.registerSimpleBlockItem("polished_origin_block", ModBlocks.POLISHED_ORIGIN_BLOCK);
-    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_BRICKS =
-            ITEMS.registerSimpleBlockItem("polished_origin_bricks", ModBlocks.POLISHED_ORIGIN_BRICKS);
+    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_ALLOY =
+            ITEMS.registerSimpleBlockItem("polished_origin_alloy", ModBlocks.POLISHED_ORIGIN_ALLOY);
+    public static final DeferredItem<BlockItem> ORIGIN_ALLOY_BRICKS =
+            ITEMS.registerSimpleBlockItem("origin_alloy_bricks", ModBlocks.ORIGIN_ALLOY_BRICKS);
     public static final DeferredItem<BlockItem> POLISHED_MEGA_SHARD_BLOCK =
             ITEMS.registerSimpleBlockItem("polished_mega_shard_block", ModBlocks.POLISHED_MEGA_SHARD_BLOCK);
     public static final DeferredItem<BlockItem> POLISHED_MEGA_SHARD_BRICKS =
             ITEMS.registerSimpleBlockItem("polished_mega_shard_bricks", ModBlocks.POLISHED_MEGA_SHARD_BRICKS);
-    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_STAIRS =
-            ITEMS.registerSimpleBlockItem("polished_origin_stairs", ModBlocks.POLISHED_ORIGIN_STAIRS);
-    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_BRICK_STAIRS =
-            ITEMS.registerSimpleBlockItem("polished_origin_brick_stairs", ModBlocks.POLISHED_ORIGIN_BRICK_STAIRS);
+    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_ALLOY_STAIRS =
+            ITEMS.registerSimpleBlockItem("polished_origin_alloy_stairs", ModBlocks.POLISHED_ORIGIN_ALLOY_STAIRS);
+    public static final DeferredItem<BlockItem> ORIGIN_ALLOY_BRICK_STAIRS =
+            ITEMS.registerSimpleBlockItem("origin_alloy_brick_stairs", ModBlocks.ORIGIN_ALLOY_BRICK_STAIRS);
     public static final DeferredItem<BlockItem> POLISHED_MEGA_SHARD_STAIRS =
             ITEMS.registerSimpleBlockItem("polished_mega_shard_stairs", ModBlocks.POLISHED_MEGA_SHARD_STAIRS);
     public static final DeferredItem<BlockItem> POLISHED_MEGA_SHARD_BRICK_STAIRS =
             ITEMS.registerSimpleBlockItem("polished_mega_shard_brick_stairs", ModBlocks.POLISHED_MEGA_SHARD_BRICK_STAIRS);
-    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_SLAB =
-            ITEMS.registerSimpleBlockItem("polished_origin_slab", ModBlocks.POLISHED_ORIGIN_SLAB);
-    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_BRICK_SLAB =
-            ITEMS.registerSimpleBlockItem("polished_origin_brick_slab", ModBlocks.POLISHED_ORIGIN_BRICK_SLAB);
+    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_ALLOY_SLAB =
+            ITEMS.registerSimpleBlockItem("polished_origin_alloy_slab", ModBlocks.POLISHED_ORIGIN_ALLOY_SLAB);
+    public static final DeferredItem<BlockItem> ORIGIN_ALLOY_BRICK_SLAB =
+            ITEMS.registerSimpleBlockItem("origin_alloy_brick_slab", ModBlocks.ORIGIN_ALLOY_BRICK_SLAB);
     public static final DeferredItem<BlockItem> POLISHED_MEGA_SHARD_SLAB =
             ITEMS.registerSimpleBlockItem("polished_mega_shard_slab", ModBlocks.POLISHED_MEGA_SHARD_SLAB);
     public static final DeferredItem<BlockItem> POLISHED_MEGA_SHARD_BRICK_SLAB =
             ITEMS.registerSimpleBlockItem("polished_mega_shard_brick_slab", ModBlocks.POLISHED_MEGA_SHARD_BRICK_SLAB);
-    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_WALL =
-            ITEMS.registerSimpleBlockItem("polished_origin_wall", ModBlocks.POLISHED_ORIGIN_WALL);
-    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_BRICK_WALL =
-            ITEMS.registerSimpleBlockItem("polished_origin_brick_wall", ModBlocks.POLISHED_ORIGIN_BRICK_WALL);
+    public static final DeferredItem<BlockItem> POLISHED_ORIGIN_ALLOY_WALL =
+            ITEMS.registerSimpleBlockItem("polished_origin_alloy_wall", ModBlocks.POLISHED_ORIGIN_ALLOY_WALL);
+    public static final DeferredItem<BlockItem> ORIGIN_ALLOY_BRICK_WALL =
+            ITEMS.registerSimpleBlockItem("origin_alloy_brick_wall", ModBlocks.ORIGIN_ALLOY_BRICK_WALL);
     public static final DeferredItem<BlockItem> POLISHED_MEGA_SHARD_WALL =
             ITEMS.registerSimpleBlockItem("polished_mega_shard_wall", ModBlocks.POLISHED_MEGA_SHARD_WALL);
     public static final DeferredItem<BlockItem> POLISHED_MEGA_SHARD_BRICK_WALL =
             ITEMS.registerSimpleBlockItem("polished_mega_shard_brick_wall", ModBlocks.POLISHED_MEGA_SHARD_BRICK_WALL);
-    public static final DeferredItem<BlockItem> CHISELED_ORIGIN_BLOCK =
-            ITEMS.registerSimpleBlockItem("chiseled_origin_block", ModBlocks.CHISELED_ORIGIN_BLOCK);
+    public static final DeferredItem<BlockItem> CHISELED_ORIGIN_ALLOY =
+            ITEMS.registerSimpleBlockItem("chiseled_origin_alloy", ModBlocks.CHISELED_ORIGIN_ALLOY);
     public static final DeferredItem<BlockItem> CHISELED_MEGA_SHARD_BLOCK =
             ITEMS.registerSimpleBlockItem("chiseled_mega_shard_block", ModBlocks.CHISELED_MEGA_SHARD_BLOCK);
 }

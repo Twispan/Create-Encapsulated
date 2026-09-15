@@ -1,0 +1,28 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "mega_showdown:diantha_mega_charm"
+    }
+  ],
+  "processing_time": 500,
+  "results": [
+    {
+      "count": 1,
+      "id": "mega_showdown:keystone"
+    },
+    {
+      "count": 2,
+      "id": "minecraft:gold_ingot"
+    },
+    {
+      "count": 1,
+      "id": "minecraft:string"
+    },
+    {
+      "chance": 0.50,
+      "count": 1,
+      "id": "minecraft:gold_nugget"
+    }
+  ]
+}

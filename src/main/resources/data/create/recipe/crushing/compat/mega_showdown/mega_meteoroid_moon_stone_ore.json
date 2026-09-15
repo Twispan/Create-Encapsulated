@@ -21,6 +21,10 @@
     {
       "chance": 0.125,
       "id": "mega_showdown:mega_meteorid_block"
+    },
+    {
+      "chance": 0.05,
+      "id": "create_encapsulated:mega_shard"
     }
   ]
 }

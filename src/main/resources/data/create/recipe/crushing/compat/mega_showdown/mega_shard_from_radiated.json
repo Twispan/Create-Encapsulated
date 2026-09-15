@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "mega_showdown:mega_meteorid_radiated_block"
+    }
+  ],
+  "processing_time": 350,
+  "results": [
+    {
+      "chance": 0.08,
+      "id": "create_encapsulated:mega_shard"
+    }
+  ]
+}

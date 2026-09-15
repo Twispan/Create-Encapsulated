@@ -108,6 +108,7 @@ public class CreateEncapsulated {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.POKEBALLBASE);
+            event.accept(ModItems.MEGASHARD);
             event.accept(ModItems.SPLITREDAPRICORN);
             event.accept(ModItems.SPLITBLUEAPRICORN);
             event.accept(ModItems.SPLITYELLOWAPRICORN);

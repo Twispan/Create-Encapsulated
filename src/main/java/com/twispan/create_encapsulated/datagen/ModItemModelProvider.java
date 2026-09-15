@@ -16,8 +16,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        wallItem(ModBlocks.POLISHED_ORIGIN_WALL, ModBlocks.POLISHED_ORIGIN_BLOCK);
-        wallItem(ModBlocks.POLISHED_ORIGIN_BRICK_WALL, ModBlocks.POLISHED_ORIGIN_BRICKS);
+        wallItem(ModBlocks.POLISHED_ORIGIN_ALLOY_WALL, ModBlocks.POLISHED_ORIGIN_ALLOY);
+        wallItem(ModBlocks.ORIGIN_ALLOY_BRICK_WALL, ModBlocks.ORIGIN_ALLOY_BRICKS);
         wallItem(ModBlocks.POLISHED_MEGA_SHARD_WALL, ModBlocks.POLISHED_MEGA_SHARD_BLOCK);
         wallItem(ModBlocks.POLISHED_MEGA_SHARD_BRICK_WALL, ModBlocks.POLISHED_MEGA_SHARD_BRICKS);
     }

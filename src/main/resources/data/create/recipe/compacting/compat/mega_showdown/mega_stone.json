@@ -1,0 +1,29 @@
+{
+  "type": "create:compacting",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 500,
+      "fluid": "minecraft:lava"
+    },
+
+    {
+      "item": "create_encapsulated:mega_shard"
+    },
+    {
+      "item": "create_encapsulated:mega_shard"
+    },
+    {
+      "item": "create_encapsulated:mega_shard"
+    },
+    {
+      "item": "create_encapsulated:mega_shard"
+    }
+  ],
+  "results": [
+    {
+      "id": "mega_showdown:mega_stone"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 {
   "item.create_encapsulated.incomplete_master_ball_lid": "Incomplete Master Ball Lid",
   "item.create_encapsulated.create_encapsulated_logo": "Create Encapsulated Logo",
+  "item.create_encapsulated.mega_shard": "Mega Shard",
   "item.create_encapsulated.poke_ball_base": "Poké Ball Base",
   "item.create_encapsulated.split_red_apricorn": "Split Red Apricorn",
   "item.create_encapsulated.split_blue_apricorn": "Split Blue Apricorn",
@@ -9,6 +10,8 @@
   "item.create_encapsulated.split_pink_apricorn": "Split Pink Apricorn",
   "item.create_encapsulated.split_black_apricorn": "Split Black Apricorn",
   "item.create_encapsulated.split_white_apricorn": "Split White Apricorn",
+
+
 
   "item.create_encapsulated.great_ball_lid": "Great Ball Lid",
   "item.create_encapsulated.ultra_ball_lid": "Ultra Ball Lid",
@@ -73,7 +76,27 @@
   "fluid_type.create_encapsulated.elixir": "Elixir",
   "fluid_type.create_encapsulated.max_elixir": "Max Elixir",
 
-  "block.create_encapsulated.origin_alloy_block": "Origin Alloy Block",
+  "block.create_encapsulated.mega_shard_block": "Block of Mega Shard",
+  "block.create_encapsulated.polished_mega_shard_block": "Polished Mega Shard",
+  "block.create_encapsulated.polished_mega_shard_wall": "Polished Mega Shard Wall",
+  "block.create_encapsulated.polished_mega_shard_slab": "Polished Mega Shard Slab",
+  "block.create_encapsulated.polished_mega_shard_stairs": "Polished Mega Shard Stairs",
+  "block.create_encapsulated.polished_mega_shard_bricks": "Polished Mega Shard Bricks",
+  "block.create_encapsulated.polished_mega_shard_brick_slab": "Polished Mega Shard Brick Slab",
+  "block.create_encapsulated.polished_mega_shard_brick_wall": "Polished Mega Shard Brick Wall",
+  "block.create_encapsulated.polished_mega_shard_brick_stairs": "Polished Mega Shard Brick Stairs",
+  "block.create_encapsulated.chiseled_mega_shard_block": "Chiseled Mega Shard",
+  "block.create_encapsulated.origin_alloy_block": "Block of Origin Alloy",
+  "block.create_encapsulated.polished_origin_alloy": "Polished Origin Alloy",
+  "block.create_encapsulated.polished_origin_alloy_wall": "Polished Origin Alloy Wall",
+  "block.create_encapsulated.polished_origin_alloy_slab": "Polished Origin Alloy Slab",
+  "block.create_encapsulated.polished_origin_alloy_stairs": "Polished Origin Alloy Stairs",
+  "block.create_encapsulated.origin_alloy_bricks": "Origin Alloy Bricks",
+  "block.create_encapsulated.origin_alloy_brick_wall": "Origin Alloy Brick Wall",
+  "block.create_encapsulated.origin_alloy_brick_slab": "Origin Alloy Brick Slab",
+  "block.create_encapsulated.origin_alloy_brick_stairs": "Origin Alloy Brick Stairs",
+  "block.create_encapsulated.chiseled_origin_alloy": "Chiseled Origin Alloy",
+
 
   "creativetab.create_encapsulated.createencapsulated_items": "Create: Encapsulated"
 }

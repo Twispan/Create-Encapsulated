@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "create_encapsulated:origin_alloy"
+    }
+  },
+  "result": {
+    "id": "create_encapsulated:origin_alloy_block"
+  }
+}

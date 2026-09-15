@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "create_encapsulated:polished_mega_shard_block"
+    }
+  },
+  "result": {
+    "id": "create_encapsulated:polished_mega_shard_slab",
+    "count": 6
+  }
+}
