@@ -1,0 +1,4 @@
+// 1.21.1	2026-09-15T04:03:04.229864008	Tags for minecraft:block mod id create_encapsulated
+868124fba9a4c41dfab7adf0f90993bb412564bc data/minecraft/tags/block/mineable/pickaxe.json
+377eb1f65649f4f7d65e2dbf9fc45f5ec1ad1974 data/minecraft/tags/block/needs_iron_tool.json
+2c13fc5613ac8267be85fe528cd7dbc4389b092d data/minecraft/tags/block/walls.json

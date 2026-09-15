@@ -1,9 +1,11 @@
 package com.twispan.create_encapsulated.registries.items;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
+import com.twispan.create_encapsulated.registries.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -71,7 +73,29 @@ public class ModCreativeModeTabs {
     );
 
     @SubscribeEvent
-    public static void addToTabs(BuildCreativeModeTabContentsEvent event) {
+    public static void buildContents(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ORIGIN_ALLOY_BLOCK.get());
+            event.accept(ModBlocks.MEGA_SHARD_BLOCK.get());
+            event.accept(ModBlocks.POLISHED_ORIGIN_BLOCK.get());
+            event.accept(ModBlocks.POLISHED_ORIGIN_BRICKS.get());
+            event.accept(ModBlocks.POLISHED_MEGA_SHARD_BLOCK.get());
+            event.accept(ModBlocks.POLISHED_MEGA_SHARD_BRICKS.get());
+            event.accept(ModBlocks.CHISELED_ORIGIN_BLOCK.get());
+            event.accept(ModBlocks.CHISELED_MEGA_SHARD_BLOCK.get());
+            event.accept(ModBlocks.POLISHED_ORIGIN_STAIRS.get());
+            event.accept(ModBlocks.POLISHED_ORIGIN_BRICK_STAIRS.get());
+            event.accept(ModBlocks.POLISHED_MEGA_SHARD_STAIRS.get());
+            event.accept(ModBlocks.POLISHED_MEGA_SHARD_BRICK_STAIRS.get());
+            event.accept(ModBlocks.POLISHED_ORIGIN_SLAB.get());
+            event.accept(ModBlocks.POLISHED_ORIGIN_BRICK_SLAB.get());
+            event.accept(ModBlocks.POLISHED_MEGA_SHARD_SLAB.get());
+            event.accept(ModBlocks.POLISHED_MEGA_SHARD_BRICK_SLAB.get());
+            event.accept(ModBlocks.POLISHED_ORIGIN_WALL.get());
+            event.accept(ModBlocks.POLISHED_ORIGIN_BRICK_WALL.get());
+            event.accept(ModBlocks.POLISHED_MEGA_SHARD_WALL.get());
+            event.accept(ModBlocks.POLISHED_MEGA_SHARD_BRICK_WALL.get());
+        }
     }
 
     public static void register(IEventBus eventBus) {

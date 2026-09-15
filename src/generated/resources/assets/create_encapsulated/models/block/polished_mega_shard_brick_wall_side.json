@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side",
+  "textures": {
+    "wall": "create_encapsulated:block/polished_mega_shard_bricks"
+  }
+}

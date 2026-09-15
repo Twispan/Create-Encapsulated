@@ -2,10 +2,12 @@ package com.twispan.create_encapsulated;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import com.twispan.create_encapsulated.client.ModClientSetup;
+import com.twispan.create_encapsulated.datagen.DataGenerators;
 import com.twispan.create_encapsulated.fluid.MedicinalBrewFluidType;
 import com.twispan.create_encapsulated.fluid.other_medicine.OMedicineFluidType;
 import com.twispan.create_encapsulated.fluid.potions.PotionFluidType;
 import com.twispan.create_encapsulated.fluid.vitamins.VitaminFluidType;
+import com.twispan.create_encapsulated.registries.ModBlocks;
 import com.twispan.create_encapsulated.registries.items.ModCreativeModeTabs;
 import com.twispan.create_encapsulated.util.FluidMapper;
 import com.twispan.create_encapsulated.util.FluidItemHandler;
@@ -67,6 +69,9 @@ public class CreateEncapsulated {
 
         // Register items
         ModItems.ITEMS.register(modEventBus);
+
+        // Register blocks
+        ModBlocks.BLOCKS.register(modEventBus);
 
         // Register client-side events only on the client
         if (FMLEnvironment.dist == Dist.CLIENT) {

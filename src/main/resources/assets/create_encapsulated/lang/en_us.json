@@ -73,5 +73,7 @@
   "fluid_type.create_encapsulated.elixir": "Elixir",
   "fluid_type.create_encapsulated.max_elixir": "Max Elixir",
 
+  "block.create_encapsulated.origin_alloy_block": "Origin Alloy Block",
+
   "creativetab.create_encapsulated.createencapsulated_items": "Create: Encapsulated"
 }

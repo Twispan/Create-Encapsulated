@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "create_encapsulated:block/polished_mega_shard_slab"
+    },
+    "type=double": {
+      "model": "create_encapsulated:block/polished_mega_shard_block"
+    },
+    "type=top": {
+      "model": "create_encapsulated:block/polished_mega_shard_slab_top"
+    }
+  }
+}

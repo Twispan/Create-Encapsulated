@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "create_encapsulated:block/mega_shard_block"
+    }
+  }
+}

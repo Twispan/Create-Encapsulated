@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "create_encapsulated:block/polished_origin_brick_slab"
+    },
+    "type=double": {
+      "model": "create_encapsulated:block/polished_origin_bricks"
+    },
+    "type=top": {
+      "model": "create_encapsulated:block/polished_origin_brick_slab_top"
+    }
+  }
+}

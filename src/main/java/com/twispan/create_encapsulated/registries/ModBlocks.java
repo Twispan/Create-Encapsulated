@@ -1,0 +1,135 @@
+package com.twispan.create_encapsulated.registries;
+
+import com.cobblemon.mod.common.pokemon.ai.BlockBehavior;
+import com.twispan.create_encapsulated.CreateEncapsulated;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+public class ModBlocks {
+    public static final DeferredRegister.Blocks BLOCKS =
+            DeferredRegister.createBlocks(CreateEncapsulated.MODID);
+
+    // ==================================
+    // ==         Origin Alloy         ==
+    // ==================================
+    public static final DeferredBlock<Block> ORIGIN_ALLOY_BLOCK =
+            BLOCKS.register("origin_alloy_block", () -> new Block(
+                    BlockBehaviour.Properties.of()
+                            .destroyTime(4.0F)
+                            .explosionResistance(6.0F)
+                            .sound(SoundType.DEEPSLATE) // Perhaps we could even work on our own sounds for this?
+                            .requiresCorrectToolForDrops()));
+
+    // -- Polished variant --
+    public static final DeferredBlock<Block> POLISHED_ORIGIN_BLOCK =
+            BLOCKS.register("polished_origin_block", () -> new Block(
+                    BlockBehaviour.Properties.of()
+                            .destroyTime(4.0F)
+                            .explosionResistance(6.0F)
+                            .sound(SoundType.DEEPSLATE_TILES)
+                            .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<StairBlock> POLISHED_ORIGIN_STAIRS =
+            BLOCKS.register("polished_origin_stairs", () -> new StairBlock(
+                    POLISHED_ORIGIN_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_ORIGIN_BLOCK.get())));
+
+    public static final DeferredBlock<SlabBlock> POLISHED_ORIGIN_SLAB =
+            BLOCKS.register("polished_origin_slab", () -> new SlabBlock(
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_ORIGIN_BLOCK.get())));
+
+    public static final DeferredBlock<WallBlock> POLISHED_ORIGIN_WALL =
+            BLOCKS.register("polished_origin_wall", () -> new WallBlock(
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_ORIGIN_BLOCK.get())));
+
+    // -- Brick variant --
+    public static final DeferredBlock<Block> POLISHED_ORIGIN_BRICKS =
+            BLOCKS.register("polished_origin_bricks", () -> new Block(
+                    BlockBehaviour.Properties.of()
+                            .destroyTime(4.0F)
+                            .explosionResistance(6.0F)
+                            .sound(SoundType.DEEPSLATE_BRICKS)
+                            .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<StairBlock> POLISHED_ORIGIN_BRICK_STAIRS =
+            BLOCKS.register("polished_origin_brick_stairs", () -> new StairBlock(
+                    POLISHED_ORIGIN_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_ORIGIN_BRICKS.get())));
+
+    public static final DeferredBlock<SlabBlock> POLISHED_ORIGIN_BRICK_SLAB =
+            BLOCKS.register("polished_origin_brick_slab", () -> new SlabBlock(
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_ORIGIN_BRICKS.get())));
+
+    public static final DeferredBlock<WallBlock> POLISHED_ORIGIN_BRICK_WALL =
+            BLOCKS.register("polished_origin_brick_wall", () -> new WallBlock(
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_ORIGIN_BRICKS.get())));
+
+    // -- Chiseled variant --
+    public static final DeferredBlock<RotatedPillarBlock> CHISELED_ORIGIN_BLOCK =
+            BLOCKS.register("chiseled_origin_block", () -> new RotatedPillarBlock(
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_ORIGIN_BRICKS.get())));
+
+    // ================================
+    // ==         Mega Shard         ==
+    // ================================
+    public static final DeferredBlock<Block> MEGA_SHARD_BLOCK =
+            BLOCKS.register("mega_shard_block", () -> new Block(
+                    BlockBehaviour.Properties.of()
+                            .destroyTime(4.0F)
+                            .explosionResistance(6.0F)
+                            .sound(SoundType.AMETHYST_CLUSTER)
+                            .requiresCorrectToolForDrops()));
+
+    // -- Polished variant --
+    public static final DeferredBlock<Block> POLISHED_MEGA_SHARD_BLOCK =
+            BLOCKS.register("polished_mega_shard_block", () -> new Block(
+                    BlockBehaviour.Properties.of()
+                            .destroyTime(4.0F)
+                            .explosionResistance(6.0F)
+                            .sound(SoundType.AMETHYST)
+                            .requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<StairBlock> POLISHED_MEGA_SHARD_STAIRS =
+            BLOCKS.register("polished_mega_shard_stairs", () -> new StairBlock(
+                    POLISHED_MEGA_SHARD_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_MEGA_SHARD_BLOCK.get())));
+
+    public static final DeferredBlock<SlabBlock> POLISHED_MEGA_SHARD_SLAB =
+            BLOCKS.register("polished_mega_shard_slab", () -> new SlabBlock(
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_MEGA_SHARD_BLOCK.get())));
+
+    public static final DeferredBlock<WallBlock> POLISHED_MEGA_SHARD_WALL =
+            BLOCKS.register("polished_mega_shard_wall", () -> new WallBlock(
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_MEGA_SHARD_BLOCK.get())));
+
+    // -- Brick variant --
+    public static final DeferredBlock<Block> POLISHED_MEGA_SHARD_BRICKS =
+            BLOCKS.register("polished_mega_shard_bricks", () -> new Block(
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_MEGA_SHARD_BLOCK.get())));
+
+    public static final DeferredBlock<StairBlock> POLISHED_MEGA_SHARD_BRICK_STAIRS =
+            BLOCKS.register("polished_mega_shard_brick_stairs", () -> new StairBlock(
+                    POLISHED_MEGA_SHARD_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_MEGA_SHARD_BLOCK.get())));
+
+    public static final DeferredBlock<SlabBlock> POLISHED_MEGA_SHARD_BRICK_SLAB =
+            BLOCKS.register("polished_mega_shard_brick_slab", () -> new SlabBlock(
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_MEGA_SHARD_BLOCK.get())));
+
+    public static final DeferredBlock<WallBlock> POLISHED_MEGA_SHARD_BRICK_WALL =
+            BLOCKS.register("polished_mega_shard_brick_wall", () -> new WallBlock(
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_MEGA_SHARD_BLOCK.get())));
+
+    // -- Chiseled variant --
+    public static final DeferredBlock<RotatedPillarBlock> CHISELED_MEGA_SHARD_BLOCK =
+            BLOCKS.register("chiseled_mega_shard_block", () -> new RotatedPillarBlock(
+                    BlockBehaviour.Properties.ofFullCopy(POLISHED_MEGA_SHARD_BLOCK.get())));
+
+
+    public static void register(IEventBus eventBus) {
+        BLOCKS.register(eventBus);
+    }
+}

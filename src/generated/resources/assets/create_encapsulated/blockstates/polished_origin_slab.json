@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "create_encapsulated:block/polished_origin_slab"
+    },
+    "type=double": {
+      "model": "create_encapsulated:block/polished_origin_block"
+    },
+    "type=top": {
+      "model": "create_encapsulated:block/polished_origin_slab_top"
+    }
+  }
+}

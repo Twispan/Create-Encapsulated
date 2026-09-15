@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create_encapsulated:chiseled_mega_shard_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "create_encapsulated:blocks/chiseled_mega_shard_block"
+}
