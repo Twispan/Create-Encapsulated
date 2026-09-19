@@ -49,7 +49,7 @@ dependencies {
     implementation "maven.modrinth:LNytGWDc:UjX6dr61"
 
     // World of Color's current build
-    implementation "maven.modrinth:DLDpwb0R:jBxdmYmP"
+    implementation "maven.modrinth:DLDpwb0R:1jHtbfXe"
 }
 
 base {

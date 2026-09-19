@@ -2,7 +2,6 @@ package com.twispan.create_encapsulated;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import com.twispan.create_encapsulated.client.ModClientSetup;
-import com.twispan.create_encapsulated.datagen.DataGenerators;
 import com.twispan.create_encapsulated.fluid.MedicinalBrewFluidType;
 import com.twispan.create_encapsulated.fluid.other_medicine.OMedicineFluidType;
 import com.twispan.create_encapsulated.fluid.potions.PotionFluidType;
@@ -15,6 +14,7 @@ import com.twispan.create_encapsulated.registries.ModFluids;
 import com.twispan.create_encapsulated.registries.items.ModItems;
 import com.itsfirestorm.world_of_color.api.BottleFillRegistry;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.material.Fluid;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.capabilities.Capabilities;
@@ -34,6 +34,9 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+
+import java.util.List;
+import java.util.function.Supplier;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(CreateEncapsulated.MODID)
@@ -82,26 +85,88 @@ public class CreateEncapsulated {
     private void commonSetup(FMLCommonSetupEvent event) {
         NeoForgeMod.enableMilkFluid();
 
+        registerPotionBottleFills();
+        registerVitaminBottleFills();
+        registerOtherMedicineBottleFills();
+
         BottleFillRegistry.register(
                 stack -> stack.getFluidType() instanceof MedicinalBrewFluidType,
-                stack -> new ItemStack(CobblemonItems.MEDICINAL_BREW)
-        );
-        BottleFillRegistry.register(
-                stack -> stack.getFluidType() instanceof PotionFluidType,
-                stack -> FluidMapper.getPotionItem((PotionFluidType) stack.getFluidType())
+                stack -> new ItemStack(CobblemonItems.MEDICINAL_BREW),
+                () -> List.of(new FluidStack(ModFluids.MEDICINAL_BREW.get(), 1))
         );
         BottleFillRegistry.register(
                 stack -> stack.getFluid() == NeoForgeMod.MILK.get(),
-                stack -> new ItemStack(CobblemonItems.MOOMOO_MILK)
+                stack -> new ItemStack(CobblemonItems.MOOMOO_MILK),
+                () -> List.of(new FluidStack(NeoForgeMod.MILK.get(), 1))
         );
-        BottleFillRegistry.register(
-                stack -> stack.getFluidType() instanceof VitaminFluidType,
-                stack -> FluidMapper.getVitaminItem((VitaminFluidType) stack.getFluidType())
+    }
+
+    private void registerPotionBottleFills() {
+        List<Supplier<? extends Fluid>> potions = List.of(
+                ModFluids.POTION,
+                ModFluids.SUPER_POTION,
+                ModFluids.HYPER_POTION,
+                ModFluids.MAX_POTION,
+                ModFluids.FULL_RESTORE
         );
-        BottleFillRegistry.register(
-                stack -> stack.getFluidType() instanceof OMedicineFluidType,
-                stack -> FluidMapper.getOMedicineItem((OMedicineFluidType) stack.getFluidType())
+
+        for (var fluid : potions) {
+            BottleFillRegistry.register(
+                    stack -> stack.getFluid() == fluid.get(),
+                    stack -> FluidMapper.getPotionItem(
+                            (PotionFluidType) stack.getFluidType()
+                    ),
+                    () -> List.of(new FluidStack(fluid.get(), 1))
+            );
+        }
+    }
+
+    private void registerVitaminBottleFills() {
+        List<Supplier<? extends Fluid>> vitamins = List.of(
+                ModFluids.CALCIUM,
+                ModFluids.CARBOS,
+                ModFluids.HP_UP,
+                ModFluids.IRON,
+                ModFluids.PP_UP,
+                ModFluids.PP_MAX,
+                ModFluids.PROTEIN,
+                ModFluids.ZINC
         );
+
+        for (var fluid : vitamins) {
+            BottleFillRegistry.register(
+                    stack -> stack.getFluid() == fluid.get(),
+                    stack -> FluidMapper.getVitaminItem(
+                            (VitaminFluidType) stack.getFluidType()
+                    ),
+                    () -> List.of(new FluidStack(fluid.get(), 1))
+            );
+        }
+    }
+
+    private void registerOtherMedicineBottleFills() {
+        List<Supplier<? extends Fluid>> omedicines = List.of(
+                ModFluids.ANTIDOTE,
+                ModFluids.PARALYZE_HEAL,
+                ModFluids.AWAKENING,
+                ModFluids.FULL_HEAL,
+                ModFluids.BURN_HEAL,
+                ModFluids.ICE_HEAL,
+                ModFluids.ETHER,
+                ModFluids.MAX_ETHER,
+                ModFluids.ELIXIR,
+                ModFluids.MAX_ELIXIR
+        );
+
+        for (var fluid : omedicines) {
+            BottleFillRegistry.register(
+                    stack -> stack.getFluid() == fluid.get(),
+                    stack -> FluidMapper.getOMedicineItem(
+                            (OMedicineFluidType) stack.getFluidType()
+                    ),
+                    () -> List.of(new FluidStack(fluid.get(), 1))
+            );
+        }
     }
 
     // Add the example block item to the building blocks tab
@@ -338,10 +403,6 @@ public class CreateEncapsulated {
         );
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
-    }
+    private void onServerStartup(ServerStartingEvent event) {}
 }

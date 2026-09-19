@@ -23,9 +23,5 @@ public class ClientSetup {
     }
 
     @SubscribeEvent
-    static void onClientSetup(FMLClientSetupEvent event) {
-        // Some client setup code
-        CreateEncapsulated.LOGGER.info("HELLO FROM CLIENT SETUP");
-        CreateEncapsulated.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-    }
+    static void onClientSetup(FMLClientSetupEvent event) {}
 }
