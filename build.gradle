@@ -43,7 +43,7 @@ dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
     // Cobblemon
-    implementation "com.cobblemon:neoforge:1.7.3+1.21.1"
+    implementation "com.cobblemon:neoforge:1.8.2+1.21.1"
 
     // Create, Ponder, Flywheel, Registrate
     implementation "maven.modrinth:LNytGWDc:UjX6dr61"
