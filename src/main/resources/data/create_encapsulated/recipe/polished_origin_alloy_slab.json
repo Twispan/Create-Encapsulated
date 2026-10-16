@@ -5,11 +5,11 @@
   ],
   "key": {
     "#": {
-      "item": "create_encapsulated:mega_shard_bricks"
+      "item": "create_encapsulated:polished_origin_alloy"
     }
   },
   "result": {
-    "id": "create_encapsulated:mega_shard_brick_slab",
+    "id": "create_encapsulated:polished_origin_alloy_slab",
     "count": 6
   }
 }

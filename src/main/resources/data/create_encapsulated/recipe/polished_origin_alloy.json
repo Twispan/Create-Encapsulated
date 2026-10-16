@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "create_encapsulated:origin_alloy_block"
+    },
+    {
+      "item": "create_encapsulated:origin_alloy_block"
+    },
+    {
+      "item": "create_encapsulated:origin_alloy_block"
+    },
+    {
+      "item": "create_encapsulated:origin_alloy_block"
+    }
+  ],
+  "result": {
+    "id": "create_encapsulated:polished_origin_alloy",
+    "count": 4
+  }
+}

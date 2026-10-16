@@ -6,10 +6,10 @@
   ],
   "key": {
     "#": {
-      "item": "create_encapsulated:polished_mega_shard_slab"
+      "item": "create_encapsulated:polished_origin_alloy_slab"
     }
   },
   "result": {
-    "id": "create_encapsulated:chiseled_mega_shard"
+    "id": "create_encapsulated:chiseled_origin_alloy"
   }
 }

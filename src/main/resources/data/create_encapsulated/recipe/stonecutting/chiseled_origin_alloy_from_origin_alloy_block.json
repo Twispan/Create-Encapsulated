@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "create_encapsulated:origin_alloy_block"
+  },
+  "result": {
+    "id": "create_encapsulated:chiseled_origin_alloy"
+  }
+}

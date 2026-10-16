@@ -69,7 +69,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ORIGINBALLLID);
                         output.accept(ModItems.ORIGINBALLBASE);
                         output.accept(ModItems.ORIGINALLOY);
-                        output.accept(ModItems.MEGASHARD);
                     }).build()
     );
 
@@ -86,16 +85,6 @@ public class ModCreativeModeTabs {
             event.accept(ModBlocks.ORIGIN_ALLOY_BRICK_SLAB.get());
             event.accept(ModBlocks.ORIGIN_ALLOY_BRICK_WALL.get());
             event.accept(ModBlocks.CHISELED_ORIGIN_ALLOY.get());
-            event.accept(ModBlocks.MEGA_SHARD_BLOCK.get());
-            event.accept(ModBlocks.POLISHED_MEGA_SHARD.get());
-            event.accept(ModBlocks.POLISHED_MEGA_SHARD_STAIRS.get());
-            event.accept(ModBlocks.POLISHED_MEGA_SHARD_SLAB.get());
-            event.accept(ModBlocks.POLISHED_MEGA_SHARD_WALL.get());
-            event.accept(ModBlocks.MEGA_SHARD_BRICKS.get());
-            event.accept(ModBlocks.MEGA_SHARD_BRICK_STAIRS.get());
-            event.accept(ModBlocks.MEGA_SHARD_BRICK_SLAB.get());
-            event.accept(ModBlocks.MEGA_SHARD_BRICK_WALL.get());
-            event.accept(ModBlocks.CHISELED_MEGA_SHARD.get());
         }
     }
 

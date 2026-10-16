@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "create_encapsulated:polished_origin_alloy"
+  },
+  "result": {
+    "id": "create_encapsulated:origin_alloy_brick_stairs"
+  }
+}
