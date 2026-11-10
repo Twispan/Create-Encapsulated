@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:cornflower"
+    },
+    {
+      "item": "minecraft:wheat_seeds"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:bottle"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "shadowedhearts:insight_scent"
+    }
+  ]
+}
