@@ -21,6 +21,16 @@ repositories {
     }
 
     maven {
+        name = "Create" // + Ponder, Flywheel, Catnip
+        url = "https://maven.createmod.net"
+    }
+
+    maven {
+        name = "Registrate"
+        url = "https://maven.ithundxr.dev/snapshots"
+    }
+
+    maven {
         name = "Cobblemon"
         url = "https://maven.impactdev.net/repository/development/"
     }
@@ -45,11 +55,22 @@ dependencies {
     // Cobblemon
     implementation "com.cobblemon:neoforge:1.8.2+1.21.1"
 
-    // Create, Ponder, Flywheel, Registrate
-    implementation "maven.modrinth:LNytGWDc:UjX6dr61"
+    // Create, Ponder, Flywheel, Catnip
+    implementation("com.simibubi.create:create-${minecraft_version}:${create_version}") { transitive = false }
+
+    compileOnly "dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}"
+    runtimeOnly "dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}"
+
+    implementation("net.createmod.ponder:ponder-neoforge:${ponder_version}") { transitive = false }
+
+    // Registrate
+    implementation "com.tterrag.registrate:Registrate:${registrate_version}"
 
     // World of Color's current build
     implementation "maven.modrinth:DLDpwb0R:XAb7eKQt"
+
+    // Needed to read cobblemon's kotlin files
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:2.0.21"
 }
 
 base {

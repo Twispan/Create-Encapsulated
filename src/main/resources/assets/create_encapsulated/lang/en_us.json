@@ -10,8 +10,6 @@
   "item.create_encapsulated.split_black_apricorn": "Split Black Apricorn",
   "item.create_encapsulated.split_white_apricorn": "Split White Apricorn",
 
-
-
   "item.create_encapsulated.great_ball_lid": "Great Ball Lid",
   "item.create_encapsulated.ultra_ball_lid": "Ultra Ball Lid",
   "item.create_encapsulated.safari_ball_lid": "Safari Ball Lid",
@@ -86,6 +84,8 @@
   "block.create_encapsulated.origin_alloy_brick_stairs": "Origin Alloy Brick Stairs",
   "block.create_encapsulated.chiseled_origin_alloy": "Chiseled Origin Alloy",
 
+  "block.create_encapsulated.slugma_burner": "Slugma Burner",
 
-  "creativetab.create_encapsulated.createencapsulated_items": "Create: Encapsulated"
+  "creativetab.create_encapsulated.createencapsulated_pokeball_components_tab": "Encapsulated: Pokeball Components",
+  "creativetab.create_encapsulated.createencapsulated_machines_tab": "Encapsulated: Machines"
 }

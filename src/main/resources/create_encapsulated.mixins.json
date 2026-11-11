@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "com.twispan.create_encapsulated.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "SendOutHotkeyMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

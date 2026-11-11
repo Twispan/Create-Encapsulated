@@ -1,0 +1,22 @@
+{
+  "textures": {
+    "0": "create_encapsulated:block/slugma_burner/slugma_base",
+    "particle": "create_encapsulated:block/slugma_burner/slugma_base"
+  },
+  "elements": [
+    {
+      "from": [4, 0, 3],
+      "to": [12, 0, 13],
+      "faces": {
+        "up": {"uv": [4, 3, 12, 13], "texture": "#0"}
+      }
+    },
+    {
+      "from": [3, 0, 4],
+      "to": [13, 0, 12],
+      "faces": {
+        "up": {"uv": [3, 4, 13, 12], "texture": "#0"}
+      }
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 package com.twispan.create_encapsulated.datagen;
 
-import com.twispan.create_encapsulated.registries.ModBlocks;
+import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.registries.DeferredHolder;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 
@@ -37,7 +37,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     }
 
     @Override
-    protected Iterable<Block> getKnownBlocks() {
+    protected @NotNull Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream()
                 .map(entry -> (Block) entry.get())
                 .toList();

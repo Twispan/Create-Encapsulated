@@ -1,7 +1,7 @@
 package com.twispan.create_encapsulated.registries.items;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.registries.ModBlocks;
+import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -21,10 +21,10 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister
             .create(Registries.CREATIVE_MODE_TAB, CreateEncapsulated.MODID);
 
-    public static final Supplier<CreativeModeTab> CREATEENCAPSULATED_ITEMS_TAB = CREATIVE_MODE_TAB.register(
-            "createencapsulated_items_tab",
+    public static final Supplier<CreativeModeTab> CREATEENCAPSULATED_COMPONENTS_TAB = CREATIVE_MODE_TAB.register(
+            "createencapsulated_pokeball_components_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.POKEBALLBASE.get()))
-                    .title(Component.translatable("creativetab.create_encapsulated.createencapsulated_items"))
+                    .title(Component.translatable("creativetab.create_encapsulated.createencapsulated_pokeball_components_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.POKEBALLBASE);
                         output.accept(ModItems.SPLITREDAPRICORN);
@@ -69,6 +69,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ORIGINBALLLID);
                         output.accept(ModItems.ORIGINBALLBASE);
                         output.accept(ModItems.ORIGINALLOY);
+                    }).build()
+    );
+
+    public static final Supplier<CreativeModeTab> CREATEENCAPSULATED_MACHINES_TAB = CREATIVE_MODE_TAB.register(
+            "createencapsulated_machines_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SLUGMA_BURNER.get()))
+                    .title(Component.translatable("creativetab.create_encapsulated.createencapsulated_machines_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.SLUGMA_BURNER);
                     }).build()
     );
 

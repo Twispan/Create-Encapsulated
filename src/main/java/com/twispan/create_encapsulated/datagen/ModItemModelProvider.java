@@ -1,7 +1,7 @@
 package com.twispan.create_encapsulated.datagen;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.registries.ModBlocks;
+import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;

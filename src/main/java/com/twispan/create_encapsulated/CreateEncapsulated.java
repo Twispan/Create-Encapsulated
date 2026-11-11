@@ -2,11 +2,17 @@ package com.twispan.create_encapsulated;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import com.twispan.create_encapsulated.client.ModClientSetup;
+import com.twispan.create_encapsulated.client.SlugmaPartialModels;
+import com.twispan.create_encapsulated.client.SlugmaSpriteShifts;
 import com.twispan.create_encapsulated.fluid.MedicinalBrewFluidType;
 import com.twispan.create_encapsulated.fluid.other_medicine.OMedicineFluidType;
 import com.twispan.create_encapsulated.fluid.potions.PotionFluidType;
 import com.twispan.create_encapsulated.fluid.vitamins.VitaminFluidType;
-import com.twispan.create_encapsulated.registries.ModBlocks;
+import com.twispan.create_encapsulated.registries.ModComponents;
+import com.twispan.create_encapsulated.registries.ModCreateBehaviours;
+import com.twispan.create_encapsulated.registries.ModSounds;
+import com.twispan.create_encapsulated.registries.blocks.ModBlockEntities;
+import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import com.twispan.create_encapsulated.registries.items.ModCreativeModeTabs;
 import com.twispan.create_encapsulated.util.FluidMapper;
 import com.twispan.create_encapsulated.util.FluidItemHandler;
@@ -76,9 +82,20 @@ public class CreateEncapsulated {
         // Register blocks
         ModBlocks.BLOCKS.register(modEventBus);
 
+        // Register block entities
+        ModBlockEntities.register(modEventBus);
+
+        // Register components
+        ModComponents.DATA_COMPONENTS.register(modEventBus);
+
+        // Register sounds
+        ModSounds.SOUND_EVENTS.register(modEventBus);
+
         // Register client-side events only on the client
-        if (FMLEnvironment.dist == Dist.CLIENT) {
+        if (FMLEnvironment.dist.isClient()) {
             modEventBus.addListener(ModClientSetup::onRegisterClientExtensions);
+            SlugmaPartialModels.init();
+            SlugmaSpriteShifts.init();
         }
     }
 
@@ -99,6 +116,8 @@ public class CreateEncapsulated {
                 stack -> new ItemStack(CobblemonItems.MOOMOO_MILK),
                 () -> List.of(new FluidStack(NeoForgeMod.MILK.get(), 1))
         );
+
+        event.enqueueWork(ModCreateBehaviours::register);
     }
 
     private void registerPotionBottleFills() {

@@ -1,7 +1,7 @@
-package com.twispan.create_encapsulated.registries;
+package com.twispan.create_encapsulated.registries.blocks;
 
-import com.cobblemon.mod.common.pokemon.ai.BlockBehavior;
 import com.twispan.create_encapsulated.CreateEncapsulated;
+import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -11,6 +11,11 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(CreateEncapsulated.MODID);
+
+    public static DeferredBlock<Block> SLUGMA_BURNER =
+            BLOCKS.register("slugma_burner", () -> new SlugmaBurnerBlock(
+                    BlockBehaviour.Properties.of()
+            ));
 
     // ==================================
     // ==         Origin Alloy         ==

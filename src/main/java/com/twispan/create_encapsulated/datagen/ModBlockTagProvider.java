@@ -1,12 +1,13 @@
 package com.twispan.create_encapsulated.datagen;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.registries.ModBlocks;
+import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
@@ -17,7 +18,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.@NotNull Provider provider) {
         tag(BlockTags.WALLS)
                 .add(ModBlocks.POLISHED_ORIGIN_ALLOY_WALL.get())
                 .add(ModBlocks.ORIGIN_ALLOY_BRICK_WALL.get());

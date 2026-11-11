@@ -1,7 +1,9 @@
 package com.twispan.create_encapsulated.registries.items;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.registries.ModBlocks;
+import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
+import com.twispan.create_encapsulated.block.item.SlugmaBurnerBlockItem;
+import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -13,6 +15,8 @@ public class ModItems {
     public static final DeferredItem<Item> INCOMPMASTERBALLLID = ITEMS.register("incomplete_master_ball_lid",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<BlockItem> SLUGMA_BURNER = ITEMS.register("slugma_burner",
+            () -> new SlugmaBurnerBlockItem((SlugmaBurnerBlock) ModBlocks.SLUGMA_BURNER.get(), new Item.Properties()));
 
     public static final DeferredItem<Item> MODLOGO = ITEMS.register("create_encapsulated_logo",
             () -> new Item(new Item.Properties()));

@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "blaze=none":        { "model": "create_encapsulated:block/slugma_burner/block" },
+    "blaze=smouldering": { "model": "create_encapsulated:block/slugma_burner/block_with_slugma" },
+    "blaze=fading":      { "model": "create_encapsulated:block/slugma_burner/block_with_slugma" },
+    "blaze=kindled":     { "model": "create_encapsulated:block/slugma_burner/block_with_slugma" },
+    "blaze=seething":    { "model": "create_encapsulated:block/slugma_burner/block_with_slugma" }
+  }
+}

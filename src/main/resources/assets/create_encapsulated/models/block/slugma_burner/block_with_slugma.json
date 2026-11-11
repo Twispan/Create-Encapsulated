@@ -1,0 +1,11 @@
+{
+  "parent": "block/block",
+  "loader": "neoforge:obj",
+  "render_type": "minecraft:cutout",
+  "flip_v": true,
+  "model": "create_encapsulated:models/block/slugma_burner/case.obj",
+  "textures": {
+    "0": "create_encapsulated:block/blaze_heater_brazier",
+    "particle": "create:block/dark_metal_block"
+  }
+}
