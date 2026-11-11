@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:dandelion"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:bottle"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "shadowedhearts:excite_scent"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "shadowedhearts:umbrafall_crystal"
+    }
+  ],
+  "processing_time": 300,
+  "results": [
+    {
+      "count": 2,
+      "id": "shadowedhearts:shadow_shard"
+    },
+    {
+      "count": 2,
+      "id": "shadowedhearts:shadow_dust"
+    },
+    {
+      "chance": 0.50,
+      "id": "shadowedhearts:refined_shadow_shard"
+    },
+    {
+      "chance": 0.25,
+      "id": "shadowedhearts:shadow_shard"
+    }
+  ]
+}

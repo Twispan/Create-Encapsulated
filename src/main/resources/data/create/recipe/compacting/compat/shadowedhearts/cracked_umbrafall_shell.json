@@ -1,0 +1,13 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "shadowedhearts:umbrafall_shell"
+    }
+  ],
+  "results": [
+    {
+      "id": "shadowedhearts:cracked_umbrafall_shell"
+    }
+  ]
+}

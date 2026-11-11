@@ -1,0 +1,19 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "shadowedhearts:shadow_residue"
+    }
+  ],
+  "processing_time": 300,
+  "results": [
+    {
+      "count": 1,
+      "id": "shadowedhearts:shadow_dust"
+    },
+    {
+      "chance": 0.25,
+      "id": "shadowedhearts:shadow_dust"
+    }
+  ]
+}
