@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "type": "single",
+      "resource": "create_encapsulated:entity/logistics_hat"
+    }
+  ]
+}
