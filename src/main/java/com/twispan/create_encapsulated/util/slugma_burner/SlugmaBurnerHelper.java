@@ -27,6 +27,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Matrix4f;
 
@@ -71,12 +72,16 @@ public class SlugmaBurnerHelper {
             @Nullable Matrix4f hat
     ) {}
 
-    public static AccessoryLocator drawPokemon(Species species, Set<String> aspects, String pose, PoseStack ms, PosableState state,
-                                   float headYaw, float bodyYaw, float xOffset, float yOffset,
-                                   float zOffset, float partialTicks, int packedLight) {
+    public static AccessoryLocator drawPokemon(Level level, Species species, Set<String> aspects, String pose,
+                                               PoseStack ms, PosableState state, float headYaw, float bodyYaw,
+                                               float xOffset, float yOffset, float zOffset, float partialTicks,
+                                               int packedLight) {
         ResourceLocation id = species.getResourceIdentifier();
 
         state.setCurrentAspects(aspects);
+
+        float animationTicks = level.getGameTime() + partialTicks;
+
         state.updatePartialTicks(partialTicks);
 
         var model = VaryingModelRepository.INSTANCE.getPoser(id, state);
@@ -90,8 +95,7 @@ public class SlugmaBurnerHelper {
         context.put(RenderContext.Companion.getSPECIES(), id);
         context.put(RenderContext.Companion.getRENDER_STATE(), RenderContext.RenderState.WORLD);
         context.put(RenderContext.Companion.getPOSABLE_STATE(), state);
-        context.put(RenderContext.Companion.getDO_QUIRKS(), false);
-
+        context.put(RenderContext.Companion.getDO_QUIRKS(), true);
 
         state.setCurrentModel(model);
 
@@ -106,7 +110,7 @@ public class SlugmaBurnerHelper {
         float relativeHeadYaw = Mth.clamp(Mth.wrapDegrees(bodyYaw - headYaw), headTurnMin, headTurnMax);
 
         model.applyAnimations(null, state, 0F, 0F,
-                state.getAnimationSeconds() * 20F, relativeHeadYaw, 0F);
+                animationTicks, relativeHeadYaw, 0F);
 
         var locator = state.getLocatorStates();
         var hatLocator = locator.get("item_hat");
@@ -148,8 +152,8 @@ public class SlugmaBurnerHelper {
     }
 
     public static void applyPokeTransform(PoseStack ms, float bodyYaw, float xOffset, float yOffset, float zOffset) {
-        ms.scale(0.7f, 0.7f, 0.7f);
-        ms.translate(0.714f, 0.2f, 0.714f);
+        ms.scale(0.8f, 0.8f, 0.8f);
+        ms.translate(0.614f, 0.2f, 0.614f);
         ms.mulPose(Axis.XP.rotationDegrees(180.0f));
         ms.mulPose(Axis.YP.rotationDegrees(180.0f - bodyYaw));
         ms.translate(xOffset, yOffset, zOffset);

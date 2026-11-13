@@ -1,0 +1,5 @@
+# Made in Blockbench 5.2.2
+newmtl slugma
+map_Kd #slugma
+newmtl flame
+map_Kd #flame

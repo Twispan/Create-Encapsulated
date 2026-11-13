@@ -94,7 +94,7 @@ config="${mod_id}.mixins.json"
 [[dependencies.${mod_id}]]
     modId="cobblemon"
     type="required"
-    versionRange="[1.7.0,)" # Medicinal Brew introduction
+    versionRange="[1.8.0,)"
     ordering="NONE"
     side="BOTH"
 

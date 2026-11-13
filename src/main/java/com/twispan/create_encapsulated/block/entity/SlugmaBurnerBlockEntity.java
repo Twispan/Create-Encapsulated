@@ -10,6 +10,8 @@ import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 import com.simibubi.create.foundation.utility.CreateLang;
 import com.twispan.create_encapsulated.components.StoredPokemon;
 import com.twispan.create_encapsulated.registries.ModComponents;
+import com.twispan.create_encapsulated.registries.ModParticles;
+import com.twispan.create_encapsulated.registries.ModSounds;
 import com.twispan.create_encapsulated.registries.blocks.ModBlockEntities;
 import net.createmod.catnip.math.AngleHelper;
 import net.createmod.catnip.math.VecHelper;
@@ -293,8 +295,8 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
             updateBlockState();
 
             if (prev != getHeatLevelFromBlock())
-                level.playSound(null, worldPosition, SoundEvents.BLAZE_AMBIENT, SoundSource.BLOCKS,
-                        .125f + level.random.nextFloat() * .125f, 1.15f - level.random.nextFloat() * .25f);
+                level.playSound(null, worldPosition, ModSounds.SLUGMA_CRY.get(), SoundSource.BLOCKS,
+                        .125f + level.random.nextFloat() * .125f, 1 + level.random.nextFloat() * .25f);
         }
 
         return true;
@@ -334,8 +336,13 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
                 .getCollisionShape(level, worldPosition.above())
                 .isEmpty();
 
-		if (empty || r.nextInt(8) == 0)
-			level.addParticle(ParticleTypes.SMALL_FLAME, v.x, v.y, v.z, 0, 0, 0);
+        if (pokemon.getShiny()) {
+            if (empty || r.nextInt(8) == 0)
+                level.addParticle(ModParticles.SLUGMA_SHINY_SMALL_FLAMES.get(), v.x, v.y, v.z, 0, 0, 0);
+        } else {
+		    if (empty || r.nextInt(8) == 0)
+                level.addParticle(ParticleTypes.SMALL_FLAME, v.x, v.y, v.z, 0, 0, 0);
+        }
 
         double yMotion = empty ? .0625f : r.nextDouble() * .0125f;
         Vec3 v2 = c.add(VecHelper.offsetRandomly(Vec3.ZERO, r, .5f)
@@ -344,10 +351,42 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
                         .scale((empty ? .25f : .5) + r.nextDouble() * .125f))
                 .add(0, .5, 0);
 
-        if (heatLevel.isAtLeast(BlazeBurnerBlock.HeatLevel.SEETHING)) {
-            level.addParticle(ParticleTypes.SOUL_FIRE_FLAME, v2.x, v2.y, v2.z, 0, yMotion, 0);
-        } else if (heatLevel.isAtLeast(BlazeBurnerBlock.HeatLevel.FADING)) {
-            level.addParticle(ParticleTypes.FLAME, v2.x, v2.y, v2.z, 0, yMotion, 0);
+        if (!pokemon.getShiny()) {
+            if (heatLevel.isAtLeast(BlazeBurnerBlock.HeatLevel.SEETHING)) {
+                level.addParticle(ParticleTypes.SOUL_FIRE_FLAME, v2.x, v2.y, v2.z, 0, yMotion, 0);
+            } else if (heatLevel.isAtLeast(BlazeBurnerBlock.HeatLevel.FADING)) {
+                level.addParticle(ParticleTypes.FLAME, v2.x, v2.y, v2.z, 0, yMotion, 0);
+            }
+        } else {
+            if (heatLevel.isAtLeast(BlazeBurnerBlock.HeatLevel.SEETHING)) {
+                level.addParticle(ModParticles.SLUGMA_SHINY_SUPERHEATED_FLAMES.get(), v2.x, v2.y, v2.z, 0, yMotion,0);
+            } else if (heatLevel.isAtLeast(BlazeBurnerBlock.HeatLevel.FADING)) {
+                level.addParticle(ModParticles.SLUGMA_SHINY_FLAMES.get(), v2.x, v2.y, v2.z, 0, yMotion, 0);
+            }
+        }
+    }
+
+    public void spawnParticleBurst(boolean soulFlame) {
+        if (level == null) return;
+        Vec3 c = VecHelper.getCenterOf(worldPosition);
+        RandomSource r = level.getRandom();
+
+        for (int i = 0; i < 20; i++) {
+            Vec3 offset = VecHelper.offsetRandomly(Vec3.ZERO, r, .5f)
+                    .multiply(1, .25, 1)
+                    .normalize();
+            Vec3 v = c.add(offset.scale(.5 + r.nextDouble() * .125f))
+                    .add(0, .125, 0);
+            Vec3 m = offset.scale(1 / 32f);
+
+            if (!pokemon.getShiny()) {
+                level.addParticle(soulFlame ? ParticleTypes.SOUL_FIRE_FLAME : ParticleTypes.FLAME,
+                        v.x, v.y, v.z, m.x, m.y, m.z);
+            } else {
+                level.addParticle(soulFlame ? ModParticles.SLUGMA_SHINY_SUPERHEATED_FLAMES.get() :
+                        ModParticles.SLUGMA_SHINY_FLAMES.get(),
+                        v.x, v.y, v.z, m.x, m.y, m.z);
+            }
         }
     }
 

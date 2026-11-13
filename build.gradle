@@ -53,7 +53,7 @@ dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
     // Cobblemon
-    implementation "com.cobblemon:neoforge:1.8.2+1.21.1"
+    implementation "com.cobblemon:neoforge:${cobblemon_version}+${minecraft_version}"
 
     // Create, Ponder, Flywheel, Catnip
     implementation("com.simibubi.create:create-${minecraft_version}:${create_version}") { transitive = false }

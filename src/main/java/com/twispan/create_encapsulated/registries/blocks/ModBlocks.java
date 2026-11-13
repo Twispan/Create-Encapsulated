@@ -15,6 +15,9 @@ public class ModBlocks {
     public static DeferredBlock<Block> SLUGMA_BURNER =
             BLOCKS.register("slugma_burner", () -> new SlugmaBurnerBlock(
                     BlockBehaviour.Properties.of()
+                            .sound(SoundType.METAL)
+                            .destroyTime(3.0F)
+                            .lightLevel(SlugmaBurnerBlock::getLight)
             ));
 
     // ==================================

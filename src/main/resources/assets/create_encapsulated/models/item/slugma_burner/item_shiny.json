@@ -1,0 +1,30 @@
+{
+  "loader": "neoforge:composite",
+  "parent": "minecraft:block/block",
+  "gui_light": "side",
+  "textures": {
+    "particle": "create:block/dark_metal_block"
+  },
+  "children": {
+    "case": {
+      "parent": "create_encapsulated:block/slugma_burner/block_with_slugma"
+    },
+    "slugma": {
+      "loader": "neoforge:obj",
+      "model": "create_encapsulated:models/item/slugma_burner/slugma_burner.geo.obj",
+      "flip_v": true,
+      "automatic_culling": false,
+      "render_type": "minecraft:cutout",
+      "transform": { "translation": [0.05, -0.23, 0.1], "scale": [0.7, 0.7, 0.7] },
+      "textures": {
+        "slugma": "create_encapsulated:item/slugma_burner/slugma_shiny",
+        "flame": "create_encapsulated:item/slugma_burner/slugma_flame_shiny"
+      }
+    },
+    "base": {
+      "parent": "create_encapsulated:block/slugma_burner/slugma/slugma_base_shiny",
+      "render_type": "cutout",
+      "transform": { "translation": [0, 0.251, 0], "scale": [1, 1, 1] }
+    }
+  }
+}

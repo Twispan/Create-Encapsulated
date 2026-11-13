@@ -33,7 +33,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ORIGIN_ALLOY_BRICK_SLAB.get())
                 .add(ModBlocks.POLISHED_ORIGIN_ALLOY_WALL.get())
                 .add(ModBlocks.ORIGIN_ALLOY_BRICK_WALL.get())
-                .add(ModBlocks.CHISELED_ORIGIN_ALLOY.get());
+                .add(ModBlocks.CHISELED_ORIGIN_ALLOY.get())
+                .add(ModBlocks.SLUGMA_BURNER.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.ORIGIN_ALLOY_BLOCK.get())

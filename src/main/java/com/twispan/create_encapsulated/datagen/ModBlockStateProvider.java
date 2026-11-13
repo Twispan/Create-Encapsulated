@@ -35,8 +35,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock(ModBlocks.ORIGIN_ALLOY_BRICK_WALL.get(), blockTexture(ModBlocks.ORIGIN_ALLOY_BRICKS.get()));
 
         axisBlock(ModBlocks.CHISELED_ORIGIN_ALLOY.get(),
-                modLoc("block/chiseled_origin_block_side"),
-                modLoc("block/chiseled_origin_block_top"));
+                modLoc("block/chiseled_origin_alloy_side"),
+                modLoc("block/chiseled_origin_alloy_top"));
         blockItem(ModBlocks.CHISELED_ORIGIN_ALLOY);
 
     }

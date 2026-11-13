@@ -8,7 +8,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -18,10 +17,10 @@ import java.util.function.Supplier;
 
 @EventBusSubscriber(modid = CreateEncapsulated.MODID, value = Dist.CLIENT)
 public class ModCreativeModeTabs {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
             .create(Registries.CREATIVE_MODE_TAB, CreateEncapsulated.MODID);
 
-    public static final Supplier<CreativeModeTab> CREATEENCAPSULATED_COMPONENTS_TAB = CREATIVE_MODE_TAB.register(
+    public static final Supplier<CreativeModeTab> CREATEENCAPSULATED_COMPONENTS_TAB = CREATIVE_MODE_TABS.register(
             "createencapsulated_pokeball_components_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.POKEBALLBASE.get()))
                     .title(Component.translatable("creativetab.create_encapsulated.createencapsulated_pokeball_components_tab"))
@@ -72,7 +71,7 @@ public class ModCreativeModeTabs {
                     }).build()
     );
 
-    public static final Supplier<CreativeModeTab> CREATEENCAPSULATED_MACHINES_TAB = CREATIVE_MODE_TAB.register(
+    public static final Supplier<CreativeModeTab> CREATEENCAPSULATED_MACHINES_TAB = CREATIVE_MODE_TABS.register(
             "createencapsulated_machines_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SLUGMA_BURNER.get()))
                     .title(Component.translatable("creativetab.create_encapsulated.createencapsulated_machines_tab"))
@@ -95,9 +94,5 @@ public class ModCreativeModeTabs {
             event.accept(ModBlocks.ORIGIN_ALLOY_BRICK_WALL.get());
             event.accept(ModBlocks.CHISELED_ORIGIN_ALLOY.get());
         }
-    }
-
-    public static void register(IEventBus eventBus) {
-        CREATIVE_MODE_TAB.register(eventBus);
     }
 }
