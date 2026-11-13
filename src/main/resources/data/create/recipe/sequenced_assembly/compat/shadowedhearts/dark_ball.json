@@ -1,0 +1,88 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "cobblemon:ultra_ball"
+  },
+  "results": [
+    {
+      "id": "shadowedhearts:dark_ball"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "cobblemon:ultra_ball"
+        },
+        [
+          {
+            "item": "shadowedhearts:core_sample"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "cobblemon:ultra_ball"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "cobblemon:ultra_ball"
+        },
+        [
+          {
+            "item": "shadowedhearts:meteoric_alloy"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "cobblemon:ultra_ball"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "cobblemon:ultra_ball"
+        },
+        [
+          {
+            "item": "shadowedhearts:condensed_shadow"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "cobblemon:ultra_ball"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "cobblemon:ultra_ball"
+        },
+        [
+          {
+            "item": "shadowedhearts:condensed_shadow"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "id": "cobblemon:ultra_ball"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "shadowedhearts:umbra_ball"
+  }
+}

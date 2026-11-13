@@ -1,0 +1,9 @@
+{
+	"name": "cobblemon.mark.mark_mitochondriac",
+	"title": "cobblemon.mark.mark_mitochondriac.title",
+	"titleColor": "3A8644",
+	"description": "cobblemon.mark.mark_mitochondriac.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_mitochondriac.png",
+	"chance": 0,
+	"indexNumber": 331
+}
