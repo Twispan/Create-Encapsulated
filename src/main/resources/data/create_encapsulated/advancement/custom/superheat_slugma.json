@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "id": "create:blaze_cake"
+    },
+    "title": "The Legendary Super Slugma",
+    "description": "Feed a Slugma a Blaze Cake while its in a Slugma Burner",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "create_encapsulated:custom/slugma_in_burner",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_encapsulated:slugma_burner"
+            ]
+          }
+        ],
+        "recipe_id": ""
+      }
+    }
+  }
+}
