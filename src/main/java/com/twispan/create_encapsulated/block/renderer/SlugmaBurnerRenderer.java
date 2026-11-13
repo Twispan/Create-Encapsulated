@@ -116,7 +116,7 @@ public class SlugmaBurnerRenderer extends SafeBlockEntityRenderer<SlugmaBurnerBl
             ms.last().normal().mul(modelTransform.last().normal());
         }
         var locators = SlugmaBurnerHelper.drawPokemon(
-                pokemon.getSpecies(), aspects, pose, ms, pokemonState,
+                level, pokemon.getSpecies(), aspects, pose, ms, pokemonState,
                 AngleHelper.deg(headAngleRad), bodyAngleDeg,
                 0f, -0.1f, 0.2f,
                 partialTicks, LightTexture.FULL_BRIGHT);
@@ -126,7 +126,7 @@ public class SlugmaBurnerRenderer extends SafeBlockEntityRenderer<SlugmaBurnerBl
             SpriteShiftEntry shift = shiny ? SlugmaSpriteShifts.SUPER_SHINY_SLUGMA_BURNER_FLAME
                     : SlugmaSpriteShifts.SUPER_SLUGMA_BURNER_FLAME;
             assert modelTransform != null;
-            renderFlame(ms, modelTransform, source, level, blockState, heat, shift, headAngleRad);
+            renderFlame(ms, modelTransform, source, level, blockState, heat, shift, headAngleRad, partialTicks);
         }
 
         PartialModel baseModel = shiny
@@ -164,8 +164,8 @@ public class SlugmaBurnerRenderer extends SafeBlockEntityRenderer<SlugmaBurnerBl
 
     private static void renderFlame(PoseStack ms, @Nullable PoseStack modelTransform, MultiBufferSource bufferSource,
                                     Level level, BlockState blockState, BlazeBurnerBlock.HeatLevel heatLevel,
-                                    SpriteShiftEntry shift, float angle) {
-        float time = AnimationTickHolder.getRenderTime(level);
+                                    SpriteShiftEntry shift, float angle, float partialTicks) {
+        float time = level.getGameTime() + partialTicks;
 
         float spriteWidth = shift.getTarget().getU1() - shift.getTarget().getU0();
         float spriteHeight = shift.getTarget().getV1() - shift.getTarget().getV0();

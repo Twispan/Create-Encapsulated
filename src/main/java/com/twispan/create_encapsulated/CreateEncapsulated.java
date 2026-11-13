@@ -1,27 +1,30 @@
 package com.twispan.create_encapsulated;
 
 import com.cobblemon.mod.common.CobblemonItems;
+import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.twispan.create_encapsulated.client.ModClientSetup;
 import com.twispan.create_encapsulated.client.SlugmaPartialModels;
 import com.twispan.create_encapsulated.client.SlugmaSpriteShifts;
+import com.twispan.create_encapsulated.components.StoredPokemon;
 import com.twispan.create_encapsulated.fluid.MedicinalBrewFluidType;
 import com.twispan.create_encapsulated.fluid.other_medicine.OMedicineFluidType;
 import com.twispan.create_encapsulated.fluid.potions.PotionFluidType;
 import com.twispan.create_encapsulated.fluid.vitamins.VitaminFluidType;
-import com.twispan.create_encapsulated.registries.ModComponents;
-import com.twispan.create_encapsulated.registries.ModCreateBehaviours;
-import com.twispan.create_encapsulated.registries.ModSounds;
+import com.twispan.create_encapsulated.registries.*;
 import com.twispan.create_encapsulated.registries.blocks.ModBlockEntities;
 import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import com.twispan.create_encapsulated.registries.items.ModCreativeModeTabs;
 import com.twispan.create_encapsulated.util.FluidMapper;
 import com.twispan.create_encapsulated.util.FluidItemHandler;
-import com.twispan.create_encapsulated.registries.ModFluids;
 import com.twispan.create_encapsulated.registries.items.ModItems;
 import com.itsfirestorm.world_of_color.api.BottleFillRegistry;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
@@ -70,7 +73,7 @@ public class CreateEncapsulated {
         modEventBus.addListener(this::addCreative);
 
         // Register creative tab
-        ModCreativeModeTabs.register(modEventBus);
+        ModCreativeModeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
         // Register fluids
         ModFluids.FLUID_TYPES.register(modEventBus);
@@ -83,13 +86,16 @@ public class CreateEncapsulated {
         ModBlocks.BLOCKS.register(modEventBus);
 
         // Register block entities
-        ModBlockEntities.register(modEventBus);
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
 
         // Register components
         ModComponents.DATA_COMPONENTS.register(modEventBus);
 
         // Register sounds
         ModSounds.SOUND_EVENTS.register(modEventBus);
+
+        // Register particles
+        ModParticles.PARTICLES.register(modEventBus);
 
         // Register client-side events only on the client
         if (FMLEnvironment.dist.isClient()) {
@@ -118,6 +124,16 @@ public class CreateEncapsulated {
         );
 
         event.enqueueWork(ModCreateBehaviours::register);
+
+        event.enqueueWork(() ->
+                ItemProperties.register(
+                        ModItems.SLUGMA_BURNER.get(),
+                        ResourceLocation.fromNamespaceAndPath(CreateEncapsulated.MODID, "shiny"),
+                        (stack, level, entity, seed) -> {
+                            StoredPokemon stored = stack.get(ModComponents.POKEMON.get());
+                            if (stored == null) return 0.0F;
+                            return stored.pokemon().getBoolean("Shiny") ? 1.0F : 0.0F;
+                        }));
     }
 
     private void registerPotionBottleFills() {

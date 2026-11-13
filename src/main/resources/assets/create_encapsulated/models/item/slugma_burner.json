@@ -1,0 +1,7 @@
+{
+  "parent": "create_encapsulated:item/slugma_burner/item_normal",
+  "overrides": [
+    { "predicate" : { "create_encapsulated:shiny": 1 },
+      "model": "create_encapsulated:item/slugma_burner/item_shiny" }
+  ]
+}

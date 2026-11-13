@@ -11,7 +11,7 @@
               "add": false,
               "conditions": [
                 {
-                  "block": "create_encapsulated:origin_alloy_slab",
+                  "block": "create_encapsulated:polished_origin_alloy_slab",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "type": "double"

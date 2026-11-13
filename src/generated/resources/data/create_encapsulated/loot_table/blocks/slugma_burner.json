@@ -1,0 +1,137 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            },
+            {
+              "block": "create_encapsulated:slugma_burner",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "blaze": "none"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "create_encapsulated:pokemon"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "create:empty_blaze_burner"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            },
+            {
+              "block": "create_encapsulated:slugma_burner",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "blaze": "smouldering"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "create_encapsulated:pokemon"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "create_encapsulated:slugma_burner"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            },
+            {
+              "block": "create_encapsulated:slugma_burner",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "blaze": "fading"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "create_encapsulated:pokemon"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "create_encapsulated:slugma_burner"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            },
+            {
+              "block": "create_encapsulated:slugma_burner",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "blaze": "kindled"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "create_encapsulated:pokemon"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "create_encapsulated:slugma_burner"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            },
+            {
+              "block": "create_encapsulated:slugma_burner",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "blaze": "seething"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "create_encapsulated:pokemon"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "create_encapsulated:slugma_burner"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "create_encapsulated:blocks/slugma_burner"
+}

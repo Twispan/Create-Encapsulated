@@ -29,8 +29,7 @@
       "animations": [
         "q.bedrock('slugma_burner', 'sleep')",
         "q.look('head')"
-      ],
-      "quirks": ["q.bedrock_quirk('slugma_burner', 'blink')"]
+      ]
     }
   }
 }

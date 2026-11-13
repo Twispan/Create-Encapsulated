@@ -39,6 +39,7 @@ import org.jetbrains.annotations.Nullable;
 public class SlugmaBurnerBlock extends BlazeBurnerBlock {
     public SlugmaBurnerBlock(Properties properties) {
         super(properties);
+        registerDefaultState(defaultBlockState().setValue(HEAT_LEVEL, HeatLevel.NONE));
     }
 
     @Override
@@ -61,7 +62,7 @@ public class SlugmaBurnerBlock extends BlazeBurnerBlock {
     }
 
     @Override
-    public BlockEntityType<? extends BlazeBurnerBlockEntity> getBlockEntityType() {
+    public @NotNull BlockEntityType<? extends BlazeBurnerBlockEntity> getBlockEntityType() {
         return ModBlockEntities.SLUGMA_BURNER.get();
     }
 
@@ -86,12 +87,24 @@ public class SlugmaBurnerBlock extends BlazeBurnerBlock {
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+    public @NotNull ItemStack getCloneItemStack(@NotNull BlockState state, @NotNull HitResult target,
+                                                @NotNull LevelReader level, @NotNull BlockPos pos,
+                                                @NotNull Player player) {
         return ModBlocks.SLUGMA_BURNER.toStack();
     }
 
+    public static int getLight(BlockState state) {
+        HeatLevel level = state.getValue(HEAT_LEVEL);
+        return switch (level) {
+            case NONE -> 0;
+            case SMOULDERING -> 8;
+            default -> 15;
+        };
+    }
+
     @Override
-    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
+    public void setPlacedBy(@NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState state,
+                            @Nullable LivingEntity placer, @NotNull ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
         if (level.isClientSide || !(placer instanceof ServerPlayer player)) return;
         if (level.getBlockEntity(pos) instanceof SlugmaBurnerBlockEntity blockEntity && blockEntity.getOwnerUUID() == null) {

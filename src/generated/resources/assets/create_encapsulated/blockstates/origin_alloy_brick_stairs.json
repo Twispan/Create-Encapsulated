@@ -20,7 +20,7 @@
       "model": "create_encapsulated:block/origin_alloy_brick_stairs"
     },
     "facing=east,half=top,shape=inner_left": {
-      "model": "create_encapsulated:block/origin_alloy_brickorigin_alloy_brick_stairs_inner",
+      "model": "create_encapsulated:block/origin_alloy_brick_stairs_inner",
       "uvlock": true,
       "x": 180
     },

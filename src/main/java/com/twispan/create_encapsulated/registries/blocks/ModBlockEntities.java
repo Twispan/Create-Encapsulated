@@ -19,8 +19,4 @@ public class ModBlockEntities {
                             SlugmaBurnerBlockEntity::new,
                             ModBlocks.SLUGMA_BURNER.get()
                             ).build(null));
-
-    public static void register(IEventBus eventBus) {
-        BLOCK_ENTITIES.register(eventBus);
-    }
 }
