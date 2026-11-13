@@ -13,10 +13,6 @@
     {
       "chance": 0.75,
       "id": "create:experience_nugget"
-    },
-    {
-      "chance": 0.25,
-      "id": "create_encapsulated:mega_shard"
     }
   ]
 }
