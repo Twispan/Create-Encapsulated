@@ -1,10 +1,18 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "create_encapsulated:origin_alloy",
-    "create_encapsulated:origin_alloy",
-    "create_encapsulated:origin_alloy",
-    "create_encapsulated:origin_alloy"
+    {
+      "item": "create_encapsulated:origin_alloy"
+    },
+    {
+      "item": "create_encapsulated:origin_alloy"
+    },
+    {
+      "item": "create_encapsulated:origin_alloy"
+    },
+    {
+      "item": "create_encapsulated:origin_alloy"
+    }
   ],
   "result": {
     "id": "create_encapsulated:origin_alloy_block"
