@@ -3,7 +3,7 @@
     "icon": {
       "id": "create_encapsulated:slugma_burner"
     },
-    "title": "Slugma, listen very carefuly",
+    "title": "Slugma, listen very carefully",
     "description": "Put a Slugma into an Empty Blaze Burner",
     "frame": "goal",
     "show_toast": true,
