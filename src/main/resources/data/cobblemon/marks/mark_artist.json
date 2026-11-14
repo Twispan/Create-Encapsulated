@@ -1,0 +1,9 @@
+{
+	"name": "cobblemon.mark.mark_artist",
+	"title": "cobblemon.mark.mark_artist.title",
+	"titleColor": "9E5FD0",
+	"description": "cobblemon.mark.mark_artist.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_artist.png",
+	"chance": 0.47,
+	"indexNumber": 332
+}

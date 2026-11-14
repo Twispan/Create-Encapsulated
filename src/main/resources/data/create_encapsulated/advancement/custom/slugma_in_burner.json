@@ -5,7 +5,7 @@
     },
     "title": "Slugma, listen very carefully",
     "description": "Put a Slugma into an Empty Blaze Burner",
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
     "hidden": false
