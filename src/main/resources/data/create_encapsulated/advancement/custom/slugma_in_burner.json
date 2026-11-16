@@ -12,18 +12,19 @@
   },
   "parent": "create_encapsulated:custom/root",
   "criteria": {
-    "trigger": {
+    "in_inv": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          {
-            "items": [
-              "create_encapsulated:slugma_burner"
-            ]
-          }
-        ],
-        "recipe_id": ""
+          { "items": "create_encapsulated:slugma_burner" }
+        ]
       }
+    },
+    "stored": {
+      "trigger": "create_encapsulated:store_slugma"
     }
-  }
+  },
+  "requirements": [
+    [ "in_inv", "stored" ]
+  ]
 }

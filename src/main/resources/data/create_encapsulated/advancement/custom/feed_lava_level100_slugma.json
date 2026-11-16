@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:lava_bucket"
+    },
+    "title": "Limit Breaker",
+    "description": "Bring a Slugma past its full potential by feeding it a Lava Bucket when its at its highest level",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "create_encapsulated:custom/superheat_slugma",
+  "criteria": {
+    "trigger": {
+      "trigger": "create_encapsulated:feed_max_level_slugma_lava"
+    }
+  }
+}

@@ -97,6 +97,9 @@ public class CreateEncapsulated {
         // Register mod arm capabilities
         ModArmInteractionPointTypes.ARM_POINTS.register(modEventBus);
 
+        // Register mod triggers
+        ModTriggers.TRIGGERS.register(modEventBus);
+
         // Register client-side events only on the client
         if (FMLEnvironment.dist.isClient()) {
             modEventBus.addListener(ModClientSetup::onRegisterClientExtensions);

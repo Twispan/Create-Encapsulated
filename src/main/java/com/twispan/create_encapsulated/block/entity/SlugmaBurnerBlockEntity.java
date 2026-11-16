@@ -10,6 +10,7 @@ import com.simibubi.create.content.logistics.stockTicker.StockTickerBlockEntity;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 
 import com.simibubi.create.foundation.utility.CreateLang;
+import com.twispan.create_encapsulated.advancements.slugma.SlugmaBurnerHooks;
 import com.twispan.create_encapsulated.components.StoredPokemon;
 import com.twispan.create_encapsulated.registries.ModComponents;
 import com.twispan.create_encapsulated.registries.ModParticles;
@@ -54,6 +55,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements IHaveGoggleInformation {
@@ -323,6 +325,13 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
             BlazeBurnerBlock.HeatLevel prev = getHeatLevelFromBlock();
             playSound();
             updateBlockState();
+
+            MinecraftServer server = level.getServer();
+
+            ServerPlayer owner = (ownerUUID == null || server == null) ? null
+                    : server.getPlayerList().getPlayer(ownerUUID);
+
+            SlugmaBurnerHooks.onSlugmaFeed(owner, itemStack, p);
 
             if (prev != getHeatLevelFromBlock())
                 level.playSound(null, worldPosition, ModSounds.SLUGMA_CRY.get(), SoundSource.BLOCKS,

@@ -16,6 +16,7 @@ import com.simibubi.create.AllItems;
 
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 import com.twispan.create_encapsulated.CreateEncapsulated;
+import com.twispan.create_encapsulated.advancements.slugma.SlugmaBurnerHooks;
 import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
 import com.twispan.create_encapsulated.block.entity.SlugmaBurnerBlockEntity;
 import com.twispan.create_encapsulated.registries.ModParticles;
@@ -217,6 +218,7 @@ public class SlugmaInteractionHandler {
             e.setSilent(true);
             e.after(SendOutPokemonHandler.THROW_DURATION, () -> {
                 placed[0] = placeSlugmaBurner(player, level, pos, pokemon);
+                SlugmaBurnerHooks.onSlugmaStore(player, level, pos, pokemon);
                 return Unit.INSTANCE;
             });
             e.after(SendOutPokemonHandler.SEND_OUT_DURATION - 0.001f, () -> {
@@ -231,7 +233,7 @@ public class SlugmaInteractionHandler {
                 return Unit.INSTANCE;
             });
             e.after(SendOutPokemonHandler.SEND_OUT_DURATION, () -> {
-                finishStore(player, level, pokemon, e, placed[0]);
+                finishStore(player, level, pos, pokemon, e, placed[0]);
                 return Unit.INSTANCE;
             });
             return Unit.INSTANCE;
@@ -257,7 +259,7 @@ public class SlugmaInteractionHandler {
         return true;
     }
 
-    private static void finishStore(ServerPlayer player, ServerLevel level,
+    private static void finishStore(ServerPlayer player, ServerLevel level, BlockPos pos,
                                     Pokemon pokemon, PokemonEntity entity, boolean placed) {
         if (!entity.isRemoved()) pokemon.recall();
         if (!placed) return;
