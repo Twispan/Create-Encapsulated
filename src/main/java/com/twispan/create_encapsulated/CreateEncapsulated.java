@@ -1,7 +1,6 @@
 package com.twispan.create_encapsulated;
 
 import com.cobblemon.mod.common.CobblemonItems;
-import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.twispan.create_encapsulated.client.ModClientSetup;
 import com.twispan.create_encapsulated.client.SlugmaPartialModels;
 import com.twispan.create_encapsulated.client.SlugmaSpriteShifts;
@@ -18,13 +17,11 @@ import com.twispan.create_encapsulated.util.FluidMapper;
 import com.twispan.create_encapsulated.util.FluidItemHandler;
 import com.twispan.create_encapsulated.registries.items.ModItems;
 import com.itsfirestorm.world_of_color.api.BottleFillRegistry;
+import net.createmod.ponder.foundation.PonderIndex;
 import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.Fluid;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
@@ -97,6 +94,9 @@ public class CreateEncapsulated {
         // Register particles
         ModParticles.PARTICLES.register(modEventBus);
 
+        // Register mod arm capabilities
+        ModArmInteractionPointTypes.ARM_POINTS.register(modEventBus);
+
         // Register client-side events only on the client
         if (FMLEnvironment.dist.isClient()) {
             modEventBus.addListener(ModClientSetup::onRegisterClientExtensions);
@@ -123,8 +123,10 @@ public class CreateEncapsulated {
                 () -> List.of(new FluidStack(NeoForgeMod.MILK.get(), 1))
         );
 
+        // Create Behaviors
         event.enqueueWork(ModCreateBehaviours::register);
 
+        // Block Item model predicate
         event.enqueueWork(() ->
                 ItemProperties.register(
                         ModItems.SLUGMA_BURNER.get(),
@@ -134,6 +136,9 @@ public class CreateEncapsulated {
                             if (stored == null) return 0.0F;
                             return stored.pokemon().getBoolean("Shiny") ? 1.0F : 0.0F;
                         }));
+
+        // Mod Ponders
+        event.enqueueWork(() -> PonderIndex.addPlugin(new ModPonders()));
     }
 
     private void registerPotionBottleFills() {

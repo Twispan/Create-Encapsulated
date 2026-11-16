@@ -72,7 +72,7 @@ public class SlugmaBurnerMovementBehaviour implements MovementBehaviour {
         if (shouldRenderHat(context) && !Mth.equal(context.relativeMotion.length(), 0)
                 && context.contraption.entity instanceof CarriageContraptionEntity cce) {
 
-            float angle = AngleHelper.deg(-Mth.atan2(context.relativeMotion.y, context.relativeMotion.z));
+            float angle = AngleHelper.deg(-Mth.atan2(context.relativeMotion.x, context.relativeMotion.z));
             return cce.getInitialOrientation()
                     .getAxis() == Direction.Axis.X ? angle + 180 : angle;
         }

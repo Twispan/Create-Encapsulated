@@ -1,18 +1,23 @@
 package com.twispan.create_encapsulated.util.slugma_burner;
 
 import com.cobblemon.mod.common.Cobblemon;
+import com.cobblemon.mod.common.api.mark.Mark;
+import com.cobblemon.mod.common.api.mark.Marks;
 import com.cobblemon.mod.common.api.pokemon.PokemonProperties;
+import com.cobblemon.mod.common.api.pokemon.PokemonSpecies;
 import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore;
 import com.cobblemon.mod.common.client.render.models.blockbench.PosableState;
 import com.cobblemon.mod.common.client.render.models.blockbench.repository.RenderContext;
 import com.cobblemon.mod.common.client.render.models.blockbench.repository.VaryingModelRepository;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import com.cobblemon.mod.common.pokemon.PokemonSizeCategory;
 import com.cobblemon.mod.common.pokemon.Species;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
+import com.twispan.create_encapsulated.CreateEncapsulated;
 import com.twispan.create_encapsulated.block.entity.SlugmaBurnerBlockEntity;
 import com.twispan.create_encapsulated.components.StoredPokemon;
 import com.twispan.create_encapsulated.registries.ModComponents;
@@ -23,8 +28,10 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -36,10 +43,14 @@ import java.util.UUID;
 
 public class SlugmaBurnerHelper {
     public static Pokemon getDefaultSlugma(@Nullable ServerPlayer player) {
-        PokemonProperties pokemon = new PokemonProperties();
-        pokemon.setSpecies("Slugma");
-        pokemon.setOriginalTrainer(player != null ? player.getGameProfile().getName() : "MissingNo.");
-        return pokemon.create();
+        try {
+            PokemonProperties props = new PokemonProperties();
+            props.setSpecies("Slugma");
+            props.setOriginalTrainer(player != null ? player.getGameProfile().getName() : "MissingNo.");
+            return props.create();
+        } catch(Exception ignored) {
+            return null;
+        }
     }
 
     public static boolean isSlugma(Pokemon pokemon) {
@@ -50,7 +61,6 @@ public class SlugmaBurnerHelper {
         Pokemon pokemon = pokemonEntity.getPokemon();
         ServerPlayer player = pokemon.getOwnerPlayer();
         pokemonEntity.discard();
-
         if (player == null) return;
 
         CompoundTag tag = pokemon.saveToNBT(pokemonEntity.registryAccess(), new CompoundTag());
@@ -82,7 +92,8 @@ public class SlugmaBurnerHelper {
 
         float animationTicks = level.getGameTime() + partialTicks;
 
-        state.updatePartialTicks(partialTicks);
+        if (state instanceof BlockPokemonState blockPokemonState) blockPokemonState.advance(animationTicks);
+        else state.updatePartialTicks(partialTicks);
 
         var model = VaryingModelRepository.INSTANCE.getPoser(id, state);
         ResourceLocation texture = VaryingModelRepository.INSTANCE.getTexture(id, state);

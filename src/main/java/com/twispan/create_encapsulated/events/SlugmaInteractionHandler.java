@@ -1,6 +1,8 @@
 package com.twispan.create_encapsulated.events;
 
 import com.cobblemon.mod.common.Cobblemon;
+import com.cobblemon.mod.common.api.mark.Mark;
+import com.cobblemon.mod.common.api.mark.Marks;
 import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore;
 import com.cobblemon.mod.common.api.storage.pc.PCStore;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
@@ -8,6 +10,7 @@ import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.net.messages.client.effect.SpawnSnowstormParticlePacket;
 import com.cobblemon.mod.common.net.serverhandling.storage.SendOutPokemonHandler;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import com.cobblemon.mod.common.pokemon.PokemonSizeCategory;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllItems;
 
@@ -70,6 +73,17 @@ public class SlugmaInteractionHandler {
             return;
         }
 
+        boolean isValid = !pokemon.getPokemon().isAlpha();
+        if (pokemon.getPokemon().getSizeCategory().equals(PokemonSizeCategory.XL)) isValid = false;
+
+        if (!isValid) {
+            player.displayClientMessage(Component.literal("This Slugma is too big to fit inside!"), true);
+            player.playSound(SoundEvents.NOTE_BLOCK_HARP.value(), 1.0f, 0.5f);
+            event.setCancellationResult(InteractionResult.FAIL);
+            event.setCanceled(true);
+            return;
+        }
+
         if (!level.isClientSide && level instanceof ServerLevel serverLevel) {
             serverLevel.playSound(null, pokemon.blockPosition(), ModSounds.SLUGMA_CRY.get(),
                     SoundSource.NEUTRAL, 0.5f, 0.8f);
@@ -89,6 +103,7 @@ public class SlugmaInteractionHandler {
                         0.03);
             }
             ItemStack filled = ModBlocks.SLUGMA_BURNER.toStack();
+            applyMark(pokemon.getPokemon());
             SlugmaBurnerHelper.popPokemonEntityToItemStack(filled, pokemon);
             if (!player.isCreative()) held.shrink(1);
             if (held.isEmpty()) player.setItemInHand(event.getHand(), filled);
@@ -180,6 +195,14 @@ public class SlugmaInteractionHandler {
         if (pokemon == null || !SlugmaBurnerHelper.isSlugma(pokemon)) return;
         if (pokemon.getEntity() != null) return;
 
+        boolean isValid = !pokemon.isAlpha();
+
+        if (!isValid) {
+            player.playSound(SoundEvents.NOTE_BLOCK_HARP.value(), 1.0f, 0.5f);
+            player.displayClientMessage(Component.literal("This Slugma is too big to fit inside!"), true);
+            return;
+        }
+
         Vec3 effectPos = Vec3.atBottomCenterOf(pos).add(0, 0.15, 0);
 
         final boolean[] placed = { false };
@@ -216,6 +239,7 @@ public class SlugmaInteractionHandler {
     }
 
     private static boolean placeSlugmaBurner(ServerPlayer player, ServerLevel level, BlockPos pos, Pokemon pokemon) {
+        applyMark(pokemon);
         BlockState current = level.getBlockState(pos);
         if (!AllBlocks.BLAZE_BURNER.has(current)
                 || current.getValue(BlazeBurnerBlock.HEAT_LEVEL) != BlazeBurnerBlock.HeatLevel.NONE) return false;
@@ -238,6 +262,13 @@ public class SlugmaInteractionHandler {
         if (!entity.isRemoved()) pokemon.recall();
         if (!placed) return;
         Cobblemon.INSTANCE.getStorage().getParty(player.getUUID(), level.registryAccess()).remove(pokemon);
+    }
+
+    private static void applyMark(Pokemon pokemon) {
+        Mark mark = Marks.getByIdentifier(ResourceLocation.fromNamespaceAndPath(
+                CreateEncapsulated.MODID, "mark_mitochondriac"));
+        if (mark == null) return;
+        pokemon.exchangeMark(mark, true);
     }
 
     public record RetrieveSlugmaPayload(BlockPos pos, int slot) implements CustomPacketPayload {

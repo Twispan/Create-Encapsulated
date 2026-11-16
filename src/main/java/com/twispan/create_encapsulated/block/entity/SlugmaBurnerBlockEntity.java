@@ -3,8 +3,10 @@ package com.twispan.create_encapsulated.block.entity;
 import com.cobblemon.mod.common.pokeball.PokeBall;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 
+import com.simibubi.create.AllBlocks;
 import com.simibubi.create.api.equipment.goggles.IHaveGoggleInformation;
 import com.simibubi.create.api.registry.CreateDataMaps;
+import com.simibubi.create.content.logistics.stockTicker.StockTickerBlockEntity;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 
 import com.simibubi.create.foundation.utility.CreateLang;
@@ -13,6 +15,7 @@ import com.twispan.create_encapsulated.registries.ModComponents;
 import com.twispan.create_encapsulated.registries.ModParticles;
 import com.twispan.create_encapsulated.registries.ModSounds;
 import com.twispan.create_encapsulated.registries.blocks.ModBlockEntities;
+import net.createmod.catnip.data.Iterate;
 import net.createmod.catnip.math.AngleHelper;
 import net.createmod.catnip.math.VecHelper;
 import net.createmod.catnip.animation.LerpedFloat;
@@ -36,12 +39,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
@@ -66,7 +70,6 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
 
     public SlugmaBurnerBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
-        pokemon = SlugmaBurnerHelper.getDefaultSlugma(getPlayerByUUID(ownerUUID));
         pokemonState = new BlockPokemonState();
         bodyAnimation = LerpedFloat.linear();
         bodyAngle = LerpedFloat.angular();
@@ -76,11 +79,6 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
 
     public SlugmaBurnerBlockEntity(BlockPos pos, BlockState state) {
         this(ModBlockEntities.SLUGMA_BURNER.get(), pos, state);
-    }
-
-    public static ServerPlayer getPlayerByUUID(UUID ownerUUID) {
-        MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
-        return (server == null || ownerUUID == null) ? null : server.getPlayerList().getPlayer(ownerUUID);
     }
 
     @Nullable
@@ -97,6 +95,25 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
             tickBodyAnim();
         }
         super.tick();
+    }
+
+    @Override
+    public void lazyTick() {
+        super.lazyTick();
+        stockKeeper = getStockTicker(level, worldPosition) != null;
+    }
+
+    public static StockTickerBlockEntity getStockTicker(LevelAccessor level, BlockPos pos) {
+        for (Direction direction : Iterate.horizontalDirections) {
+            if (level instanceof Level l && !l.isLoaded(pos))
+                return null;
+            BlockState blockState = level.getBlockState(pos.relative(direction));
+            if (!AllBlocks.STOCK_TICKER.has(blockState))
+                continue;
+            if (level.getBlockEntity(pos.relative(direction)) instanceof StockTickerBlockEntity stbe)
+                return stbe;
+        }
+        return null;
     }
 
     public static final float MAX_HEAD_TURN = 60f;
@@ -210,10 +227,20 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
         }
     }
 
-    public Pokemon getPokemon() { return pokemon; }
+    public static ServerPlayer getPlayerByUUID(UUID ownerUUID) {
+        MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
+        return (server == null || ownerUUID == null) ? null : server.getPlayerList().getPlayer(ownerUUID);
+    }
+    public @Nullable Pokemon getPokemon() {
+        if (pokemon == null && level != null && !level.isClientSide) {
+            pokemon = SlugmaBurnerHelper.getDefaultSlugma(getPlayerByUUID(ownerUUID));
+        }
+        return pokemon;
+    }
     public net.createmod.catnip.animation.LerpedFloat getHeadAnimation() { return headAnimation; }
     public net.createmod.catnip.animation.LerpedFloat getHeadAngle() { return headAngle; }
     public UUID getOwnerUUID() { return ownerUUID; }
+    public String getOwnerName() { return ownerName; }
     public LerpedFloat getBodyAngle() { return bodyAngle; }
 
 
@@ -236,9 +263,12 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
     protected boolean tryUpdateFuel(ItemStack itemStack, boolean forceOverflow, boolean simulate) {
         if (isCreative()) return false;
 
+        Pokemon p = getPokemon();
+        if (p == null) return false;
+
         FuelType newFuel = FuelType.NONE;
         int newBurnTime;
-        int pokemonLevel = pokemon.getLevel();
+        int pokemonLevel = p.getLevel();
         float multiplier;
 
         if (pokemonLevel < 25) multiplier = 0.5f;
@@ -336,7 +366,9 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
                 .getCollisionShape(level, worldPosition.above())
                 .isEmpty();
 
-        if (pokemon.getShiny()) {
+        boolean isShiny = pokemon != null && pokemon.getShiny();
+
+        if (isShiny) {
             if (empty || r.nextInt(8) == 0)
                 level.addParticle(ModParticles.SLUGMA_SHINY_SMALL_FLAMES.get(), v.x, v.y, v.z, 0, 0, 0);
         } else {
@@ -351,7 +383,7 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
                         .scale((empty ? .25f : .5) + r.nextDouble() * .125f))
                 .add(0, .5, 0);
 
-        if (!pokemon.getShiny()) {
+        if (!isShiny) {
             if (heatLevel.isAtLeast(BlazeBurnerBlock.HeatLevel.SEETHING)) {
                 level.addParticle(ParticleTypes.SOUL_FIRE_FLAME, v2.x, v2.y, v2.z, 0, yMotion, 0);
             } else if (heatLevel.isAtLeast(BlazeBurnerBlock.HeatLevel.FADING)) {
@@ -370,6 +402,7 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
         if (level == null) return;
         Vec3 c = VecHelper.getCenterOf(worldPosition);
         RandomSource r = level.getRandom();
+        boolean isShiny = pokemon != null && pokemon.getShiny();
 
         for (int i = 0; i < 20; i++) {
             Vec3 offset = VecHelper.offsetRandomly(Vec3.ZERO, r, .5f)
@@ -379,7 +412,7 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
                     .add(0, .125, 0);
             Vec3 m = offset.scale(1 / 32f);
 
-            if (!pokemon.getShiny()) {
+            if (!isShiny) {
                 level.addParticle(soulFlame ? ParticleTypes.SOUL_FIRE_FLAME : ParticleTypes.FLAME,
                         v.x, v.y, v.z, m.x, m.y, m.z);
             } else {
@@ -414,9 +447,12 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
 
     @Override
     public boolean addToGoggleTooltip(List<Component> tooltip, boolean isPlayerSneaking) {
-        MutableComponent nickname = pokemon.getNickname();
-        String speciesName = pokemon.getSpecies().getName();
-        int level = pokemon.getLevel();
+        Pokemon p = getPokemon();
+        if (p == null) return false;
+
+        MutableComponent nickname = p.getNickname();
+        String speciesName = p.getSpecies().getName();
+        int level = p.getLevel();
         boolean hasNickname = nickname != null;
 
         int color;
@@ -425,6 +461,12 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
         else if (level <= 99) color = 0x55FF55;
         else color = 0x55FFFF;
 
+        int percentage;
+        if (level < 25) percentage = 50;
+        else if (level < 50) percentage = 100;
+        else if (level <= 99) percentage = 150;
+        else percentage = 200;
+
         String fallback = "MissingNo.";
 
         if (hasNickname) {
@@ -432,18 +474,44 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
         } else {
             CreateLang.builder().text(speciesName).forGoggles(tooltip);
         }
-        if (ownerName != null && !ownerName.isEmpty()) CreateLang.builder().text(0xAAAAAA, "OT: ")
-                .text(0xFFFFFF, ownerName).forGoggles(tooltip);
-        else CreateLang.builder().text(0xAAAAAA, "OT: ")
-                .text(0xFFFFFF, fallback).forGoggles(tooltip);
-        CreateLang.builder().text("Lv. ").text(color, String.valueOf(level)).forGoggles(tooltip);
+        if (!isTraded(pokemon)) {
+            if (ownerName != null && !ownerName.isEmpty()) CreateLang.builder().text(0xAAAAAA, "OT: ")
+                    .text(0xFFFFFF, ownerName).forGoggles(tooltip);
+            else CreateLang.builder().text(0xAAAAAA, "OT: ")
+                    .text(0xFFFFFF, fallback).forGoggles(tooltip);
+        } else {
+            if (ownerName != null && !ownerName.isEmpty()) CreateLang.builder().text(0xAAAAAA, "Owner: ")
+                    .text(0xFFFFFF, ownerName).forGoggles(tooltip);
+            else CreateLang.builder().text(0xAAAAAA, "Owner: ")
+                    .text(0xFFFFFF, fallback).forGoggles(tooltip);
+            if (pokemon.getOriginalTrainerName() != null && !pokemon.getOriginalTrainerName().isEmpty())
+                CreateLang.builder().text(0xAAAAAA, "OT: ")
+                        .text(0xFFFFFF, pokemon.getOriginalTrainerName()).forGoggles(tooltip);
+            else CreateLang.builder().text(0xAAAAAA, "OT: ")
+                    .text(0xFFFFFF, fallback).forGoggles(tooltip);
+        }
+        CreateLang.builder().text("Lv. ").text(color, String.valueOf(level))
+                .text(0xAAAAAA, " ("+percentage+"%)").forGoggles(tooltip);
 
         return true;
     }
 
+    private boolean isTraded(Pokemon pokemon) {
+        String currentOwner = getOwnerName();
+        System.out.println(currentOwner);
+        String OT = pokemon.getOriginalTrainerName();
+        System.out.println(OT);
+        if (currentOwner == null || OT == null) return false;
+        boolean isSameTrainer = !OT.equals(currentOwner);
+        System.out.println(isSameTrainer);
+        return isSameTrainer;
+    }
+
     @Override
     public ItemStack getIcon(boolean isPlayerSneaking) {
-        PokeBall caughtBall = pokemon.getCaughtBall();
+        Pokemon p = getPokemon();
+        if (p == null) return ItemStack.EMPTY;
+        PokeBall caughtBall = p.getCaughtBall();
 
         // IDE warns that caughtBall is always true, but I prefer having some security for a potential NullPointerException
         return caughtBall.stack(1);
