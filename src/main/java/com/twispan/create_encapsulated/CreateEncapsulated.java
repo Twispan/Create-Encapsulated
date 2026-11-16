@@ -128,20 +128,6 @@ public class CreateEncapsulated {
 
         // Create Behaviors
         event.enqueueWork(ModCreateBehaviours::register);
-
-        // Block Item model predicate
-        event.enqueueWork(() ->
-                ItemProperties.register(
-                        ModItems.SLUGMA_BURNER.get(),
-                        ResourceLocation.fromNamespaceAndPath(CreateEncapsulated.MODID, "shiny"),
-                        (stack, level, entity, seed) -> {
-                            StoredPokemon stored = stack.get(ModComponents.POKEMON.get());
-                            if (stored == null) return 0.0F;
-                            return stored.pokemon().getBoolean("Shiny") ? 1.0F : 0.0F;
-                        }));
-
-        // Mod Ponders
-        event.enqueueWork(() -> PonderIndex.addPlugin(new ModPonders()));
     }
 
     private void registerPotionBottleFills() {

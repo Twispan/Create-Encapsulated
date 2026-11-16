@@ -8,7 +8,7 @@ import com.simibubi.create.AllBlocks;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 import com.twispan.create_encapsulated.CreateEncapsulated;
 import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
-import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelper;
+import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelperServer;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
@@ -55,7 +55,7 @@ public class SendOutHotkeyOverride {
             suppressRelease = true;
         } else if (state.getValue(BlazeBurnerBlock.HEAT_LEVEL) == BlazeBurnerBlock.HeatLevel.NONE) {
             Pokemon pokemon = CobblemonClient.INSTANCE.getStorage().getParty().get(slot);
-            suppressRelease = pokemon != null && SlugmaBurnerHelper.isSlugma(pokemon);
+            suppressRelease = pokemon != null && SlugmaBurnerHelperServer.isSlugma(pokemon);
         }
     }
 }

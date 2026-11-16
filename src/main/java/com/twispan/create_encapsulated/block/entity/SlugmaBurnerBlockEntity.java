@@ -24,7 +24,7 @@ import net.createmod.catnip.animation.LerpedFloat;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlockEntity;
 
 import com.twispan.create_encapsulated.util.slugma_burner.BlockPokemonState;
-import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelper;
+import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelperServer;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
@@ -55,7 +55,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
 
 public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements IHaveGoggleInformation {
@@ -221,7 +220,7 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
         super.write(compound, registries, clientPacket);
         RegistryAccess registryAccess = registryAccess(registries);
         if (registryAccess != null && pokemon != null) {
-            SlugmaBurnerHelper.savePokemon(compound, registryAccess, this.pokemon);
+            SlugmaBurnerHelperServer.savePokemon(compound, registryAccess, this.pokemon);
         }
         if (ownerUUID != null && ownerName != null) {
             compound.putUUID("owner", ownerUUID);
@@ -235,7 +234,7 @@ public class SlugmaBurnerBlockEntity extends BlazeBurnerBlockEntity implements I
     }
     public @Nullable Pokemon getPokemon() {
         if (pokemon == null && level != null && !level.isClientSide) {
-            pokemon = SlugmaBurnerHelper.getDefaultSlugma(getPlayerByUUID(ownerUUID));
+            pokemon = SlugmaBurnerHelperServer.getDefaultSlugma(getPlayerByUUID(ownerUUID));
         }
         return pokemon;
     }

@@ -14,7 +14,7 @@ import com.twispan.create_encapsulated.block.entity.SlugmaBurnerBlockEntity;
 import com.twispan.create_encapsulated.client.SlugmaPartialModels;
 import com.twispan.create_encapsulated.client.SlugmaSpriteShifts;
 import com.twispan.create_encapsulated.util.slugma_burner.BlockPokemonState;
-import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelper;
+import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelperClient;
 import dev.engine_room.flywheel.lib.model.baked.PartialModel;
 import net.createmod.catnip.animation.AnimationTickHolder;
 import net.createmod.catnip.animation.LerpedFloat;
@@ -115,7 +115,7 @@ public class SlugmaBurnerRenderer extends SafeBlockEntityRenderer<SlugmaBurnerBl
             ms.last().pose().mul(modelTransform.last().pose());
             ms.last().normal().mul(modelTransform.last().normal());
         }
-        var locators = SlugmaBurnerHelper.drawPokemon(
+        var locators = SlugmaBurnerHelperClient.drawPokemon(
                 level, pokemon.getSpecies(), aspects, pose, ms, pokemonState,
                 AngleHelper.deg(headAngleRad), bodyAngleDeg,
                 0f, -0.1f, 0.2f,
@@ -145,7 +145,7 @@ public class SlugmaBurnerRenderer extends SafeBlockEntityRenderer<SlugmaBurnerBl
                 ms.last().normal().mul(modelTransform.last().normal());
             }
 
-            SlugmaBurnerHelper.applyPokeTransform(ms, bodyAngleDeg, 0f, -0.1f, 0.2f);
+            SlugmaBurnerHelperClient.applyPokeTransform(ms, bodyAngleDeg, 0f, -0.1f, 0.2f);
 
             ms.mulPose(locators.hat());
             ms.translate(HAT_OFFSET_X, HAT_OFFSET_Y, HAT_OFFSET_Z);

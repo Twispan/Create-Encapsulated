@@ -22,7 +22,7 @@ import com.twispan.create_encapsulated.block.entity.SlugmaBurnerBlockEntity;
 import com.twispan.create_encapsulated.registries.ModParticles;
 import com.twispan.create_encapsulated.registries.ModSounds;
 import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
-import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelper;
+import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelperServer;
 
 import io.netty.buffer.ByteBuf;
 import kotlin.Unit;
@@ -61,7 +61,7 @@ public class SlugmaInteractionHandler {
         ItemStack held = event.getItemStack();
         if (!held.is(AllItems.EMPTY_BLAZE_BURNER.get())) return;
         if (!(event.getTarget() instanceof PokemonEntity pokemon)) return;
-        if (!SlugmaBurnerHelper.isSlugma(pokemon.getPokemon())) return;
+        if (!SlugmaBurnerHelperServer.isSlugma(pokemon.getPokemon())) return;
 
         Player player = event.getEntity();
         Level level = event.getLevel();
@@ -105,7 +105,7 @@ public class SlugmaInteractionHandler {
             }
             ItemStack filled = ModBlocks.SLUGMA_BURNER.toStack();
             applyMark(pokemon.getPokemon());
-            SlugmaBurnerHelper.popPokemonEntityToItemStack(filled, pokemon);
+            SlugmaBurnerHelperServer.popPokemonEntityToItemStack(filled, pokemon);
             if (!player.isCreative()) held.shrink(1);
             if (held.isEmpty()) player.setItemInHand(event.getHand(), filled);
             else player.getInventory().placeItemBackInInventory(filled);
@@ -193,7 +193,7 @@ public class SlugmaInteractionHandler {
         PlayerPartyStore partyStore = Cobblemon.INSTANCE.getStorage().getParty(player.getUUID(), level.registryAccess());
         if (slot < 0 || slot >= 6) return;
         Pokemon pokemon = partyStore.get(slot);
-        if (pokemon == null || !SlugmaBurnerHelper.isSlugma(pokemon)) return;
+        if (pokemon == null || !SlugmaBurnerHelperServer.isSlugma(pokemon)) return;
         if (pokemon.getEntity() != null) return;
 
         boolean isValid = !pokemon.isAlpha();

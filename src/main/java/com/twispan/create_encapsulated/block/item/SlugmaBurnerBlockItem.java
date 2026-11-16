@@ -4,7 +4,7 @@ import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
 import com.twispan.create_encapsulated.components.StoredPokemon;
 import com.twispan.create_encapsulated.registries.ModComponents;
-import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelper;
+import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelperServer;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -74,7 +74,7 @@ public class SlugmaBurnerBlockItem extends BlockItem {
         if (level.isClientSide || !(entity instanceof ServerPlayer player)) return;
         if (stack.has(ModComponents.POKEMON.get())) return;
 
-        Pokemon pokemon = SlugmaBurnerHelper.getDefaultSlugma(player);
+        Pokemon pokemon = SlugmaBurnerHelperServer.getDefaultSlugma(player);
         CompoundTag tag = pokemon.saveToNBT(level.registryAccess(), new CompoundTag());
         stack.set(ModComponents.POKEMON.get(),
                 new StoredPokemon(tag, player.getUUID(), player.getGameProfile().getName()));
