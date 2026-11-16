@@ -1,12 +1,11 @@
 package com.twispan.create_encapsulated.datagen;
 
-import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
+import com.twispan.create_encapsulated.block.slugma_burner.SlugmaBurnerBlock;
 import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.fml.common.Mod;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;

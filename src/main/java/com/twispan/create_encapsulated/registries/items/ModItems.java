@@ -1,8 +1,8 @@
 package com.twispan.create_encapsulated.registries.items;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
-import com.twispan.create_encapsulated.block.item.SlugmaBurnerBlockItem;
+import com.twispan.create_encapsulated.block.slugma_burner.SlugmaBurnerBlock;
+import com.twispan.create_encapsulated.block.slugma_burner.item.SlugmaBurnerBlockItem;
 import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

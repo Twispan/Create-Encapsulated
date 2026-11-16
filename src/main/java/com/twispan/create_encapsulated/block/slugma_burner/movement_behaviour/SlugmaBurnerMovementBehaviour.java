@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.block.movement_behaviour;
+package com.twispan.create_encapsulated.block.slugma_burner.movement_behaviour;
 
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.simibubi.create.api.behaviour.movement.MovementBehaviour;
@@ -9,8 +9,8 @@ import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 import com.simibubi.create.content.trains.entity.CarriageContraption;
 import com.simibubi.create.content.trains.entity.CarriageContraptionEntity;
 import com.simibubi.create.foundation.virtualWorld.VirtualRenderWorld;
-import com.twispan.create_encapsulated.block.entity.SlugmaBurnerBlockEntity;
-import com.twispan.create_encapsulated.block.renderer.SlugmaBurnerRenderer;
+import com.twispan.create_encapsulated.block.slugma_burner.entity.SlugmaBurnerBlockEntity;
+import com.twispan.create_encapsulated.block.slugma_burner.renderer.SlugmaBurnerRenderer;
 import com.twispan.create_encapsulated.util.slugma_burner.BlockPokemonState;
 import net.createmod.catnip.animation.LerpedFloat;
 import net.createmod.catnip.data.Iterate;

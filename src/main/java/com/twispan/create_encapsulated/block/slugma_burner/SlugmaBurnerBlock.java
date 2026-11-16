@@ -1,10 +1,10 @@
-package com.twispan.create_encapsulated.block;
+package com.twispan.create_encapsulated.block.slugma_burner;
 
 import com.simibubi.create.AllItems;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlockEntity;
-import com.twispan.create_encapsulated.block.entity.SlugmaBurnerBlockEntity;
+import com.twispan.create_encapsulated.block.slugma_burner.entity.SlugmaBurnerBlockEntity;
 import com.twispan.create_encapsulated.registries.ModComponents;
 import com.twispan.create_encapsulated.registries.blocks.ModBlockEntities;
 import com.twispan.create_encapsulated.registries.blocks.ModBlocks;

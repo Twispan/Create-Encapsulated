@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.client;
+package com.twispan.create_encapsulated.client.slugma_burner;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
 import dev.engine_room.flywheel.lib.model.baked.PartialModel;

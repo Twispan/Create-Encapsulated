@@ -1,10 +1,9 @@
 package com.twispan.create_encapsulated.registries.blocks;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.block.entity.SlugmaBurnerBlockEntity;
+import com.twispan.create_encapsulated.block.slugma_burner.entity.SlugmaBurnerBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 

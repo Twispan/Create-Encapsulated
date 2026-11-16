@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.block.entity;
+package com.twispan.create_encapsulated.block.slugma_burner.entity;
 
 import com.cobblemon.mod.common.pokeball.PokeBall;
 import com.cobblemon.mod.common.pokemon.Pokemon;

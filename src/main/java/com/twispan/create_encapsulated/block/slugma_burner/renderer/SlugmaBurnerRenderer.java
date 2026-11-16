@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.block.renderer;
+package com.twispan.create_encapsulated.block.slugma_burner.renderer;
 
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -9,10 +9,10 @@ import com.simibubi.create.content.contraptions.behaviour.MovementContext;
 import com.simibubi.create.content.contraptions.render.ContraptionMatrices;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 import com.simibubi.create.foundation.blockEntity.renderer.SafeBlockEntityRenderer;
-import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
-import com.twispan.create_encapsulated.block.entity.SlugmaBurnerBlockEntity;
-import com.twispan.create_encapsulated.client.SlugmaPartialModels;
-import com.twispan.create_encapsulated.client.SlugmaSpriteShifts;
+import com.twispan.create_encapsulated.block.slugma_burner.SlugmaBurnerBlock;
+import com.twispan.create_encapsulated.block.slugma_burner.entity.SlugmaBurnerBlockEntity;
+import com.twispan.create_encapsulated.client.slugma_burner.SlugmaPartialModels;
+import com.twispan.create_encapsulated.client.slugma_burner.SlugmaSpriteShifts;
 import com.twispan.create_encapsulated.util.slugma_burner.BlockPokemonState;
 import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelperClient;
 import dev.engine_room.flywheel.lib.model.baked.PartialModel;

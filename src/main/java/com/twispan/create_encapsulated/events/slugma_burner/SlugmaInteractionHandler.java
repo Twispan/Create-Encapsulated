@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.events;
+package com.twispan.create_encapsulated.events.slugma_burner;
 
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.api.mark.Mark;
@@ -17,8 +17,8 @@ import com.simibubi.create.AllItems;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 import com.twispan.create_encapsulated.CreateEncapsulated;
 import com.twispan.create_encapsulated.advancements.slugma.SlugmaBurnerHooks;
-import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
-import com.twispan.create_encapsulated.block.entity.SlugmaBurnerBlockEntity;
+import com.twispan.create_encapsulated.block.slugma_burner.SlugmaBurnerBlock;
+import com.twispan.create_encapsulated.block.slugma_burner.entity.SlugmaBurnerBlockEntity;
 import com.twispan.create_encapsulated.registries.ModParticles;
 import com.twispan.create_encapsulated.registries.ModSounds;
 import com.twispan.create_encapsulated.registries.blocks.ModBlocks;

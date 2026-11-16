@@ -2,7 +2,7 @@ package com.twispan.create_encapsulated.advancements.slugma;
 
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.simibubi.create.AllItems;
-import com.twispan.create_encapsulated.block.entity.SlugmaBurnerBlockEntity;
+import com.twispan.create_encapsulated.block.slugma_burner.entity.SlugmaBurnerBlockEntity;
 import com.twispan.create_encapsulated.registries.ModTriggers;
 import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelperServer;
 import net.minecraft.core.BlockPos;

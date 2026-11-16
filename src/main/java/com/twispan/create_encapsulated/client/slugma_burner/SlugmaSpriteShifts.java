@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.client;
+package com.twispan.create_encapsulated.client.slugma_burner;
 
 import com.simibubi.create.Create;
 import com.twispan.create_encapsulated.CreateEncapsulated;

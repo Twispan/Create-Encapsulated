@@ -1,7 +1,7 @@
 package com.twispan.create_encapsulated.registries.blocks;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
+import com.twispan.create_encapsulated.block.slugma_burner.SlugmaBurnerBlock;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;

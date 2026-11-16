@@ -1,13 +1,11 @@
-package com.twispan.create_encapsulated.block.arm;
+package com.twispan.create_encapsulated.block.slugma_burner.arm;
 
 import com.simibubi.create.content.kinetics.mechanicalArm.ArmBlockEntity;
 import com.simibubi.create.content.kinetics.mechanicalArm.ArmInteractionPoint;
 import com.simibubi.create.content.kinetics.mechanicalArm.ArmInteractionPointType;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
-import com.twispan.create_encapsulated.CreateEncapsulated;
 import com.twispan.create_encapsulated.registries.blocks.ModBlocks;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;

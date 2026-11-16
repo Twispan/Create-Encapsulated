@@ -1,13 +1,13 @@
-package com.twispan.create_encapsulated.events;
+package com.twispan.create_encapsulated.events.slugma_burner;
 
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
-import com.twispan.create_encapsulated.block.item.SlugmaBurnerBlockItem;
-import com.twispan.create_encapsulated.block.entity.SlugmaBurnerBlockEntity;
+import com.twispan.create_encapsulated.block.slugma_burner.SlugmaBurnerBlock;
+import com.twispan.create_encapsulated.block.slugma_burner.item.SlugmaBurnerBlockItem;
+import com.twispan.create_encapsulated.block.slugma_burner.entity.SlugmaBurnerBlockEntity;
 import com.twispan.create_encapsulated.components.StoredPokemon;
 import com.twispan.create_encapsulated.registries.ModComponents;
 

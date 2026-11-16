@@ -1,7 +1,7 @@
-package com.twispan.create_encapsulated.block.item;
+package com.twispan.create_encapsulated.block.slugma_burner.item;
 
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.twispan.create_encapsulated.block.SlugmaBurnerBlock;
+import com.twispan.create_encapsulated.block.slugma_burner.SlugmaBurnerBlock;
 import com.twispan.create_encapsulated.components.StoredPokemon;
 import com.twispan.create_encapsulated.registries.ModComponents;
 import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelperServer;

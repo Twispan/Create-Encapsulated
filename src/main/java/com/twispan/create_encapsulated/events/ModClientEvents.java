@@ -1,7 +1,7 @@
 package com.twispan.create_encapsulated.events;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
-import com.twispan.create_encapsulated.block.renderer.SlugmaBurnerRenderer;
+import com.twispan.create_encapsulated.block.slugma_burner.renderer.SlugmaBurnerRenderer;
 import com.twispan.create_encapsulated.components.StoredPokemon;
 import com.twispan.create_encapsulated.registries.ModComponents;
 import com.twispan.create_encapsulated.registries.ModParticles;
