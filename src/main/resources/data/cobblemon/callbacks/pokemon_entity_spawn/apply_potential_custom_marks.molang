@@ -21,7 +21,9 @@ q.pokemon_entity.add_potential_marks(
     'cobblemon:mark_delivery',
     'cobblemon:mark_piping',
     'cobblemon:mark_imitation',
-    'cobblemon:mark_shopkeep'
+    'cobblemon:mark_shopkeep',
+    'cobblemon:mark_artist'
+
 
 );
 
