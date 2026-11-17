@@ -1,6 +1,7 @@
 package com.twispan.create_encapsulated.registries.blocks;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
+import com.twispan.create_encapsulated.block.dynamo_podium.DynamoPodiumBlock;
 import com.twispan.create_encapsulated.block.slugma_burner.SlugmaBurnerBlock;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -18,6 +19,13 @@ public class ModBlocks {
                             .sound(SoundType.METAL)
                             .destroyTime(3.0F)
                             .lightLevel(SlugmaBurnerBlock::getLight)
+            ));
+
+    public static DeferredBlock<Block> DYNAMO_PODIUM =
+            BLOCKS.register("dynamo_podium", () -> new DynamoPodiumBlock(
+                    BlockBehaviour.Properties.of()
+                            .sound(SoundType.METAL)
+                            .destroyTime(3.0F)
             ));
 
     // ==================================

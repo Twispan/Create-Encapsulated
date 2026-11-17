@@ -23,7 +23,7 @@ import net.createmod.catnip.animation.LerpedFloat;
 
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlockEntity;
 
-import com.twispan.create_encapsulated.util.slugma_burner.BlockPokemonState;
+import com.twispan.create_encapsulated.util.BlockPokemonState;
 import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelperServer;
 
 import net.minecraft.client.Minecraft;

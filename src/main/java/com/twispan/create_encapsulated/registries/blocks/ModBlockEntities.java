@@ -1,6 +1,7 @@
 package com.twispan.create_encapsulated.registries.blocks;
 
 import com.twispan.create_encapsulated.CreateEncapsulated;
+import com.twispan.create_encapsulated.block.dynamo_podium.entity.DynamoPodiumBlockEntity;
 import com.twispan.create_encapsulated.block.slugma_burner.entity.SlugmaBurnerBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -18,4 +19,11 @@ public class ModBlockEntities {
                             SlugmaBurnerBlockEntity::new,
                             ModBlocks.SLUGMA_BURNER.get()
                             ).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DynamoPodiumBlockEntity>> DYNAMO_PODIUM =
+            BLOCK_ENTITIES.register("dynamo_podium_be",
+                    () -> BlockEntityType.Builder.of(
+                            DynamoPodiumBlockEntity::new,
+                            ModBlocks.DYNAMO_PODIUM.get()
+                    ).build(null));
 }

@@ -9,6 +9,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import com.twispan.create_encapsulated.block.slugma_burner.entity.SlugmaBurnerBlockEntity;
+import com.twispan.create_encapsulated.util.BlockPokemonState;
 import kotlin.Unit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;

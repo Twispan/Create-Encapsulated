@@ -11,7 +11,7 @@ import com.simibubi.create.content.trains.entity.CarriageContraptionEntity;
 import com.simibubi.create.foundation.virtualWorld.VirtualRenderWorld;
 import com.twispan.create_encapsulated.block.slugma_burner.entity.SlugmaBurnerBlockEntity;
 import com.twispan.create_encapsulated.block.slugma_burner.renderer.SlugmaBurnerRenderer;
-import com.twispan.create_encapsulated.util.slugma_burner.BlockPokemonState;
+import com.twispan.create_encapsulated.util.BlockPokemonState;
 import net.createmod.catnip.animation.LerpedFloat;
 import net.createmod.catnip.data.Iterate;
 import net.createmod.catnip.math.AngleHelper;

@@ -1,4 +1,4 @@
-package com.twispan.create_encapsulated.util.slugma_burner;
+package com.twispan.create_encapsulated.util;
 
 import com.cobblemon.mod.common.api.scheduling.SchedulingTracker;
 import com.cobblemon.mod.common.client.render.models.blockbench.PosableState;

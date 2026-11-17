@@ -13,7 +13,7 @@ import com.twispan.create_encapsulated.block.slugma_burner.SlugmaBurnerBlock;
 import com.twispan.create_encapsulated.block.slugma_burner.entity.SlugmaBurnerBlockEntity;
 import com.twispan.create_encapsulated.client.slugma_burner.SlugmaPartialModels;
 import com.twispan.create_encapsulated.client.slugma_burner.SlugmaSpriteShifts;
-import com.twispan.create_encapsulated.util.slugma_burner.BlockPokemonState;
+import com.twispan.create_encapsulated.util.BlockPokemonState;
 import com.twispan.create_encapsulated.util.slugma_burner.SlugmaBurnerHelperClient;
 import dev.engine_room.flywheel.lib.model.baked.PartialModel;
 import net.createmod.catnip.animation.AnimationTickHolder;
