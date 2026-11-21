@@ -39,8 +39,12 @@ public class SlugmaBurnerHelperClient {
 
         float animationTicks = level.getGameTime() + partialTicks;
 
-        if (state instanceof BlockPokemonState blockPokemonState) blockPokemonState.advance(animationTicks);
-        else state.updatePartialTicks(partialTicks);
+        if (state instanceof BlockPokemonState blockPokemonState) {
+            blockPokemonState.advance(animationTicks);
+            animationTicks = blockPokemonState.totalPartialTicks;
+        } else {
+            state.updatePartialTicks(partialTicks);
+        }
 
         var model = VaryingModelRepository.INSTANCE.getPoser(id, state);
         ResourceLocation texture = VaryingModelRepository.INSTANCE.getTexture(id, state);

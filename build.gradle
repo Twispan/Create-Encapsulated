@@ -35,6 +35,12 @@ repositories {
         url = "https://maven.impactdev.net/repository/development/"
     }
 
+    maven {
+        name = "JEI"
+        url = "https://maven.blamejared.com"
+    }
+
+
     exclusiveContent {
         forRepository {
             maven {
@@ -68,6 +74,9 @@ dependencies {
 
     // World of Color's current build
     implementation "maven.modrinth:DLDpwb0R:XAb7eKQt"
+
+    // JEI
+    compileOnly("mezz.jei:jei-1.21.1-neoforge:19.44.0.403")
 
     // Needed to read cobblemon's kotlin files
     compileOnly "org.jetbrains.kotlin:kotlin-stdlib:2.0.21"
