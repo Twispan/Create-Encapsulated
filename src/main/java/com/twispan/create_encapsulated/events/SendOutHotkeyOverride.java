@@ -58,4 +58,35 @@ public class SendOutHotkeyOverride {
             suppressRelease = pokemon != null && SlugmaBurnerHelperServer.isSlugma(pokemon);
         }
     }
+
+    @SubscribeEvent
+    public static void onClick(InputEvent.MouseButton.Post event) {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.player == null || mc.level == null || mc.screen != null) return;
+
+        KeyMapping sendOut = CobblemonKeyBinds.INSTANCE.getSEND_OUT_POKEMON();
+        InputConstants.Key key = InputConstants.Type.MOUSE.getOrCreate(event.getButton());
+        if (!sendOut.isActiveAndMatches(key)) return;
+        if (event.getAction() != GLFW.GLFW_PRESS) return;
+
+        suppressRelease = false;
+
+        if (!(mc.hitResult instanceof BlockHitResult hitResult) || hitResult.getType() != HitResult.Type.BLOCK) return;
+        BlockPos pos = hitResult.getBlockPos();
+        BlockState state = mc.level.getBlockState(pos);
+
+        boolean slugmaBurner = state.getBlock() instanceof SlugmaBurnerBlock;
+        boolean emptyBurner = AllBlocks.BLAZE_BURNER.has(state);
+        if (!slugmaBurner && !emptyBurner) return;
+
+        int slot = CobblemonClient.INSTANCE.getStorage().getSelectedSlot();
+        PacketDistributor.sendToServer(new SlugmaInteractionHandler.RetrieveSlugmaPayload(pos, slot));
+
+        if (slugmaBurner) {
+            suppressRelease = true;
+        } else if (state.getValue(BlazeBurnerBlock.HEAT_LEVEL) == BlazeBurnerBlock.HeatLevel.NONE) {
+            Pokemon pokemon = CobblemonClient.INSTANCE.getStorage().getParty().get(slot);
+            suppressRelease = pokemon != null && SlugmaBurnerHelperServer.isSlugma(pokemon);
+        }
+    }
 }
