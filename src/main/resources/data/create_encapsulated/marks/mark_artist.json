@@ -1,0 +1,9 @@
+{
+	"name": "create_encapsulated.mark.mark_artist",
+	"title": "create_encapsulated.mark.mark_artist.title",
+	"titleColor": "9E5FD0",
+	"description": "create_encapsulated.mark.mark_artist.desc",
+	"texture": "create_encapsulated:textures/gui/mark/mark_artist.png",
+	"chance": 0.034,
+	"indexNumber": 332
+}

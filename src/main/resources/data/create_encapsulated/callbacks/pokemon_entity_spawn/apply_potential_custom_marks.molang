@@ -1,0 +1,29 @@
+t.x = q.pokemon_entity.x;
+t.y = q.pokemon_entity.y;
+t.z = q.pokemon_entity.z;
+
+t.world = q.pokemon_entity.world;
+
+t.biome = q.pokemon_entity.biome;
+
+t.biome.is_in('#minecraft:is_overworld') && t.y > 300 ? {
+    q.pokemon_entity.add_potential_marks('create_encapsulated:mark_aeronaut');
+};
+
+t.biome.is_in('#minecraft:is_overworld') && t.y < -40 ? {
+    q.pokemon_entity.add_potential_marks('create_encapsulated:mark_core');
+};
+
+q.pokemon_entity.add_potential_marks(
+    'create_encapsulated:mark_mechanic',
+    'create_encapsulated:mark_engineer',
+    'create_encapsulated:mark_factory',
+    'create_encapsulated:mark_delivery',
+    'create_encapsulated:mark_piping',
+    'create_encapsulated:mark_imitation',
+    'create_encapsulated:mark_shopkeep',
+    'create_encapsulated:mark_artist'
+
+
+);
+
