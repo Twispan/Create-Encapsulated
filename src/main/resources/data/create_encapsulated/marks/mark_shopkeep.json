@@ -1,9 +1,9 @@
 {
-	"name": "cobblemon.mark.mark_shopkeep",
-	"title": "cobblemon.mark.mark_shopkeep.title",
+	"name": "create_encapsulated.mark.mark_shopkeep",
+	"title": "create_encapsulated.mark.mark_shopkeep.title",
 	"titleColor": "3B86D1",
-	"description": "cobblemon.mark.mark_shopkeep.desc",
-	"texture": "cobblemon:textures/gui/mark/mark_shopkeep.png",
+	"description": "create_encapsulated.mark.mark_shopkeep.desc",
+	"texture": "create_encapsulated:textures/gui/mark/mark_shopkeep.png",
 	"chance": 0.057,
 	"indexNumber": 324
 }

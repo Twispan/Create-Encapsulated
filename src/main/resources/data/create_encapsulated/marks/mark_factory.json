@@ -1,9 +1,9 @@
 {
-	"name": "cobblemon.mark.mark_factory",
-	"title": "cobblemon.mark.mark_factory.title",
+	"name": "create_encapsulated.mark.mark_factory",
+	"title": "create_encapsulated.mark.mark_factory.title",
 	"titleColor": "977043",
-	"description": "cobblemon.mark.mark_factory.desc",
-	"texture": "cobblemon:textures/gui/mark/mark_factory.png",
+	"description": "create_encapsulated.mark.mark_factory.desc",
+	"texture": "create_encapsulated:textures/gui/mark/mark_factory.png",
 	"chance": 0.04,
 	"indexNumber": 321
 }

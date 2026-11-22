@@ -1,9 +1,9 @@
 {
-	"name": "cobblemon.mark.mark_engineer",
-	"title": "cobblemon.mark.mark_engineer.title",
+	"name": "create_encapsulated.mark.mark_engineer",
+	"title": "create_encapsulated.mark.mark_engineer.title",
 	"titleColor": "B83F40",
-	"description": "cobblemon.mark.mark_engineer.desc",
-	"texture": "cobblemon:textures/gui/mark/mark_engineer.png",
+	"description": "create_encapsulated.mark.mark_engineer.desc",
+	"texture": "create_encapsulated:textures/gui/mark/mark_engineer.png",
 	"chance": 0.051,
 	"indexNumber": 322
 }
