@@ -110,14 +110,23 @@ public class SlugmaBurnerRenderer extends SafeBlockEntityRenderer<SlugmaBurnerBl
         aspects.add(superHeated ? "super_heated" : "burner");
         boolean shiny = aspects.contains("shiny");
 
+        PartialModel baseModel = shiny
+                ? (superHeated ? SlugmaPartialModels.BASE_SUPERHEATED_SHINY : SlugmaPartialModels.BASE_SHINY)
+                : (superHeated ? SlugmaPartialModels.BASE_SUPERHEATED : SlugmaPartialModels.BASE);
+        SuperByteBuffer base = CachedBuffers.partial(baseModel, blockState);
+        if (modelTransform != null) base.transform(modelTransform);
+        base.translate(0, 0.251, 0);
+        draw(base, 0, ms, source.getBuffer(RenderType.solid()));
+
         ms.pushPose();
         if (modelTransform != null) {
             ms.last().pose().mul(modelTransform.last().pose());
             ms.last().normal().mul(modelTransform.last().normal());
         }
+
         var locators = SlugmaBurnerHelperClient.drawPokemon(
                 level, pokemon.getSpecies(), aspects, pose, ms, pokemonState,
-                AngleHelper.deg(headAngleRad), bodyAngleDeg,
+                source, AngleHelper.deg(headAngleRad), bodyAngleDeg,
                 0f, -0.1f, 0.2f,
                 partialTicks, LightTexture.FULL_BRIGHT);
         ms.popPose();
@@ -128,14 +137,6 @@ public class SlugmaBurnerRenderer extends SafeBlockEntityRenderer<SlugmaBurnerBl
             assert modelTransform != null;
             renderFlame(ms, modelTransform, source, level, blockState, heat, shift, headAngleRad, partialTicks);
         }
-
-        PartialModel baseModel = shiny
-                ? (superHeated ? SlugmaPartialModels.BASE_SUPERHEATED_SHINY : SlugmaPartialModels.BASE_SHINY)
-                : (superHeated ? SlugmaPartialModels.BASE_SUPERHEATED : SlugmaPartialModels.BASE);
-        SuperByteBuffer base = CachedBuffers.partial(baseModel, blockState);
-        if (modelTransform != null) base.transform(modelTransform);
-        base.translate(0, 0.251, 0);
-        draw(base, 0, ms, source.getBuffer(RenderType.solid()));
 
         if (hat != null && locators.hat() != null) {
             ms.pushPose();

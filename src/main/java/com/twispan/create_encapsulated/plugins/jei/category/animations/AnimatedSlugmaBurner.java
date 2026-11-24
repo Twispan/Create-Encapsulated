@@ -19,6 +19,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.LightTexture;
+import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
 
@@ -70,10 +71,6 @@ public class AnimatedSlugmaBurner extends AnimatedKinetics {
         ms.scale(scale, -scale, scale);
         ms.translate(0, -1.8, 0);
 
-        SlugmaBurnerHelperClient.drawPokemon(level, species, aspects, pose, ms, state,
-                180f, 180f, 0f, -0.3f, 0.2f,
-                AnimationTickHolder.getPartialTicks(level), LightTexture.FULL_BRIGHT);
-
         SpriteShiftEntry spriteShift = heatLevel == BlazeBurnerBlock.HeatLevel.SEETHING
                                 ? SlugmaSpriteShifts.SUPER_SLUGMA_BURNER_FLAME
                                 : null;
@@ -105,6 +102,13 @@ public class AnimatedSlugmaBurner extends AnimatedKinetics {
                     .light(LightTexture.FULL_BRIGHT)
                     .renderInto(ms, g.bufferSource().getBuffer(RenderType.cutoutMipped()));
         }
+
+        SlugmaBurnerHelperClient.drawPokemon(level, species, aspects, pose, ms, state,
+                g.bufferSource(), 180f, 180f, 0f, -0.3f, 0.2f,
+                AnimationTickHolder.getPartialTicks(level), LightTexture.FULL_BRIGHT);
+
+        g.flush();
+
         ms.popPose();
     }
 }

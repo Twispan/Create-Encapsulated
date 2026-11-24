@@ -30,9 +30,9 @@ public class SlugmaBurnerHelperClient {
     ) {}
 
     public static AccessoryLocator drawPokemon(Level level, Species species, Set<String> aspects, String pose,
-                                               PoseStack ms, PosableState state, float headYaw, float bodyYaw,
-                                               float xOffset, float yOffset, float zOffset, float partialTicks,
-                                               int packedLight) {
+                                               PoseStack ms, PosableState state, MultiBufferSource bufferSource,
+                                               float headYaw, float bodyYaw, float xOffset, float yOffset,
+                                               float zOffset, float partialTicks, int packedLight) {
         ResourceLocation id = species.getResourceIdentifier();
 
         state.setCurrentAspects(aspects);
@@ -96,14 +96,11 @@ public class SlugmaBurnerHelperClient {
         ms.pushPose();
         applyPokeTransform(ms, bodyYaw, xOffset, yOffset, zOffset);
 
-        MultiBufferSource.BufferSource immediate =
-                Minecraft.getInstance().renderBuffers().bufferSource();
-        VertexConsumer consumer = immediate.getBuffer(RenderType.entityCutout(texture));
+        VertexConsumer consumer = bufferSource.getBuffer(RenderType.entityCutout(texture));
 
-        model.withLayerContext(immediate, state,
+        model.withLayerContext(bufferSource, state,
                 VaryingModelRepository.INSTANCE.getLayers(id, state), () -> {
                     model.render(context, ms, consumer, packedLight, OverlayTexture.NO_OVERLAY, -1);
-                    immediate.endBatch();
                     return Unit.INSTANCE;
                 });
 
