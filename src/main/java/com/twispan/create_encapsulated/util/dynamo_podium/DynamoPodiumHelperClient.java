@@ -11,7 +11,6 @@ import com.mojang.math.Axis;
 import com.twispan.create_encapsulated.block.dynamo_podium.entity.DynamoPodiumBlockEntity;
 import com.twispan.create_encapsulated.util.BlockPokemonState;
 import kotlin.Unit;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.OverlayTexture;
@@ -23,17 +22,21 @@ import java.util.Set;
 
 public class DynamoPodiumHelperClient {
     public static void drawPokemon(Level level, Species species, Set<String> aspects, String pose,
-                                   PoseStack ms, PosableState state, float headYaw, float bodyYaw,
-                                   float xOffset, float yOffset, float zOffset, float partialTicks,
-                                   int packedLight) {
+                                   PoseStack ms, PosableState state, MultiBufferSource bufferSource,
+                                   float headYaw, float bodyYaw, float xOffset, float yOffset,
+                                   float zOffset, float partialTicks, int packedLight) {
         ResourceLocation id = species.getResourceIdentifier();
 
         state.setCurrentAspects(aspects);
 
         float animationTicks = level.getGameTime() + partialTicks;
 
-        if (state instanceof BlockPokemonState pokemonState) pokemonState.advance(animationTicks);
-        else state.updatePartialTicks(partialTicks);
+        if (state instanceof BlockPokemonState blockPokemonState) {
+            blockPokemonState.advance(animationTicks);
+            animationTicks = blockPokemonState.totalPartialTicks;
+        } else {
+            state.updatePartialTicks(partialTicks);
+        }
 
         var model = VaryingModelRepository.INSTANCE.getPoser(id, state);
         ResourceLocation texture = VaryingModelRepository.INSTANCE.getTexture(id, state);
@@ -68,14 +71,11 @@ public class DynamoPodiumHelperClient {
         ms.pushPose();
         applyPokeTransForm(ms, bodyYaw, xOffset, yOffset, zOffset);
 
-        MultiBufferSource.BufferSource immediate =
-                Minecraft.getInstance().renderBuffers().bufferSource();
-        VertexConsumer consumer = immediate.getBuffer(RenderType.entityCutout(texture));
+        VertexConsumer consumer = bufferSource.getBuffer(RenderType.entityCutout(texture));
 
-        model.withLayerContext(immediate, state,
+        model.withLayerContext(bufferSource, state,
                 VaryingModelRepository.INSTANCE.getLayers(id, state), () -> {
                     model.render(context, ms, consumer, packedLight, OverlayTexture.NO_OVERLAY, -1);
-                    immediate.endBatch();
                     return Unit.INSTANCE;
                 });
 
